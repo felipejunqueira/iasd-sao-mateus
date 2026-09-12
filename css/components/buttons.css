@@ -18,7 +18,7 @@
 
 .btn-primary {
   background: var(--brand-gold);
-  color: var(--brand-dark);
+  color: #1a120e;
   border-color: var(--brand-gold);
 }
 .btn-primary:hover {
