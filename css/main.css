@@ -24,6 +24,7 @@
 @import url('components/forms.css');
 @import url('components/form-feedback.css');
 @import url('components/modals.css');
+@import url('components/toast.css');
 @import url('components/footer.css');
 
 /* Aliases de classes legadas (compatibilidade com JS existente) */
