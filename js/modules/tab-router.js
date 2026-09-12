@@ -7,6 +7,7 @@ import { safeStorage } from './utils.js';
 const TAB_MAP = {
   '#inicio': 'tab-inicio',
   '#cultos': 'tab-inicio',
+  '#pastoral': 'tab-inicio',
   '#series': 'tab-inicio',
   '#contato': 'tab-inicio',
   '#comunidade': 'tab-comunidade',
