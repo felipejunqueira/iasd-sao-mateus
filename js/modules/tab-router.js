@@ -44,6 +44,21 @@ export function initTabRouter() {
 
   window.addEventListener('hashchange', handleRoute);
 
+  const tabContainer = document.querySelector('.tabs-nav-container');
+  if (tabContainer) {
+    tabContainer.addEventListener('keydown', (e) => {
+      const arr = Array.from(buttons);
+      const curr = arr.findIndex((b) => b.classList.contains('active'));
+      let next = -1;
+      if (e.key === 'ArrowRight') next = (curr + 1) % arr.length;
+      if (e.key === 'ArrowLeft') next = (curr - 1 + arr.length) % arr.length;
+      if (next >= 0) {
+        arr[next].click();
+        arr[next].focus();
+      }
+    });
+  }
+
   const initialTab = safeStorage.get('iasd_active_tab', 'tab-inicio');
   const hash = window.location.hash;
   if (hash && TAB_MAP[hash]) {
