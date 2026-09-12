@@ -10,7 +10,7 @@ export async function loadComponents() {
     elements.map(async (el) => {
       const file = el.getAttribute('data-include');
       try {
-        const res = await fetch(file);
+        const res = await fetch(`${file}?v=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const html = await res.text();
         el.outerHTML = html;

@@ -10,7 +10,8 @@ export async function initGallery() {
   if (!container) return;
 
   try {
-    const res = await fetch('data/feed.json');
+    const res = await fetch(`data/feed.json?v=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) throw new Error('Falha ao carregar galeria');
     const data = await res.json();
     galleryItems = data.posts || [];
   } catch {
