@@ -1,94 +1,52 @@
 .header-main {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: sticky; top: 0; z-index: 1000;
   background: rgba(7, 25, 47, 0.96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .navbar {
-  display: flex;
-  align-items: center;
+  display: flex; align-items: center;
   justify-content: space-between;
   padding: 0.85rem 0;
 }
-
 .brand-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  display: flex; align-items: center; gap: 0.75rem;
 }
-
 .brand-icon {
-  width: 42px;
-  height: 42px;
+  width: 42px; height: 42px;
   background: linear-gradient(135deg, var(--iasd-gold), var(--iasd-gold-dark));
   border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #07192f;
-  font-size: 1.3rem;
-  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  color: #07192f; font-size: 1.3rem; font-weight: 800;
 }
-
 .brand-title {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: #ffffff;
+  font-size: 1.15rem; font-weight: 800; color: #ffffff;
 }
-
 .brand-subtitle {
-  font-size: 0.75rem;
-  color: #cbd5e1;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.75rem; color: #cbd5e1;
+  text-transform: uppercase; letter-spacing: 0.08em;
 }
-
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.35rem;
-  list-style: none;
+  display: flex; align-items: center;
+  gap: 1.35rem; list-style: none;
 }
-
 .nav-item a {
-  color: #e2e8f0;
-  font-size: 0.9rem;
-  font-weight: 500;
+  color: #e2e8f0; font-size: 0.9rem; font-weight: 500;
 }
-
-.nav-item a:hover {
-  color: var(--iasd-gold);
-}
-
+.nav-item a:hover { color: var(--iasd-gold); }
 .mobile-menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 1.8rem;
-  cursor: pointer;
+  display: none; background: transparent;
+  border: none; color: #ffffff;
+  font-size: 1.8rem; cursor: pointer;
 }
-
 @media (max-width: 900px) {
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #07192f;
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1rem;
+    display: none; position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #07192f; flex-direction: column;
+    padding: 1.5rem; gap: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  .nav-links.mobile-open {
-    display: flex;
-  }
-  .mobile-menu-toggle {
-    display: block;
-  }
+  .nav-links.mobile-open { display: flex; }
+  .mobile-menu-toggle { display: block; }
 }
