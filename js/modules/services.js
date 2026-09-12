@@ -25,20 +25,20 @@ export function initNextService() {
       title = "Hoje às 17:00 • Culto Jovem (JA)";
       desc = "Encontro dinâmico dos jovens, música contemporânea e comunhão.";
     } else {
-      title = "Domingo às 19:30 • Culto da Família";
+      title = "Domingo às 19:00 • Culto da Família";
       desc = "Uma palavra de esperança e bênção para o seu lar.";
     }
   } else if (day === 0) { // Domingo
-    if (hours < 20) {
-      title = "Hoje às 19:30 • Culto da Esperança";
+    if (hours < 19) {
+      title = "Hoje às 19:00 • Culto da Família";
       desc = "Mensagem prática da Bíblia para começar bem a sua semana.";
     } else {
-      title = "Quarta-feira às 19:30 • Culto de Oração";
+      title = "Quarta-feira às 20:00 • Culto de Oração";
       desc = "Momento de intercessão e fortalecimento espiritual.";
     }
   } else if (day === 3) { // Quarta
     if (hours < 20) {
-      title = "Hoje às 19:30 • Culto de Oração & Bíblia";
+      title = "Hoje às 20:00 • Culto de Oração & Bíblia";
       desc = "Pausa semanal para orar e estudar os ensinamentos de Cristo.";
     } else {
       title = "Sábado às 09:00 • Escola Sabatina";
@@ -48,7 +48,7 @@ export function initNextService() {
     title = "Sábado às 09:00 • Escola Sabatina & Culto";
     desc = "Prepare seu coração para um dia sagrado de paz e adoração.";
   } else {
-    title = "Quarta-feira às 19:30 • Culto de Oração";
+    title = "Quarta-feira às 20:00 • Culto de Oração";
     desc = "Estudo bíblico e oração comunitária.";
   }
 
