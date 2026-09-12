@@ -61,6 +61,10 @@ const server = http.createServer((req, res) => {
   });
 });
 
+try {
+  require('./scripts/build').buildHtml();
+} catch (e) {}
+
 server.listen(PORT, () => {
   console.log(`====================================================`);
   console.log(`⛪ Site da Igreja Adventista rodando com sucesso!`);

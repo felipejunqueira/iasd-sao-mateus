@@ -1,0 +1,75 @@
+<!-- Formulários de Estudo Bíblico e Pedidos de Oração -->
+      <section id="estudo-biblico" class="section form-section" aria-labelledby="form-heading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" style="color:var(--iasd-gold);">Crescimento Espiritual</span>
+            <h2 id="form-heading" class="section-title" style="color:#fff;">Como Podemos Ajudar Você?</h2>
+            <p class="section-desc" style="color:#cbd5e1;">Solicite uma Bíblia e guia de estudos gratuito ou envie seu pedido confidencial de oração.</p>
+          </div>
+
+          <div class="form-container-box">
+            <div class="form-tabs">
+              <button class="form-tab-btn active" id="tab-bible">📖 Quero Estudar a Bíblia</button>
+              <button class="form-tab-btn" id="tab-prayer">🙏 Pedido de Oração</button>
+            </div>
+
+            <form id="form-bible-study" class="form-grid">
+              <div class="form-group">
+                <label for="bible-name">Seu Nome *</label>
+                <input type="text" id="bible-name" class="form-control" placeholder="Ex: João da Silva" required>
+              </div>
+              <div class="form-group">
+                <label for="bible-whatsapp">WhatsApp com DDD *</label>
+                <input type="tel" id="bible-whatsapp" class="form-control" placeholder="(11) 98888-7777" required>
+              </div>
+              <div class="form-group">
+                <label for="bible-modality">Modalidade de Estudo</label>
+                <select id="bible-modality" class="form-control">
+                  <option value="online">Online via WhatsApp</option>
+                  <option value="presencial">Presencial na igreja (Rua Antônio Previato, 1001)</option>
+                  <option value="impresso">Desejo guia impresso gratuito</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="bible-topic">Tema de Interesse</label>
+                <select id="bible-topic" class="form-control">
+                  <option value="jesus">A Vida e os Ensinos de Jesus</option>
+                  <option value="profecias">Profecias de Daniel e Apocalipse</option>
+                  <option value="paz">Paz Interior e Vencer a Ansiedade</option>
+                  <option value="familia">Princípios Bíblicos para o Lar</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;">
+                  Enviar Solicitação Gratuita
+                </button>
+              </div>
+            </form>
+
+            <form id="form-prayer-request" class="form-grid" style="display:none;">
+              <div class="form-group">
+                <label for="prayer-name">Seu Nome (ou Anônimo)</label>
+                <input type="text" id="prayer-name" class="form-control" placeholder="Seu nome">
+              </div>
+              <div class="form-group">
+                <label for="prayer-category">Motivo da Oração</label>
+                <select id="prayer-category" class="form-control">
+                  <option value="saude">Saúde & Cura</option>
+                  <option value="familia">Família & Casamento</option>
+                  <option value="trabalho">Emprego & Finanças</option>
+                  <option value="espiritual">Paz Espiritual</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="prayer-details">Pedido de Oração *</label>
+                <textarea id="prayer-details" class="form-control" rows="3" placeholder="Compartilhe seu motivo de oração..." required></textarea>
+              </div>
+              <div class="form-group full-width">
+                <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;background:linear-gradient(135deg,#10b981,#059669);color:#fff;">
+                  Enviar para a Equipe de Oração
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>

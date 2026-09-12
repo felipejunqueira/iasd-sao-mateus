@@ -1,0 +1,24 @@
+<!-- Modal do Player de Vídeo das Séries -->
+  <div id="video-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Player de Séries Bíblicas">
+    <div class="modal-dialog">
+      <button id="video-modal-close" class="modal-close-btn" aria-label="Fechar Vídeo">✕</button>
+      <div style="padding:1rem 1.25rem;background:#07192f;color:#fff;">
+        <h3 id="video-modal-title" style="font-size:1.1rem;color:#fff;margin:0;">Aula Bíblica</h3>
+      </div>
+      <iframe id="video-frame" class="video-player-frame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Modal Lightbox para Fotos -->
+  <div id="lightbox-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Visualizador de Foto">
+    <div class="modal-dialog">
+      <button id="lightbox-close" class="modal-close-btn" aria-label="Fechar Foto">✕</button>
+      <div style="max-height:480px;background:#000;display:flex;align-items:center;justify-content:center;">
+        <img id="lightbox-img" src="" alt="" style="max-height:480px;object-fit:contain;">
+      </div>
+      <div style="padding:1.25rem;background:#0f172a;color:#fff;">
+        <h3 id="lightbox-title" style="color:#fff;margin-bottom:0.35rem;font-size:1.15rem;"></h3>
+        <p id="lightbox-caption" style="color:#cbd5e1;font-size:0.9rem;margin:0;"></p>
+      </div>
+    </div>
+  </div>
