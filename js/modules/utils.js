@@ -25,8 +25,10 @@ export function sanitize(str) {
   return str.replace(/[&<>"']/g, (m) => map[m]);
 }
 
+const CHECK_SVG = `<svg viewBox="0 0 20 20" fill="none" width="18" height="18"><circle cx="10" cy="10" r="10" fill="#10b981"/><polyline points="5,10 8,13 15,7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
 let toastTimer = null;
-export function showToast(message, icon = '🙏') {
+export function showToast(message) {
   let toast = document.getElementById('toast-notification');
   if (!toast) {
     toast = document.createElement('div');
@@ -35,7 +37,7 @@ export function showToast(message, icon = '🙏') {
     document.body.appendChild(toast);
   }
 
-  toast.innerHTML = `<span>${icon}</span><div>${sanitize(message)}</div>`;
+  toast.innerHTML = `${CHECK_SVG}<div>${sanitize(message)}</div>`;
   toast.classList.add('show');
 
   if (toastTimer) clearTimeout(toastTimer);

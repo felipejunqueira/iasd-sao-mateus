@@ -1,39 +1,47 @@
-/* Layout e Estrutura de Seções */
+/* Layout Utilities */
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-.section {
-  padding: 5rem 0;
-  position: relative;
+.section { padding: 5.5rem 0; position: relative; }
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--brand-mid);
+  margin-bottom: .65rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: .85rem;
+  line-height: 1.15;
+}
+
+.section-lead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 580px;
 }
 
 .section-header {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 3.5rem auto;
+  margin-bottom: 3.5rem;
 }
 
-.section-tag {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--iasd-blue-primary);
-  margin-bottom: 0.5rem;
-}
+.section-header .section-lead { margin: 0 auto; }
 
-.section-title {
-  font-size: 2.35rem;
-  color: var(--iasd-blue-dark);
-  margin-bottom: 0.85rem;
-}
-
-.section-desc {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
+@media (max-width: 768px) {
+  .section { padding: 4rem 0; }
+  .section-title { font-size: 1.9rem; }
 }

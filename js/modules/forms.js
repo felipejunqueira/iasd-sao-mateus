@@ -43,7 +43,7 @@ function initFormSubmits() {
 
       const rawName = document.getElementById('bible-name')?.value || 'Amigo(a)';
       const cleanName = sanitize(rawName);
-      showToast(`Obrigado, ${cleanName}! Recebemos seu pedido de estudo bíblico.`, '📖');
+      showToast(`Obrigado, ${cleanName}! Recebemos seu pedido de estudo bíblico.`);
       bibleForm.reset();
 
       setTimeout(() => { if (submitBtn) submitBtn.disabled = false; }, 3000);
@@ -56,7 +56,7 @@ function initFormSubmits() {
       const submitBtn = prayerForm.querySelector('button[type="submit"]');
       if (submitBtn) submitBtn.disabled = true;
 
-      showToast('Seu pedido de oração foi enviado para nossa equipe de intercessão!', '🙏');
+      showToast('Seu pedido de oração foi enviado para nossa equipe de intercessão!');
       prayerForm.reset();
 
       setTimeout(() => { if (submitBtn) submitBtn.disabled = false; }, 3000);

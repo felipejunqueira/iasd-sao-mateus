@@ -1,80 +1,44 @@
 /* Cards de Episódios das Séries Bíblicas */
 .episodes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .episode-card {
   background: var(--bg-surface);
-  border-radius: var(--radius-md);
+  border-radius: var(--r-md);
   overflow: hidden;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-smooth);
+  border: 1px solid var(--border);
+  transition: var(--t);
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
+  display: flex; flex-direction: column;
 }
 
-.episode-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
+.episode-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 
 .episode-thumb-wrap {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
+  position: relative; height: 190px; overflow: hidden;
 }
-
-.episode-thumb-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.episode-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.episode-card:hover .episode-thumb-wrap img { transform: scale(1.03); }
 
 .episode-duration {
-  position: absolute;
-  bottom: 0.75rem;
-  right: 0.75rem;
-  background: rgba(7, 25, 47, 0.85);
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.2rem 0.55rem;
-  border-radius: 4px;
+  position: absolute; bottom: .65rem; right: .65rem;
+  background: rgba(26,18,14,.85); color: #fff;
+  font-size: .72rem; font-weight: 700;
+  padding: .18rem .5rem; border-radius: 4px;
 }
 
 .episode-play-btn {
-  position: absolute;
-  inset: 0;
-  background: rgba(7, 25, 47, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 2.4rem;
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  position: absolute; inset: 0;
+  background: rgba(26,18,14,.45);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; opacity: 0; transition: opacity .22s ease;
 }
-
+.episode-play-btn svg { width: 44px; height: 44px; }
 .episode-card:hover .episode-play-btn { opacity: 1; }
 
-.episode-body {
-  padding: 1.35rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.episode-body h4 {
-  font-size: 1.15rem;
-  margin-bottom: 0.5rem;
-  color: var(--iasd-blue-dark);
-}
-
-.episode-body p {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
+.episode-body { padding: 1.2rem; flex-grow: 1; }
+.episode-body h4 { font-size: 1rem; margin-bottom: .4rem; }
+.episode-body p { font-size: .85rem; color: var(--text-secondary); }

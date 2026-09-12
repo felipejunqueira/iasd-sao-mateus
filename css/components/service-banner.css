@@ -1,32 +1,67 @@
-/* Banner Dinâmico do Próximo Culto */
-.next-service-banner {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius-md);
-  padding: 1.15rem 1.4rem;
-  display: flex;
+/* Localização */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 3.5rem;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 640px;
 }
 
-.service-badge-info {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
+.address-card {
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.service-icon-box {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-sm);
-  background: rgba(234, 179, 8, 0.2);
-  color: var(--iasd-gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
+.address-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text-muted);
+  margin-bottom: .4rem;
+}
+
+.address-street {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--brand-mid);
+  margin-bottom: .2rem;
+}
+
+.address-city {
+  font-size: .88rem;
+  color: var(--text-secondary);
+}
+
+.sanctuary-photo-wrap {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.sanctuary-photo {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.sanctuary-label {
+  position: absolute;
+  bottom: .85rem;
+  left: .85rem;
+  background: rgba(26,18,14,.85);
+  color: var(--brand-light);
+  font-size: .78rem;
+  font-weight: 700;
+  padding: .3rem .85rem;
+  border-radius: var(--r-full);
+  border: 1px solid var(--brand-gold);
+}
+
+@media (max-width: 840px) {
+  .location-grid { grid-template-columns: 1fr; }
 }

@@ -51,8 +51,10 @@ function renderEpisodes(season) {
     <article class="episode-card" data-video="${ep.video_id}" data-title="${ep.title}">
       <div class="episode-thumb-wrap">
         <img src="${ep.image}" alt="${ep.title}" loading="lazy">
-        <span class="episode-duration">⏱️ ${ep.duration}</span>
-        <div class="episode-play-btn">▶</div>
+        <span class="episode-duration">${ep.duration}</span>
+        <div class="episode-play-btn">
+          <svg viewBox="0 0 24 24" fill="white" width="44" height="44"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.35)"/><polygon points="10,8 17,12 10,16" fill="white"/></svg>
+        </div>
       </div>
       <div class="episode-body">
         <h4>${ep.title}</h4>

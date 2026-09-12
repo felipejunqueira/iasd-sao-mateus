@@ -1,48 +1,44 @@
-.remedies-section {
-  background: var(--bg-main);
-}
+/* 8 Remédios Naturais */
+.remedies-section { background: var(--bg-surface); }
 
 .remedies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.35rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .remedy-card {
-  background: var(--bg-surface);
-  border-radius: var(--radius-md);
-  padding: 1.6rem;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-smooth);
+  background: var(--bg-muted);
+  border-radius: var(--r-md);
+  padding: 1.4rem 1.25rem;
+  border: 1px solid var(--border);
+  transition: var(--t);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
 .remedy-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: #10b981;
+  border-color: var(--brand-mid);
+  box-shadow: var(--shadow-sm);
 }
 
-.remedy-icon-box {
-  width: 50px;
-  height: 50px;
-  border-radius: var(--radius-sm);
-  background: rgba(16, 185, 129, 0.12);
-  color: #10b981;
+.remedy-num {
+  font-family: var(--font-display);
   font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--brand-gold);
+  line-height: 1;
 }
 
-.remedy-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.4rem;
+.remedy-name {
+  font-size: .95rem;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
-.remedy-card p {
-  font-size: 0.88rem;
+.remedy-desc {
+  font-size: .82rem;
   color: var(--text-secondary);
+  line-height: 1.55;
 }

@@ -1,36 +1,51 @@
-.btn-primary {
-  background: linear-gradient(135deg, var(--iasd-gold), var(--iasd-gold-dark));
-  color: #07192f;
-  font-weight: 700;
-  padding: 0.65rem 1.4rem;
-  border-radius: var(--radius-full);
-  border: none;
-  cursor: pointer;
+/* Buttons */
+.btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: var(--transition-smooth);
+  gap: .45rem;
+  padding: .65rem 1.5rem;
+  border-radius: var(--r-full);
+  font-family: var(--font-body);
+  font-size: .88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: var(--t);
+  white-space: nowrap;
+  text-decoration: none;
 }
 
+.btn-primary {
+  background: var(--brand-gold);
+  color: var(--brand-dark);
+  border-color: var(--brand-gold);
+}
 .btn-primary:hover {
-  transform: translateY(-2px);
+  background: var(--iasd-gold-dark);
+  border-color: var(--iasd-gold-dark);
+  transform: translateY(-1px);
   box-shadow: var(--shadow-gold);
 }
 
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  font-weight: 600;
-  padding: 0.65rem 1.35rem;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: var(--transition-smooth);
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255,255,255,.45);
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.7);
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.22);
-  transform: translateY(-2px);
+.btn-ghost {
+  background: transparent;
+  color: var(--brand-mid);
+  border-color: var(--border);
 }
+.btn-ghost:hover {
+  background: var(--bg-muted);
+  border-color: var(--border-strong);
+}
+
+/* Legacy aliases */
+.btn-secondary { @extend .btn-outline; }

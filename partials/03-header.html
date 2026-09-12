@@ -1,36 +1,33 @@
-<!-- Cabeçalho Principal -->
-  <header class="header-main" role="banner">
-    <div class="container">
-      <nav class="navbar" aria-label="Navegação Principal">
-        <a href="#inicio" class="brand-logo" aria-label="IASD São Mateus Página Inicial">
-          <img src="assets/images/iasd_emblema_transparente.png" width="38" height="38" alt="Logo Oficial IASD" style="display:inline-block;object-fit:contain;">
-          <div>
-            <div class="brand-title">Igreja Adventista</div>
-            <div class="brand-subtitle">São Mateus • ZL SP</div>
-          </div>
-        </a>
-
-        <!-- 3 Abas Principais no Menu -->
-        <ul class="nav-links" id="nav-menu" role="tablist">
-          <li class="nav-item">
-            <a href="#inicio" class="main-tab-link" onclick="location.hash='#inicio'">⛪ Início & Cultos</a>
-          </li>
-          <li class="nav-item">
-            <a href="#comunidade" class="main-tab-link" onclick="location.hash='#comunidade'">🤝 Comunidade & Dízimos</a>
-          </li>
-          <li class="nav-item">
-            <a href="#historia" class="main-tab-link" onclick="location.hash='#historia'">📜 História & Saúde</a>
-          </li>
-        </ul>
-
-        <div style="display:flex;align-items:center;gap:0.75rem;">
-          <a href="#dizimos" onclick="location.hash='#comunidade'" class="btn-primary" style="padding:0.45rem 1rem;font-size:0.85rem;">
-            💳 PIX / Dízimo
-          </a>
-          <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Abrir Menu" aria-expanded="false">
-            ☰
-          </button>
+<!-- Header + Navegação Principal -->
+<header class="header-main" role="banner">
+  <div class="container">
+    <nav class="navbar" aria-label="Navegação Principal">
+      <a href="#inicio" class="brand-logo" aria-label="Igreja Adventista São Mateus">
+        <img src="assets/images/iasd_emblema_transparente.png" width="34" height="34" alt="Emblema IASD">
+        <div>
+          <div class="brand-title">Igreja Adventista</div>
+          <div class="brand-subtitle">São Mateus · ZL SP</div>
         </div>
-      </nav>
-    </div>
-  </header>
+      </a>
+
+      <ul class="nav-links" id="nav-menu" role="tablist">
+        <li><a href="#inicio" class="main-tab-link active" data-tab="tab-inicio" data-hash="#inicio">Início & Cultos</a></li>
+        <li><a href="#comunidade" class="main-tab-link" data-tab="tab-comunidade" data-hash="#comunidade">Comunidade & Dízimos</a></li>
+        <li><a href="#historia" class="main-tab-link" data-tab="tab-historia" data-hash="#historia">História & Saúde</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/5511996338938" target="_blank" rel="noopener noreferrer"
+           class="btn btn-primary" style="font-size:.82rem;padding:.45rem 1.1rem;">
+          Falar com o Pastor
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>

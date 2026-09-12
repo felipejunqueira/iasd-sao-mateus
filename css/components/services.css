@@ -1,46 +1,70 @@
-/* Grid de Horários de Cultos Semanais */
+/* Seção de Horários de Culto */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
 }
 
 .service-card {
   background: var(--bg-surface);
-  border-radius: var(--radius-md);
-  padding: 1.85rem;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-smooth);
-  display: flex;
-  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.6rem 1.5rem;
+  transition: var(--t);
+  position: relative;
+  overflow: hidden;
 }
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--border);
+  transition: var(--t);
+}
+
+.service-card.featured::before { background: var(--brand-gold); }
 
 .service-card:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-md);
-  border-color: var(--iasd-blue-primary);
+  transform: translateY(-3px);
 }
 
-.service-day {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.85rem;
-}
+.service-card:hover::before { background: var(--brand-mid); }
+.service-card.featured:hover::before { background: var(--brand-gold); }
 
-.day-tag {
-  background: var(--bg-muted);
-  color: var(--iasd-blue-primary);
+.service-day-label {
+  font-size: .72rem;
   font-weight: 700;
-  font-size: 0.8rem;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text-muted);
+  margin-bottom: .6rem;
 }
 
-.service-time {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--iasd-blue-dark);
+.service-time-big {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: .5rem;
+  line-height: 1;
+}
+
+.service-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: .4rem;
+}
+
+.service-desc {
+  font-size: .85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+@media (max-width: 580px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
 }

@@ -25,3 +25,20 @@
 @import url('components/form-feedback.css');
 @import url('components/modals.css');
 @import url('components/footer.css');
+
+/* Aliases de classes legadas (compatibilidade com JS existente) */
+.section-tag { font-family: var(--font-body); font-size: .75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .12em; color: var(--brand-mid);
+  display: inline-block; margin-bottom: .65rem; }
+.section-desc { font-size: 1.05rem; color: var(--text-secondary); }
+
+/* btn-secondary legado → outline */
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .65rem 1.5rem; border-radius: var(--r-full);
+  font-size: .88rem; font-weight: 600; cursor: pointer;
+  border: 1.5px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.08); color: rgba(255,255,255,.85);
+  transition: var(--t);
+}
+.btn-secondary:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.6); }

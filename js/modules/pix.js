@@ -13,7 +13,7 @@ export function initPixCopy() {
 
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(key).then(() => {
-        showToast('Chave PIX copiada com sucesso!', '💳');
+        showToast('Chave PIX copiada com sucesso!');
       }).catch(() => fallbackCopy(key));
     } else {
       fallbackCopy(key);
@@ -34,8 +34,8 @@ function fallbackCopy(text) {
     tempInput.select();
     document.execCommand('copy');
     document.body.removeChild(tempInput);
-    showToast('Chave PIX copiada!', '💳');
+    showToast('Chave PIX copiada!');
   } catch {
-    showToast('Copie a chave manualmente: ' + text, 'ℹ️');
+    showToast('Copie a chave manualmente: ' + text);
   }
 }

@@ -1,64 +1,55 @@
+/* Footer */
 .footer-main {
-  background: #040d18;
-  color: #94a3b8;
-  padding: 4.5rem 0 2rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.portfolio-credits-banner {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-md);
-  padding: 1.4rem;
-  margin-bottom: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-
-.developer-profile {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-}
-
-.dev-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--iasd-gold), var(--iasd-gold-dark));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #07192f;
-  font-weight: 800;
-  font-size: 1.3rem;
-}
-
-.dev-text h5 {
-  color: #ffffff;
-  font-size: 1.05rem;
-}
-
-.dev-text p {
-  color: #cbd5e1;
-  font-size: 0.85rem;
+  background: var(--bg-dark);
+  color: rgba(255,255,255,.55);
+  padding: 4rem 0 2rem;
+  border-top: 1px solid rgba(255,255,255,.06);
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: 1.5fr repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 3rem;
 }
+
+.footer-brand p {
+  font-size: .88rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,.45);
+  margin-top: .85rem;
+  max-width: 260px;
+}
+
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 1rem;
+}
+
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+.footer-col a { font-size: .88rem; color: rgba(255,255,255,.6); }
+.footer-col a:hover { color: var(--brand-gold); }
+
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255,255,255,.06);
   padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 0.85rem;
+  gap: .75rem;
+  font-size: .8rem;
+}
+
+.footer-bottom strong { color: var(--brand-gold); }
+
+.dev-credit { color: rgba(255,255,255,.4); }
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
 }
