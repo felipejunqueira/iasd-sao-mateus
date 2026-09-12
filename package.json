@@ -1,0 +1,23 @@
+{
+  "name": "igreja-adventista-website",
+  "version": "1.0.0",
+  "description": "Website moderno, interativo e com alta acessibilidade para a Igreja Adventista do Sétimo Dia",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "sync-feed": "python3 scripts/sync_instagram.py --list",
+    "sync-interactive": "python3 scripts/sync_instagram.py --interactive"
+  },
+  "keywords": [
+    "igreja-adventista",
+    "iasd",
+    "portfolio",
+    "acessibilidade",
+    "vlibras",
+    "alto-contraste",
+    "python-feed"
+  ],
+  "author": "Felipe",
+  "license": "MIT"
+}

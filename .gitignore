@@ -1,0 +1,22 @@
+# Dependências e logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ambientes Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/

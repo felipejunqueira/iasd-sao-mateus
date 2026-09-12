@@ -1,0 +1,80 @@
+{
+  "last_updated": "2026-09-12T13:40:00Z",
+  "instagram_handle": "@iasdsaomateus",
+  "flickr_url": "https://www.flickr.com",
+  "instagram_url": "https://www.instagram.com",
+  "posts": [
+    {
+      "id": "post_01",
+      "category": "cultos",
+      "category_label": "Culto de Adoração",
+      "image": "assets/images/real_worship.jpg",
+      "title": "Sábado de Paz e Comunhão em São Mateus",
+      "caption": "Gratidão e louvor a Deus no Culto Divino deste sábado na IASD São Mateus. 'Grandes coisas fez o Senhor por nós, pelas quais estamos alegres.' (Salmo 126:3)",
+      "date": "12 de Setembro de 2026",
+      "likes": 182,
+      "link": "https://www.instagram.com",
+      "tags": ["#Sábado", "#IASDSãoMateus", "#CultoDivino", "#Adoração"]
+    },
+    {
+      "id": "post_02",
+      "category": "desbravadores",
+      "category_label": "Desbravadores & Aventureiros",
+      "image": "assets/images/real_camping.jpg",
+      "title": "Acampamento de Instrução e Natureza",
+      "caption": "Nossos bravos Desbravadores aprendendo nós, amarras, pioneiria e companheirismo em contato com a criação de Deus.",
+      "date": "06 de Setembro de 2026",
+      "likes": 234,
+      "link": "https://www.instagram.com",
+      "tags": ["#Desbravadores", "#LençoAmarelo", "#SãoMateus", "#Natureza"]
+    },
+    {
+      "id": "post_03",
+      "category": "acao_social",
+      "category_label": "Ação Social (ASA)",
+      "image": "assets/images/real_community_aid.jpg",
+      "title": "Entrega de Alimentos e Apoio Comunitário",
+      "caption": "Atendimento com alimentos frescos, carinho e oração para famílias da região de São Mateus pela Ação Solidária Adventista.",
+      "date": "30 de Agosto de 2026",
+      "likes": 196,
+      "link": "https://www.instagram.com",
+      "tags": ["#ASASãoMateus", "#Solidariedade", "#AmorAoPróximo", "#Esperança"]
+    },
+    {
+      "id": "post_04",
+      "category": "estudos",
+      "category_label": "Estudo Bíblico & Comunhão",
+      "image": "assets/images/real_bible_study.jpg",
+      "title": "Pequenos Grupos nos Lares",
+      "caption": "Reunião especial de estudo da Bíblia e intercessão. Convidamos você a fazer parte de um grupo perto da sua casa!",
+      "date": "27 de Agosto de 2026",
+      "likes": 125,
+      "link": "https://www.instagram.com",
+      "tags": ["#PequenosGrupos", "#EstudoBíblico", "#Oração", "#Comunidade"]
+    },
+    {
+      "id": "post_05",
+      "category": "jovens",
+      "category_label": "Ministério Jovem & Louvor",
+      "image": "assets/images/real_choir.jpg",
+      "title": "Vigília Jovem: Adoração e Fé",
+      "caption": "Juventude reunida para cantar louvores e buscar o Espírito Santo em oração fervorosa.",
+      "date": "22 de Agosto de 2026",
+      "likes": 278,
+      "link": "https://www.instagram.com",
+      "tags": ["#CultoJA", "#JovensAdventistas", "#Louvor", "#Vigília"]
+    },
+    {
+      "id": "post_06",
+      "category": "saude",
+      "category_label": "Vida Saudável",
+      "image": "assets/images/real_nature_water.jpg",
+      "title": "Os 8 Remédios Naturais na Prática",
+      "caption": "Cuidar do corpo e da mente é glorificar ao Criador. Dicas de saúde e bem-estar para o seu dia a dia.",
+      "date": "15 de Agosto de 2026",
+      "likes": 164,
+      "link": "https://www.instagram.com",
+      "tags": ["#8RemédiosNaturais", "#SaúdeAdventista", "#EstiloDeVida", "#BemEstar"]
+    }
+  ]
+}

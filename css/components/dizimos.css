@@ -1,0 +1,92 @@
+.dizimos-section {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dizimos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.dizimos-info h3 {
+  font-size: 1.8rem;
+  color: var(--iasd-blue-dark);
+  margin-bottom: 0.85rem;
+}
+
+.dizimos-info p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.dizimo-verse {
+  background: var(--bg-muted);
+  border-left: 4px solid var(--iasd-gold);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.pix-box-card {
+  background: linear-gradient(135deg, #07192f 0%, #0e2a47 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pix-badge {
+  background: #00b4d8;
+  color: #07192f;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.pix-qr-wrapper {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.pix-key-display {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  word-break: break-all;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.sevenme-banner {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .dizimos-container { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,81 @@
+{
+  "seasons": [
+    {
+      "id": "season_1",
+      "title": "Temporada 1: Origens e Esperança",
+      "description": "Descubra como a Bíblia explica a criação, o plano da salvação e o amor incondicional de Jesus.",
+      "episodes": [
+        {
+          "id": "ep_1_1",
+          "title": "Episódio 1: Quem é Deus e Como Ele se Revela",
+          "duration": "28 min",
+          "image": "assets/images/real_bible_study.jpg",
+          "video_id": "dQw4w9WgXcQ",
+          "summary": "Uma jornada fascinante pela revelação bíblica, a natureza de Deus e Seu cuidado diário por cada um de nós."
+        },
+        {
+          "id": "ep_1_2",
+          "title": "Episódio 2: A Origem da Dor e o Grande Conflito",
+          "duration": "32 min",
+          "image": "assets/images/real_sanctuary.jpg",
+          "video_id": "dQw4w9WgXcQ",
+          "summary": "Por que existe o sofrimento no mundo? Entenda a batalha espiritual cósmica e o triunfo final de Cristo."
+        },
+        {
+          "id": "ep_1_3",
+          "title": "Episódio 3: O Sábado - Um Oásis no Tempo",
+          "duration": "26 min",
+          "image": "assets/images/real_worship.jpg",
+          "video_id": "dQw4w9WgXcQ",
+          "summary": "O memorial da criação e sinal eterno de comunhão e repouso dado por Deus para a bênção de toda a humanidade."
+        }
+      ]
+    },
+    {
+      "id": "season_2",
+      "title": "Temporada 2: Profecias do Tempo do Fim",
+      "description": "Compreenda os livros de Daniel e Apocalipse sem medo, com clareza e fundamentação bíblica sólida.",
+      "episodes": [
+        {
+          "id": "ep_2_1",
+          "title": "Episódio 1: A Estátua de Daniel 2 e os Impérios Mundiais",
+          "duration": "34 min",
+          "image": "assets/images/real_bible_study.jpg",
+          "video_id": "dQw4w9WgXcQ",
+          "summary": "A história mundial predita com séculos de antecedência e a certeza do estabelecimento do Reino Eterno de Deus."
+        },
+        {
+          "id": "ep_2_2",
+          "title": "Episódio 2: As Mensagens dos Três Anjos de Apocalipse 14",
+          "duration": "30 min",
+          "image": "assets/images/real_choir.jpg",
+          "video_id": "dQw4w9WgXcQ",
+          "summary": "O último apelo de amor e verdade de Deus para o planeta Terra antes do glorioso retorno de Jesus."
+        }
+      ]
+    },
+    {
+      "id": "season_3",
+      "title": "Temporada 3: Vida Cristã Prática e Saúde",
+      "description": "Como viver com saúde física, mental e espiritual nos dias de hoje segundo os conselhos de Deus.",
+      "episodes": [
+        {
+          "id": "ep_3_1",
+          "title": "Episódio 1: O Poder Restaurador da Oração",
+          "duration": "25 min",
+          "image": "assets/images/real_fellowship.jpg",
+          "video_id": "dQw4w9WgXcQ",
+          "summary": "Como cultivar uma conversa diária e íntima com Deus para vencer a ansiedade e ter paz interior."
+        },
+        {
+          "id": "ep_3_2",
+          "title": "Episódio 2: O Templo do Espírito Santo e os 8 Remédios",
+          "duration": "31 min",
+          "image": "assets/images/real_nature_water.jpg",
+          "video_id": "dQw4w9WgXcQ",
+          "summary": "Princípios científicos e bíblicos para desfrutar de vitalidade, energia e longevidade com qualidade de vida."
+        }
+      ]
+    }
+  ]
+}

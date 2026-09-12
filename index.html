@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Igreja Adventista do Sétimo Dia - São Mateus | Esperança e Comunidade</title>
+  
+  <meta name="description" content="Portal oficial da Igreja Adventista do Sétimo Dia de São Mateus. Rua Antônio Previato, 1001. Horários de cultos, séries bíblicas, dízimos, PIX e projetos comunitários.">
+  <meta name="keywords" content="IASD São Mateus, Igreja Adventista, Rua Antônio Previato, São Mateus, Cultos, Desbravadores, Escola Sabatina, Séries Bíblicas, Dízimo PIX">
+  <meta name="author" content="Felipe">
+
+  <meta property="og:title" content="Igreja Adventista do Sétimo Dia - São Mateus">
+  <meta property="og:description" content="Um lugar acolhedor para toda a sua família na Rua Antônio Previato, 1001. Venha nos visitar!">
+  <meta property="og:image" content="assets/images/real_worship.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon Oficial da IASD (SVG + PNG transparente) -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/images/favicon.png">
+  
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de Acessibilidade & Tema Minimalista -->
+  <aside class="accessibility-bar" aria-label="Ferramentas de Acessibilidade">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;width:100%;flex-wrap:wrap;gap:0.5rem;">
+      <div class="a11y-shortcuts">
+        <button id="toggle-theme" class="a11y-btn" title="Alternar Modo Claro / Modo Escuro">🌙 Escuro</button>
+        <button id="toggle-contrast" class="a11y-btn" aria-pressed="false" title="Alternar Alto Contraste">🌓 Alto Contraste</button>
+        <button id="toggle-grayscale" class="a11y-btn" aria-pressed="false" title="Modo Monocromático">🏁 P&B</button>
+      </div>
+      <div class="a11y-actions">
+        <button id="font-decrease" class="a11y-btn" aria-label="Diminuir fonte">A-</button>
+        <button id="font-increase" class="a11y-btn" aria-label="Aumentar fonte">A+</button>
+        <button id="toggle-tts" class="a11y-btn" title="Ouvir conteúdo em áudio">🔊 Ouvir Site</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho Principal -->
+  <header class="header-main" role="banner">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegação Principal">
+        <a href="#inicio" class="brand-logo" aria-label="IASD São Mateus Página Inicial">
+          <img src="assets/images/favicon.svg" width="36" height="36" alt="Logo IASD" style="display:inline-block;">
+          <div>
+            <div class="brand-title">Igreja Adventista</div>
+            <div class="brand-subtitle">São Mateus • ZL SP</div>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="nav-menu">
+          <li class="nav-item"><a href="#inicio">Início</a></li>
+          <li class="nav-item"><a href="#links-bio">Links da Bio</a></li>
+          <li class="nav-item"><a href="#cultos">Cultos</a></li>
+          <li class="nav-item"><a href="#series">Séries Bíblicas</a></li>
+          <li class="nav-item"><a href="#dizimos">Dízimos & PIX</a></li>
+          <li class="nav-item"><a href="#saude">8 Remédios</a></li>
+          <li class="nav-item"><a href="#ministerios">Ministérios</a></li>
+          <li class="nav-item"><a href="#galeria">Fotos</a></li>
+          <li class="nav-item"><a href="#estudo-biblico">Estudo & Oração</a></li>
+          <li class="nav-item"><a href="#contato">Como Chegar</a></li>
+        </ul>
+
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <a href="#dizimos" class="btn-primary" style="padding:0.45rem 1rem;font-size:0.85rem;">
+            💳 PIX / Dízimo
+          </a>
+          <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Abrir Menu" aria-expanded="false">
+            ☰
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="conteudo-principal">
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section" aria-label="Apresentação da Igreja">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            ✨ Rua Antônio Previato, 1001 • São Mateus, SP
+          </div>
+          <h1 class="hero-title">
+            Um refúgio de paz, <span>esperança e amor</span> para você e sua família.
+          </h1>
+          <p class="hero-desc">
+            Seja bem-vindo à Igreja Adventista do Sétimo Dia de São Mateus. Venha renovar sua fé, cantar louvores e aprender ensinamentos práticos da Bíblia Sagrada.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#cultos" class="btn-primary">📅 Ver Nossos Cultos</a>
+            <a href="#series" class="btn-secondary">▶ Assistir Séries Bíblicas</a>
+            <a href="#contato" class="btn-secondary">📍 Como Chegar</a>
+          </div>
+
+          <div class="next-service-banner" aria-live="polite">
+            <div class="service-badge-info">
+              <div class="service-icon-box">🔔</div>
+              <div>
+                <h4 id="next-service-title" style="color:#fff;font-size:1rem;">Carregando próximo culto...</h4>
+                <p id="next-service-desc" style="color:#cbd5e1;font-size:0.85rem;">Venha adorar conosco em São Mateus!</p>
+              </div>
+            </div>
+            <a href="#cultos" class="btn-secondary" style="font-size:0.8rem;padding:0.4rem 0.8rem;">Programação ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hub de Links Rápidos (Ideal para a Bio do Instagram) -->
+    <section id="links-bio" class="quick-links-section" aria-label="Links Úteis e Bio do Instagram">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+          <span class="section-tag">Acesso Rápido</span>
+          <h2 style="font-size:1.6rem;color:var(--text-primary);">Hub de Links da IASD São Mateus</h2>
+        </div>
+        <div class="quick-links-grid">
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <span class="quick-link-icon">🔴</span>
+            <span class="quick-link-title">Cultos ao Vivo</span>
+            <span class="quick-link-desc">Assista no YouTube</span>
+          </a>
+          <a href="#series" class="quick-link-card">
+            <span class="quick-link-icon">🎬</span>
+            <span class="quick-link-title">Séries Bíblicas</span>
+            <span class="quick-link-desc">Temporadas gratuitas</span>
+          </a>
+          <a href="#dizimos" class="quick-link-card">
+            <span class="quick-link-icon">💳</span>
+            <span class="quick-link-title">Dízimos & Ofertas</span>
+            <span class="quick-link-desc">Chave PIX e 7me</span>
+          </a>
+          <a href="#estudo-biblico" class="quick-link-card">
+            <span class="quick-link-icon">🙏</span>
+            <span class="quick-link-title">Pedido de Oração</span>
+            <span class="quick-link-desc">Equipe de intercessão</span>
+          </a>
+          <a href="https://novotempo.com" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <span class="quick-link-icon">📺</span>
+            <span class="quick-link-title">Rede Novo Tempo</span>
+            <span class="quick-link-desc">TV e Rádio da Esperança</span>
+          </a>
+          <a href="https://cpb.com.br" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <span class="quick-link-icon">📖</span>
+            <span class="quick-link-title">Lição da Escola Sabatina</span>
+            <span class="quick-link-desc">Portal CPB</span>
+          </a>
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="quick-link-card">
+            <span class="quick-link-icon">💬</span>
+            <span class="quick-link-title">WhatsApp Pastoral</span>
+            <span class="quick-link-desc">Fale com a secretaria</span>
+          </a>
+          <a href="#contato" class="quick-link-card">
+            <span class="quick-link-icon">📍</span>
+            <span class="quick-link-title">Rua Antônio Previato</span>
+            <span class="quick-link-desc">Abrir no GPS</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horários dos Cultos -->
+    <section id="cultos" class="section" aria-labelledby="cultos-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Programação Semanal</span>
+          <h2 id="cultos-heading" class="section-title">Nossos Horários de Adoração</h2>
+          <p class="section-desc">Encontros acolhedores para todas as faixas etárias na Rua Antônio Previato, 1001.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-day">
+              <span class="day-tag">Sábado de Manhã</span>
+              <span class="service-time">09:00</span>
+            </div>
+            <h3 style="font-size:1.25rem;color:var(--text-primary);margin-bottom:0.5rem;">Escola Sabatina</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Estudo interativo da Bíblia Sagrada em pequenas classes com espaço para perguntas e reflexão.</p>
+          </div>
+
+          <div class="service-card" style="border-top:4px solid var(--iasd-gold);">
+            <div class="service-day">
+              <span class="day-tag" style="background:#fef08a;color:#854d0e;">Sábado de Manhã</span>
+              <span class="service-time">10:15</span>
+            </div>
+            <h3 style="font-size:1.25rem;color:var(--text-primary);margin-bottom:0.5rem;">Culto Divino</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Celebração congregacional de adoração, louvor ao Criador e mensagem bíblica expositiva.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-day">
+              <span class="day-tag">Sábado à Tarde</span>
+              <span class="service-time">17:00</span>
+            </div>
+            <h3 style="font-size:1.25rem;color:var(--text-primary);margin-bottom:0.5rem;">Culto Jovem (JA)</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Música contemporânea, testemunhos inspiradores e temas da juventude cristã.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-day">
+              <span class="day-tag">Quarta-feira</span>
+              <span class="service-time">19:30</span>
+            </div>
+            <h3 style="font-size:1.25rem;color:var(--text-primary);margin-bottom:0.5rem;">Oração & Estudo Bíblico</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Recarregue as energias espirituais no meio da semana com oração e estudo dos evangelhos.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-day">
+              <span class="day-tag">Domingo</span>
+              <span class="service-time">19:30</span>
+            </div>
+            <h3 style="font-size:1.25rem;color:var(--text-primary);margin-bottom:0.5rem;">Culto da Família & Esperança</h3>
+            <p style="font-size:0.9rem;color:var(--text-secondary);">Mensagens de encorajamento para superação de desafios diários e fortalecimento do lar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Central de Séries Bíblicas em Temporadas -->
+    <section id="series" class="section series-section" aria-labelledby="series-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Aulas em Vídeo</span>
+          <h2 id="series-heading" class="section-title">Central de Séries Bíblicas</h2>
+          <p class="section-desc">Assista gratuitamente às temporadas de estudos bíblicos preparados para enriquecer o seu conhecimento da Palavra de Deus.</p>
+        </div>
+
+        <div class="season-tabs" id="season-tabs-container"></div>
+        <div class="episodes-grid" id="episodes-container"></div>
+      </div>
+    </section>
+
+    <!-- Seção de Dízimos e Ofertas (PIX e 7me) -->
+    <section id="dizimos" class="section dizimos-section" aria-labelledby="dizimos-heading">
+      <div class="container">
+        <div class="dizimos-container">
+          <div class="dizimos-info">
+            <span class="section-tag">Fidelidade e Missão</span>
+            <h2 id="dizimos-heading" class="section-title">Dízimos e Ofertas Voluntárias</h2>
+            <p>
+              Na Igreja Adventista, a devolução dos dízimos (10% que pertencem ao Senhor) e as ofertas voluntárias do coração sustentam o anúncio do evangelho, a ação social aos necessitados e o avanço da missão de Cristo.
+            </p>
+            <div class="dizimo-verse">
+              "Trazei todos os dízimos à casa do tesouro, para que haja mantimento na minha casa, e depois fazei prova de mim, diz o Senhor dos Exércitos." — Malaquias 3:10
+            </div>
+            <p>Você pode devolver seu dízimo e ofertar pelo aplicativo oficial <strong>7me</strong> ou diretamente via <strong>PIX</strong> da congregação.</p>
+          </div>
+
+          <div class="pix-box-card">
+            <span class="pix-badge">CHAVE PIX OFICIAL</span>
+            <div class="pix-qr-wrapper">
+              <svg width="140" height="140" viewBox="0 0 100 100" fill="#07192f">
+                <rect x="5" y="5" width="30" height="30" fill="#07192f"/>
+                <rect x="10" y="10" width="20" height="20" fill="#ffffff"/>
+                <rect x="15" y="15" width="10" height="10" fill="#07192f"/>
+                <rect x="65" y="5" width="30" height="30" fill="#07192f"/>
+                <rect x="70" y="10" width="20" height="20" fill="#ffffff"/>
+                <rect x="75" y="15" width="10" height="10" fill="#07192f"/>
+                <rect x="5" y="65" width="30" height="30" fill="#07192f"/>
+                <rect x="10" y="70" width="20" height="20" fill="#ffffff"/>
+                <rect x="15" y="75" width="10" height="10" fill="#07192f"/>
+                <circle cx="50" cy="50" r="12" fill="#eab308"/>
+              </svg>
+            </div>
+            <div class="pix-key-display" id="pix-key-text">
+              tesouraria.saomateus@iasd.org.br
+            </div>
+            <button id="btn-copy-pix" class="btn-primary" style="width:100%;justify-content:center;">
+              📋 Copiar Chave PIX
+            </button>
+
+            <div class="sevenme-banner">
+              <div style="text-align:left;">
+                <strong style="color:#fff;font-size:0.9rem;">App Oficial 7me</strong>
+                <p style="color:#cbd5e1;font-size:0.8rem;margin:0;">Gerencie seus dízimos com comprovante oficial da igreja.</p>
+              </div>
+              <a href="https://7me.app" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding:0.4rem 0.8rem;font-size:0.8rem;">
+                Acessar 7me ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Linha do Tempo da Igreja -->
+    <section id="historia" class="section timeline-section" aria-labelledby="historia-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Nossa Trajetória</span>
+          <h2 id="historia-heading" class="section-title">História da IASD São Mateus</h2>
+          <p class="section-desc">Uma história de fé e dedicação comunitária na Zona Leste de São Paulo.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2012</span>
+              <h3>O Início das Reuniões</h3>
+              <p>Pequeno grupo de pioneiros reúne famílias para estudos bíblicos na região de São Mateus.</p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2015</span>
+              <h3>Estabelecimento do Templo</h3>
+              <p>Abertura solene do templo na Rua Antônio Previato, 1001, acolhendo centenas de vizinhos.</p>
+            </div>
+          </div>
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2018</span>
+              <h3>Clubes de Desbravadores & Aventureiros</h3>
+              <p>Fundação dos clubes para formação de liderança, princípios cristãos e serviço ao ar livre.</p>
+            </div>
+          </div>
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year">2026</span>
+              <h3>Comunidade Viva & Conectada</h3>
+              <p>Portal digital inclusivo, reforçando o alcance do evangelho para todas as famílias do bairro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 Remédios Naturais -->
+    <section id="saude" class="section remedies-section" aria-labelledby="saude-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Estilo de Vida Saudável</span>
+          <h2 id="saude-heading" class="section-title">Os 8 Remédios Naturais de Deus</h2>
+          <p class="section-desc">Princípios comprovados de saúde integral promovidos pela Igreja Adventista mundialmente.</p>
+        </div>
+
+        <div class="remedies-grid">
+          <div class="remedy-card"><div class="remedy-icon-box">💧</div><h3>1. Água Pura</h3><p>Beba bastante água pura para hidratar as células e purificar o corpo.</p></div>
+          <div class="remedy-card"><div class="remedy-icon-box">🍃</div><h3>2. Ar Puro</h3><p>Oxigenação profunda em contato com áreas verdes para clareza mental.</p></div>
+          <div class="remedy-card"><div class="remedy-icon-box">☀️</div><h3>3. Luz Solar</h3><p>Ativação de vitamina D, fortalecimento imunológico e bom humor matinal.</p></div>
+          <div class="remedy-card"><div class="remedy-icon-box">🏃</div><h3>4. Exercício Físico</h3><p>Caminhadas e atividades regulares para fortalecer o coração e o corpo.</p></div>
+          <div class="remedy-card"><div class="remedy-icon-box">🛌</div><h3>5. Repouso Reparador</h3><p>Sono de qualidade à noite e o descanso semanal do sábado sagrado.</p></div>
+          <div class="remedy-card"><div class="remedy-icon-box">🥗</div><h3>6. Nutrição Equilibrada</h3><p>Alimentos integrais, frutas e verduras com redução de ultraprocessados.</p></div>
+          <div class="remedy-card"><div class="remedy-icon-box">⚖️</div><h3>7. Temperança</h3><p>Equilíbrio no trabalho e abstenção total de substâncias nocivas.</p></div>
+          <div class="remedy-card"><div class="remedy-icon-box">🙏</div><h3>8. Confiança em Deus</h3><p>Fé e oração que trazem paz interior e serenidade nas tribulações.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministérios e Clubes -->
+    <section id="ministerios" class="section" aria-labelledby="ministerios-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Desenvolvimento & Comunidade</span>
+          <h2 id="ministerios-heading" class="section-title">Clubes e Ministérios</h2>
+          <p class="section-desc">Atividades formativas para crianças, adolescentes, jovens e famílias em São Mateus.</p>
+        </div>
+
+        <div class="ministries-grid">
+          <div class="ministry-card">
+            <div class="ministry-image-wrapper">
+              <span class="ministry-badge">10 a 15 anos</span>
+              <img src="assets/images/real_camping.jpg" alt="Desbravadores em acampamento real">
+            </div>
+            <div class="ministry-body">
+              <h3>Clube de Desbravadores</h3>
+              <p>Acampamentos, pioneiria, cidadania, noções de sobrevivência e crescimento do caráter cristão.</p>
+              <a href="#contato" class="btn-secondary" style="color:var(--iasd-blue-primary);border-color:#cbd5e1;justify-content:center;">Inscrever Filho(a) ↗</a>
+            </div>
+          </div>
+
+          <div class="ministry-card">
+            <div class="ministry-image-wrapper">
+              <span class="ministry-badge" style="background:#065f46;color:#a7f3d0;">Solidariedade</span>
+              <img src="assets/images/real_community_aid.jpg" alt="Ação Solidária Adventista entregando alimentos">
+            </div>
+            <div class="ministry-body">
+              <h3>Ação Solidária Adventista (ASA)</h3>
+              <p>Assistência a famílias em vulnerabilidade de São Mateus com alimentos, roupas e apoio emocional.</p>
+              <a href="#contato" class="btn-secondary" style="color:var(--iasd-blue-primary);border-color:#cbd5e1;justify-content:center;">Quero Ajudar ↗</a>
+            </div>
+          </div>
+
+          <div class="ministry-card">
+            <div class="ministry-image-wrapper">
+              <span class="ministry-badge" style="background:#1e3a8a;color:#bae6fd;">Música & Jovens</span>
+              <img src="assets/images/real_choir.jpg" alt="Coral e equipe de louvor congregacional">
+            </div>
+            <div class="ministry-body">
+              <h3>Louvor e Jovens Adventistas (JA)</h3>
+              <p>Coral, equipe instrumental e encontros dinâmicos da juventude de fé aos sábados à tarde.</p>
+              <a href="#contato" class="btn-secondary" style="color:var(--iasd-blue-primary);border-color:#cbd5e1;justify-content:center;">Participar ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria de Fotos Reais e Feed -->
+    <section id="galeria" class="section gallery-section" aria-labelledby="galeria-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Momentos Reais</span>
+          <h2 id="galeria-heading" class="section-title">Galeria de Fotos da Comunidade</h2>
+          <p class="section-desc">Registros autênticos dos cultos, acampamentos e encontros de oração.</p>
+        </div>
+
+        <div class="gallery-filters" role="tablist">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="cultos">Cultos</button>
+          <button class="filter-btn" data-filter="desbravadores">Desbravadores</button>
+          <button class="filter-btn" data-filter="acao_social">Ação Social</button>
+          <button class="filter-btn" data-filter="estudos">Estudos Bíblicos</button>
+          <button class="filter-btn" data-filter="jovens">Jovens & Louvor</button>
+          <button class="filter-btn" data-filter="saude">Saúde</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-posts-container" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Formulários de Estudo Bíblico e Pedidos de Oração -->
+    <section id="estudo-biblico" class="section form-section" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="color:var(--iasd-gold);">Crescimento Espiritual</span>
+          <h2 id="form-heading" class="section-title" style="color:#fff;">Como Podemos Ajudar Você?</h2>
+          <p class="section-desc" style="color:#cbd5e1;">Solicite uma Bíblia e guia de estudos gratuito ou envie seu pedido confidencial de oração.</p>
+        </div>
+
+        <div class="form-container-box">
+          <div class="form-tabs">
+            <button class="form-tab-btn active" id="tab-bible">📖 Quero Estudar a Bíblia</button>
+            <button class="form-tab-btn" id="tab-prayer">🙏 Pedido de Oração</button>
+          </div>
+
+          <form id="form-bible-study" class="form-grid">
+            <div class="form-group">
+              <label for="bible-name">Seu Nome *</label>
+              <input type="text" id="bible-name" class="form-control" placeholder="Ex: João da Silva" required>
+            </div>
+            <div class="form-group">
+              <label for="bible-whatsapp">WhatsApp com DDD *</label>
+              <input type="tel" id="bible-whatsapp" class="form-control" placeholder="(11) 98888-7777" required>
+            </div>
+            <div class="form-group">
+              <label for="bible-modality">Modalidade de Estudo</label>
+              <select id="bible-modality" class="form-control">
+                <option value="online">Online via WhatsApp</option>
+                <option value="presencial">Presencial na igreja (Rua Antônio Previato, 1001)</option>
+                <option value="impresso">Desejo guia impresso gratuito</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bible-topic">Tema de Interesse</label>
+              <select id="bible-topic" class="form-control">
+                <option value="jesus">A Vida e os Ensinos de Jesus</option>
+                <option value="profecias">Profecias de Daniel e Apocalipse</option>
+                <option value="paz">Paz Interior e Vencer a Ansiedade</option>
+                <option value="familia">Princípios Bíblicos para o Lar</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;">
+                Enviar Solicitação Gratuita
+              </button>
+            </div>
+          </form>
+
+          <form id="form-prayer-request" class="form-grid" style="display:none;">
+            <div class="form-group">
+              <label for="prayer-name">Seu Nome (ou Anônimo)</label>
+              <input type="text" id="prayer-name" class="form-control" placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+              <label for="prayer-category">Motivo da Oração</label>
+              <select id="prayer-category" class="form-control">
+                <option value="saude">Saúde & Cura</option>
+                <option value="familia">Família & Casamento</option>
+                <option value="trabalho">Emprego & Finanças</option>
+                <option value="espiritual">Paz Espiritual</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="prayer-details">Pedido de Oração *</label>
+              <textarea id="prayer-details" class="form-control" rows="3" placeholder="Compartilhe seu motivo de oração..." required></textarea>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;background:linear-gradient(135deg,#10b981,#059669);color:#fff;">
+                Enviar para a Equipe de Oração
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Localização e Rotas de GPS -->
+    <section id="contato" class="section" aria-labelledby="contato-heading">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem;align-items:center;">
+          <div>
+            <span class="section-tag">Onde Estamos</span>
+            <h2 id="contato-heading" class="section-title">Venha Adorar Conosco!</h2>
+            <p style="color:var(--text-secondary);font-size:1.05rem;margin-bottom:1.5rem;">
+              Local de fácil acesso na Zona Leste de São Paulo, com recepção amigável e estacionamento.
+            </p>
+            <div style="background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.5rem;margin-bottom:1.5rem;">
+              <h4 style="color:var(--text-primary);margin-bottom:0.4rem;font-size:1.15rem;">📍 Endereço Oficial:</h4>
+              <p style="font-size:1rem;font-weight:700;color:var(--iasd-blue-primary);margin-bottom:0.35rem;">
+                Rua Antônio Previato, 1001
+              </p>
+              <p style="color:var(--text-secondary);font-size:0.9rem;">
+                São Mateus, São Paulo - SP | CEP: 03962-000
+              </p>
+            </div>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+              <a href="https://www.google.com/maps/search/?api=1&query=Rua+Antônio+Previato+1001+São+Mateus+São+Paulo" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                🗺️ Abrir no Google Maps
+              </a>
+              <a href="https://waze.com/ul?q=Rua+Antônio+Previato+1001+São+Mateus+São+Paulo" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="color:var(--iasd-blue-dark);border-color:#cbd5e1;">
+                🚗 Abrir no Waze
+              </a>
+            </div>
+          </div>
+
+          <div style="background:var(--bg-surface);border-radius:var(--radius-lg);padding:1.5rem;border:1px solid var(--border-color);box-shadow:var(--shadow-md);">
+            <div style="height:260px;border-radius:var(--radius-md);background:url('assets/images/real_sanctuary.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;position:relative;">
+              <div style="background:rgba(7,25,47,0.85);color:#fff;padding:0.6rem 1.2rem;border-radius:var(--radius-full);font-weight:700;font-size:0.9rem;border:2px solid var(--iasd-gold);">
+                ⛪ IASD São Mateus • 1001
+              </div>
+            </div>
+            <div style="margin-top:1rem;font-size:0.85rem;color:var(--text-secondary);text-align:center;">
+              Rampa de acessibilidade e acolhimento para idosos e crianças.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal do Player de Vídeo das Séries -->
+  <div id="video-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Player de Séries Bíblicas">
+    <div class="modal-dialog">
+      <button id="video-modal-close" class="modal-close-btn" aria-label="Fechar Vídeo">✕</button>
+      <div style="padding:1rem 1.25rem;background:#07192f;color:#fff;">
+        <h3 id="video-modal-title" style="font-size:1.1rem;color:#fff;margin:0;">Aula Bíblica</h3>
+      </div>
+      <iframe id="video-frame" class="video-player-frame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Modal Lightbox para Fotos -->
+  <div id="lightbox-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Visualizador de Foto">
+    <div class="modal-dialog">
+      <button id="lightbox-close" class="modal-close-btn" aria-label="Fechar Foto">✕</button>
+      <div style="max-height:480px;background:#000;display:flex;align-items:center;justify-content:center;">
+        <img id="lightbox-img" src="" alt="" style="max-height:480px;object-fit:contain;">
+      </div>
+      <div style="padding:1.25rem;background:#0f172a;color:#fff;">
+        <h3 id="lightbox-title" style="color:#fff;margin-bottom:0.35rem;font-size:1.15rem;"></h3>
+        <p id="lightbox-caption" style="color:#cbd5e1;font-size:0.9rem;margin:0;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé & Portfólio de Felipe -->
+  <footer class="footer-main" role="contentinfo">
+    <div class="container">
+      <div class="portfolio-credits-banner">
+        <div class="developer-profile">
+          <div class="dev-avatar">F</div>
+          <div class="dev-text">
+            <h5>Site Desenvolvido por Felipe</h5>
+            <p>Projeto dedicado à Igreja Adventista de São Mateus • Código Aberto, Acessível e Modular (Filosofia Unix)</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:0.75rem;">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size:0.85rem;padding:0.4rem 0.85rem;">
+            💻 GitHub
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:0.85rem;padding:0.4rem 0.85rem;">
+            🤝 LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div>
+          <h3 style="color:#fff;margin-bottom:0.75rem;">Igreja Adventista do Sétimo Dia</h3>
+          <p style="font-size:0.9rem;color:#cbd5e1;max-width:320px;">
+            Proclamando o evangelho eterno, o amor de Jesus Cristo e a esperança de sua breve volta na comunidade de São Mateus.
+          </p>
+        </div>
+        <div>
+          <h4 style="color:#fff;margin-bottom:1rem;">Navegação</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.45rem;font-size:0.9rem;">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#cultos">Cultos</a></li>
+            <li><a href="#series">Séries Bíblicas</a></li>
+            <li><a href="#dizimos">Dízimos & PIX</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#fff;margin-bottom:1rem;">Recursos Oficiais</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.45rem;font-size:0.9rem;">
+            <li><a href="https://novotempo.com" target="_blank" rel="noopener noreferrer">TV Novo Tempo ↗</a></li>
+            <li><a href="https://cpb.com.br" target="_blank" rel="noopener noreferrer">Casa Publicadora (CPB) ↗</a></li>
+            <li><a href="https://7me.app" target="_blank" rel="noopener noreferrer">Portal 7me ↗</a></li>
+            <li><a href="https://adventistas.org" target="_blank" rel="noopener noreferrer">Adventistas.org ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#fff;margin-bottom:1rem;">Localização</h4>
+          <p style="font-size:0.9rem;color:#cbd5e1;margin-bottom:0.35rem;">
+            Rua Antônio Previato, 1001
+          </p>
+          <p style="font-size:0.85rem;color:#94a3b8;">
+            São Mateus, São Paulo - SP
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Igreja Adventista do Sétimo Dia - São Mateus. Todos os direitos reservados.</p>
+        <p>Desenvolvido com excelência por <strong style="color:var(--iasd-gold);">Felipe</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
