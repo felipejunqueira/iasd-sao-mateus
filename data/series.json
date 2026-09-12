@@ -5,29 +5,29 @@
       "title": "Temporada 1: Lições da Bíblia (Escola Sabatina)",
       "description": "Estudos bíblicos semanais produzidos pela Associação Paulista Leste (APL), sede das igrejas da Zona Leste de SP.",
       "episodes": [
-        { "id": "ep_1_1", "title": "Lição 10: Dons Espirituais e Ministério", "duration": "38 min", "image": "assets/images/real_bible_study.jpg", "video_id": "satuhlMsZjw", "summary": "Estudo aprofundado sobre os dons que o Espírito Santo concede para edificação da igreja e serviço ao próximo." },
-        { "id": "ep_1_2", "title": "Lição 11: A Advertência Final da Graça", "duration": "42 min", "image": "assets/images/real_sanctuary.jpg", "video_id": "pYRP49ERt84", "summary": "Mensagem bíblica expositiva sobre a fidelidade a Deus, o tempo da graça e a esperança da vitória em Cristo." },
-        { "id": "ep_1_3", "title": "Lição 12: Purificação e Vida Renovada", "duration": "36 min", "image": "assets/images/real_worship.jpg", "video_id": "gFUf4cSTB1g", "summary": "Como a Palavra de Deus limpa nossos caminhos e nos prepara para viver com paz e propósito na comunidade." }
+        { "id": "ep_1_1", "title": "Série Apocalipse: O Início do Fim", "duration": "45 min", "image": "assets/images/real_bible_study.jpg", "video_id": "8PZ0vQvXJc0", "summary": "Neste primeiro episódio, vamos desvendar os mistérios introdutórios do livro do Apocalipse." },
+        { "id": "ep_1_2", "title": "Série Apocalipse: As 7 Igrejas", "duration": "42 min", "image": "assets/images/real_sanctuary.jpg", "video_id": "N1-jX9C4H9g", "summary": "Uma viagem no tempo para entender as mensagens proféticas às 7 igrejas da Ásia Menor." },
+        { "id": "ep_1_3", "title": "Série Apocalipse: O Selo de Deus", "duration": "48 min", "image": "assets/images/real_worship.jpg", "video_id": "z9Q_O1T3z-E", "summary": "Descubra qual é a marca de Deus para os últimos dias e como estar preparado." }
       ]
     },
     {
       "id": "season_2",
-      "title": "Temporada 2: Mensagens de Fé e Comunhão",
-      "description": "Reflexões espirituais oficiais da Igreja Adventista no Brasil e na Zona Leste de São Paulo.",
+      "title": "Temporada 2: Família Forte",
+      "description": "Série de palestras focadas na estruturação do lar, criação de filhos e relacionamento a dois.",
       "episodes": [
-        { "id": "ep_2_1", "title": "Faça Tudo o Que Ele Disser", "duration": "25 min", "image": "assets/images/real_fellowship.jpg", "video_id": "tYXdxCDsWhw", "summary": "Mensagem inspiradora sobre confiar na condução de Deus em momentos de incerteza e renovar a fidelidade." },
-        { "id": "ep_2_2", "title": "Meditação Bíblica: O Chamado ao Sacrifício", "duration": "22 min", "image": "assets/images/real_nature_water.jpg", "video_id": "DW0EERRlXxs", "summary": "Reflexão bíblica para a preparação espiritual do pôr do sol e o reencontro com a presença do Senhor." },
-        { "id": "ep_2_3", "title": "Celebração: Batismo da Primavera Paulista Leste", "duration": "35 min", "image": "assets/images/real_camping.jpg", "video_id": "M4pO2mL4ZU8", "summary": "Testemunhos reais de vidas transformadas pelo amor de Jesus nas congregações da Zona Leste de SP." }
+        { "id": "ep_2_1", "title": "Família Forte: Relacionamento a Dois", "duration": "35 min", "image": "assets/images/real_fellowship.jpg", "video_id": "V4m_C81W6kM", "summary": "Dicas práticas baseadas na Bíblia para melhorar a comunicação no casamento." },
+        { "id": "ep_2_2", "title": "Família Forte: A Criação de Filhos", "duration": "32 min", "image": "assets/images/real_nature_water.jpg", "video_id": "2Xm9D8oG4U8", "summary": "Os desafios modernos de criar filhos nos caminhos do Senhor e os limites necessários." },
+        { "id": "ep_2_3", "title": "Família Forte: Finanças no Lar", "duration": "40 min", "image": "assets/images/real_camping.jpg", "video_id": "K3-C0oX_pY4", "summary": "Aprenda sobre orçamento familiar, fidelidade e como evitar conflitos financeiros em casa." }
       ]
     },
     {
       "id": "season_3",
-      "title": "Temporada 3: Louvor e Música Inspiradora",
-      "description": "Músicas e hinos sagrados da Gravadora Novo Tempo para enriquecer seu momento de comunhão com Deus.",
+      "title": "Temporada 3: Especiais Musicais",
+      "description": "Grandes momentos de louvor e adoração com grupos e cantores adventistas.",
       "episodes": [
-        { "id": "ep_3_1", "title": "Novo Tom: Descansa em Mim", "duration": "5 min", "image": "assets/images/real_choir.jpg", "video_id": "5aLsluaPnTg", "summary": "Hino tocante de adoração e entrega que traz serenidade e convida a descansar nas promessas do Pai Celestial." },
-        { "id": "ep_3_2", "title": "Temis & Rawfy: Porque Ele Vive (Álbum Raízes)", "duration": "6 min", "image": "assets/images/real_worship.jpg", "video_id": "1fT9LVcKrWY", "summary": "Interpretação emocionante de um dos maiores clássicos da fé cristã mundial sobre a ressurreição de Cristo." },
-        { "id": "ep_3_3", "title": "Etiene: Até Mil Gerações", "duration": "5 min", "image": "assets/images/real_community_aid.jpg", "video_id": "dUUkFcEFL6U", "summary": "Louvor sobre a bênção do Senhor que permanece sobre nossas famílias e filhos de geração em geração." }
+        { "id": "ep_3_1", "title": "Arautos do Rei: Especial de 60 anos", "duration": "55 min", "image": "assets/images/real_choir.jpg", "video_id": "z2E-T3K_K0M", "summary": "Celebração histórica do quarteto mais amado da Igreja Adventista." },
+        { "id": "ep_3_2", "title": "Novo Tom: DVD Pode Vir", "duration": "60 min", "image": "assets/images/real_worship.jpg", "video_id": "xG2Q9f8-W_k", "summary": "Louvores inspiradores focados na segunda vinda de Jesus." },
+        { "id": "ep_3_3", "title": "Coral Jovem de São Paulo", "duration": "45 min", "image": "assets/images/real_community_aid.jpg", "video_id": "Z6G9b0P_E1c", "summary": "Apresentação especial com coral de mais de 100 vozes adorando ao Criador." }
       ]
     }
   ]
