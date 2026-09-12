@@ -1,45 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --iasd-blue-dark: #07192f;
-  --iasd-blue-primary: #004b87;
-  --iasd-blue-light: #0284c7;
-  --iasd-gold: #eab308;
-  --iasd-gold-dark: #ca8a04;
-  --accent-red: #ef4444;
-  --accent-green: #10b981;
+  --iasd-blue-dark: #2a1f1a;
+  --iasd-blue-primary: #8c5b36;
+  --iasd-blue-light: #b07d56;
+  --iasd-gold: #cfa27e;
+  --iasd-gold-dark: #b8865f;
+  --accent-red: #d9534f;
+  --accent-green: #2d8a64;
 
-  --bg-main: #f8fafc;
+  --bg-main: #fcfaf8;
   --bg-surface: #ffffff;
-  --bg-muted: #f1f5f9;
-  --border-color: #e2e8f0;
+  --bg-muted: #f4ede6;
+  --border-color: #e8ded6;
 
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-primary: #1e1612;
+  --text-secondary: #5e4e45;
+  --text-muted: #9c8a7f;
 
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 22px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 10px 25px -5px rgba(7, 25, 47, 0.08);
-  --shadow-lg: 0 20px 35px -10px rgba(7, 25, 47, 0.12);
-  --shadow-gold: 0 10px 25px -5px rgba(234, 179, 8, 0.35);
+  --shadow-sm: 0 2px 4px rgba(30, 22, 18, 0.04);
+  --shadow-md: 0 10px 25px -5px rgba(30, 22, 18, 0.08);
+  --shadow-lg: 0 20px 35px -10px rgba(30, 22, 18, 0.12);
+  --shadow-gold: 0 10px 25px -5px rgba(207, 162, 126, 0.35);
 
   --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body.dark-mode {
-  --iasd-blue-dark: #38bdf8;
-  --bg-main: #090e1a;
-  --bg-surface: #111a2e;
-  --bg-muted: #1e293b;
-  --border-color: rgba(255, 255, 255, 0.12);
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
+  --iasd-blue-dark: #e8caa8;
+  --iasd-blue-primary: #d9a47a;
+  --bg-main: #140e0c;
+  --bg-surface: #1e1613;
+  --bg-muted: #291e19;
+  --border-color: rgba(223, 184, 146, 0.15);
+  --text-primary: #fbf8f5;
+  --text-secondary: #d1c1b7;
+  --text-muted: #9c8a7f;
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 20px 35px -10px rgba(0, 0, 0, 0.8);
