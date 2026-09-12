@@ -37,8 +37,11 @@ function renderGallery(items) {
         <img src="${p.image}" alt="${p.title}" loading="lazy">
       </div>
       <div class="feed-content">
-        <h3 class="feed-title">${p.title}</h3>
-        <p class="feed-caption">${p.caption}</p>
+        <div class="gallery-overlay">
+          <span class="gallery-category">${window.currentLang === 'en' && p.category_label_en ? p.category_label_en : p.category_label}</span>
+          <h4>${window.currentLang === 'en' && p.title_en ? p.title_en : p.title}</h4>
+        </div>
+        <p class="feed-caption">${window.currentLang === 'en' && p.caption_en ? p.caption_en : p.caption}</p>
       </div>
     </article>
   `).join('');

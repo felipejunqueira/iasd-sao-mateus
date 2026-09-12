@@ -57,8 +57,8 @@ function renderEpisodes(season) {
         </div>
       </div>
       <div class="episode-body">
-        <h4>${ep.title}</h4>
-        <p>${ep.summary}</p>
+        <h4>${window.currentLang === 'en' && ep.title_en ? ep.title_en : ep.title}</h4>
+        <p>${window.currentLang === 'en' && ep.summary_en ? ep.summary_en : ep.summary}</p>
       </div>
     </article>
   `).join('');

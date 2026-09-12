@@ -56,6 +56,8 @@
 /* High contrast */
 body.high-contrast { background: #000 !important; color: #fff !important; }
 body.high-contrast * { border-color: #ff0 !important; }
-body.font-lg { font-size: 1.15rem !important; }
-body.font-xl { font-size: 1.3rem !important; }
+body.font-zoom-1 { font-size: 1.05rem !important; }
+body.font-zoom-2 { font-size: 1.15rem !important; }
+body.font-zoom-3 { font-size: 1.25rem !important; }
+body.font-zoom-4 { font-size: 1.35rem !important; }
 body.grayscale-mode { filter: grayscale(1); }

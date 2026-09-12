@@ -12,11 +12,12 @@ import { initGallery } from './modules/gallery.js';
 import { initLightbox } from './modules/lightbox.js';
 import { initForms } from './modules/forms.js';
 import { initA11yTheme } from './modules/a11y-theme.js';
-import { initA11yVoice } from './modules/a11y-voice.js';
 import { initVLibras } from './modules/vlibras.js';
+import { initI18n } from './modules/i18n.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   await loadComponents();
+  initI18n();
   initMobileMenu();
   initTabRouter();
   initNextService();
@@ -26,6 +27,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   initLightbox();
   initForms();
   initA11yTheme();
-  initA11yVoice();
   initVLibras();
 });

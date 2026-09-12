@@ -42,8 +42,9 @@ function initContrastAndFont() {
     if (contrastBtn) contrastBtn.classList.add('active');
   }
 
-  const savedFont = safeStorage.get('iasd_fontsize');
-  if (savedFont) document.body.classList.add(savedFont);
+  const savedFont = parseInt(safeStorage.get('iasd_fontzoom')) || 0;
+  let currentZoom = savedFont;
+  applyZoom(currentZoom);
 
   if (contrastBtn) {
     contrastBtn.addEventListener('click', () => {
@@ -62,15 +63,34 @@ function initContrastAndFont() {
 
   if (fontInc) {
     fontInc.addEventListener('click', () => {
-      document.body.classList.toggle('font-lg');
-      safeStorage.set('iasd_fontsize', document.body.classList.contains('font-lg') ? 'font-lg' : '');
+      if (currentZoom < 4) {
+        currentZoom++;
+        applyZoom(currentZoom);
+        safeStorage.set('iasd_fontzoom', String(currentZoom));
+      }
     });
   }
 
   if (fontDec) {
     fontDec.addEventListener('click', () => {
-      document.body.classList.remove('font-lg', 'font-xl');
-      safeStorage.set('iasd_fontsize', '');
+      if (currentZoom > 0) {
+        currentZoom--;
+        applyZoom(currentZoom);
+        safeStorage.set('iasd_fontzoom', String(currentZoom));
+      }
     });
+  }
+}
+
+function applyZoom(level) {
+  // Remove todas as classes de zoom
+  for (let i = 1; i <= 4; i++) {
+    document.body.classList.remove('font-zoom-' + i);
+  }
+  // Remove classes legadas
+  document.body.classList.remove('font-lg', 'font-xl');
+  
+  if (level > 0) {
+    document.body.classList.add('font-zoom-' + level);
   }
 }
