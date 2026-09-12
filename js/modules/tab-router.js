@@ -22,7 +22,7 @@ const TAB_MAP = {
 };
 
 export function initTabRouter() {
-  const buttons = document.querySelectorAll('.main-tab-btn');
+  const buttons = document.querySelectorAll('.main-tab-btn, .main-tab-link');
   if (buttons.length === 0) return;
 
   const handleRoute = () => {
@@ -58,7 +58,7 @@ export function initTabRouter() {
 
 function switchTab(targetId) {
   const panels = document.querySelectorAll('.tab-panel');
-  const buttons = document.querySelectorAll('.main-tab-btn');
+  const buttons = document.querySelectorAll('.main-tab-btn, .main-tab-link');
 
   panels.forEach((p) => p.classList.toggle('active', p.id === targetId));
   buttons.forEach((b) => {
