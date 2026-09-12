@@ -1,7 +1,9 @@
 /* Arquivo Central de Importação Modular - Filosofia Unix */
 @import url('core/variables.css');
 @import url('core/reset.css');
+@import url('core/layout.css');
 @import url('core/accessibility.css');
+@import url('core/contrast-theme.css');
 
 @import url('components/nav.css');
 @import url('components/nav-tabs.css');
@@ -9,14 +11,17 @@
 @import url('components/hero.css');
 @import url('components/quick-links.css');
 @import url('components/pastor.css');
+@import url('components/service-banner.css');
 @import url('components/services.css');
 @import url('components/series-tabs.css');
 @import url('components/series-cards.css');
+@import url('components/series-modal.css');
 @import url('components/dizimos.css');
 @import url('components/timeline.css');
 @import url('components/remedies.css');
 @import url('components/ministries.css');
 @import url('components/gallery.css');
 @import url('components/forms.css');
+@import url('components/form-feedback.css');
 @import url('components/modals.css');
 @import url('components/footer.css');

@@ -1,6 +1,7 @@
 /**
- * Central de Séries Bíblicas em Temporadas
+ * Central de Séries Bíblicas em Temporadas (Filosofia Unix)
  */
+import { openSeriesModal, initSeriesModalEvents } from './series-modal.js';
 
 let seriesData = null;
 
@@ -9,12 +10,14 @@ export async function initSeriesPlayer() {
   const episodesContainer = document.getElementById('episodes-container');
   if (!tabsContainer || !episodesContainer) return;
 
+  initSeriesModalEvents();
+
   try {
     const res = await fetch('data/series.json');
     seriesData = await res.json();
     renderSeasons(seriesData.seasons || []);
   } catch {
-    episodesContainer.innerHTML = '<p style="color:#94a3b8; text-align:center;">Não foi possível carregar as séries no momento.</p>';
+    episodesContainer.innerHTML = '<p style="color:#94a3b8;text-align:center;">Não foi possível carregar as séries no momento.</p>';
   }
 }
 
@@ -60,19 +63,7 @@ function renderEpisodes(season) {
 
   container.querySelectorAll('.episode-card').forEach((card) => {
     card.addEventListener('click', () => {
-      openVideoModal(card.dataset.title, card.dataset.video);
+      openSeriesModal(card.dataset.video, card.dataset.title);
     });
   });
-}
-
-function openVideoModal(title, videoId) {
-  const modal = document.getElementById('video-modal');
-  const titleEl = document.getElementById('video-modal-title');
-  const frameEl = document.getElementById('video-frame');
-  if (!modal || !frameEl) return;
-
-  if (titleEl) titleEl.innerText = title;
-  frameEl.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
 }

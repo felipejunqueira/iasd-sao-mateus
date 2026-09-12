@@ -1,0 +1,41 @@
+/* Modal de Reprodução de Séries Bíblicas */
+.series-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 25, 47, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 1050;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.series-modal-overlay.active {
+  display: flex;
+}
+
+.series-modal-box {
+  background: #000;
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 860px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.series-video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.series-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

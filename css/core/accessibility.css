@@ -1,77 +1,57 @@
+/* Barra de Acessibilidade e Foco Visível */
 .skip-link {
   position: absolute;
-  top: -100px; left: 1rem;
-  background: #000; color: #ffeb3b;
-  padding: 0.75rem 1.25rem; font-weight: 700;
-  z-index: 10000; border-radius: 0 0 8px 8px;
+  top: -100px;
+  left: 1rem;
+  background: #000;
+  color: #ffeb3b;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  z-index: 10000;
+  border-radius: 0 0 8px 8px;
   border: 2px solid #ffeb3b;
 }
+
 .skip-link:focus { top: 0; outline: 3px solid #ffeb3b; }
+
 :focus-visible {
   outline: 3px solid #f59e0b !important;
   outline-offset: 3px !important;
 }
+
 .accessibility-bar {
   background: var(--bg-surface);
   color: var(--text-secondary);
   padding: 0.45rem 1rem;
   font-size: 0.825rem;
   border-bottom: 1px solid var(--border-color);
-  display: flex; justify-content: space-between;
-  align-items: center; flex-wrap: wrap;
-  gap: 0.5rem; z-index: 1001;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  z-index: 1001;
   transition: var(--transition-smooth);
 }
+
 .a11y-shortcuts, .a11y-actions {
-  display: flex; align-items: center;
-  gap: 0.5rem; flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
+
 .a11y-btn {
   background: var(--bg-muted);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   padding: 0.3rem 0.65rem;
   border-radius: var(--radius-full);
-  font-size: 0.8rem; font-weight: 600;
-  cursor: pointer; transition: var(--transition-smooth);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
 }
-.a11y-btn:hover {
-  border-color: var(--iasd-gold);
-  color: var(--iasd-gold-dark);
-}
-.a11y-btn.active {
-  background: var(--iasd-gold);
-  color: #07192f; border-color: var(--iasd-gold);
-}
-body.high-contrast {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
-body.high-contrast header,
-body.high-contrast nav,
-body.high-contrast footer,
-body.high-contrast .card,
-body.high-contrast .service-card,
-body.high-contrast .episode-card,
-body.high-contrast .remedy-card,
-body.high-contrast .gallery-card,
-body.high-contrast .pastoral-card,
-body.high-contrast .quick-link-card,
-body.high-contrast .pix-box-card,
-body.high-contrast .timeline-card,
-body.high-contrast .ministry-card,
-body.high-contrast .modal-dialog {
-  background-color: #121212 !important;
-  color: #ffffff !important;
-  border: 2px solid #ffff00 !important;
-}
-body.high-contrast a,
-body.high-contrast h1,
-body.high-contrast h2,
-body.high-contrast h3,
-body.high-contrast h4 {
-  color: #ffff00 !important;
-}
-body.font-lg { font-size: 1.15rem !important; }
-body.font-xl { font-size: 1.3rem !important; }
-body.grayscale-mode { filter: grayscale(100%); }
+
+.a11y-btn:hover { border-color: var(--iasd-gold); color: var(--iasd-gold-dark); }
+.a11y-btn.active { background: var(--iasd-gold); color: #07192f; border-color: var(--iasd-gold); }

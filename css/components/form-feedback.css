@@ -1,0 +1,29 @@
+/* Alertas de Feedback e Validação de Formulários */
+.form-feedback {
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: none;
+}
+
+.form-feedback.success {
+  display: block;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid #10b981;
+  color: #34d399;
+}
+
+.form-feedback.error {
+  display: block;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #f87171;
+}
+
+.btn-submit-loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}

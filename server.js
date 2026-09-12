@@ -1,8 +1,7 @@
 /**
- * Servidor Web Estático em Node.js (Zero Dependências)
- * Permite rodar o site localmente com suporte a MIME types e CORS
+ * Servidor Web Estático em Node.js (Filosofia Unix - Zero Dependências)
+ * Suporte nativo a MIME types, UTF-8 e CORS (< 55 linhas)
  */
-
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -20,22 +19,17 @@ const MIME_TYPES = {
   '.png': 'image/png',
   '.svg': 'image/svg+xml',
   '.webp': 'image/webp',
-  '.ico': 'image/x-icon',
-  '.txt': 'text/plain; charset=utf-8'
+  '.ico': 'image/x-icon'
 };
 
 const server = http.createServer((req, res) => {
-  // Limpa query params
   let reqUrl = req.url.split('?')[0];
   if (reqUrl === '/') reqUrl = '/index.html';
 
   const filePath = path.join(PUBLIC_DIR, reqUrl);
-
-  // Previne Directory Traversal
   if (!filePath.startsWith(PUBLIC_DIR)) {
     res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
-    res.end('403 Proibido');
-    return;
+    return res.end('403 Proibido');
   }
 
   const ext = path.extname(filePath).toLowerCase();
@@ -43,31 +37,19 @@ const server = http.createServer((req, res) => {
 
   fs.readFile(filePath, (err, content) => {
     if (err) {
-      if (err.code === 'ENOENT') {
-        res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
-        res.end('<h1>404 Não Encontrado</h1><p>O arquivo solicitado não existe.</p>');
-      } else {
-        res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
-        res.end(`Erro no Servidor: ${err.code}`);
-      }
-    } else {
-      res.writeHead(200, {
-        'Content-Type': contentType,
-        'Cache-Control': 'no-cache',
-        'Access-Control-Allow-Origin': '*'
-      });
-      res.end(content);
+      const code = err.code === 'ENOENT' ? 404 : 500;
+      res.writeHead(code, { 'Content-Type': 'text/plain; charset=utf-8' });
+      return res.end(`${code} Não Encontrado`);
     }
+    res.writeHead(200, {
+      'Content-Type': contentType,
+      'Cache-Control': 'no-cache',
+      'Access-Control-Allow-Origin': '*'
+    });
+    res.end(content);
   });
 });
 
-try {
-  require('./scripts/build').buildHtml();
-} catch (e) {}
-
 server.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(`⛪ Site da Igreja Adventista rodando com sucesso!`);
-  console.log(`🌐 Acesse no seu navegador: http://localhost:${PORT}`);
-  console.log(`====================================================`);
+  console.log(`⛪ IASD São Mateus rodando em http://localhost:${PORT}`);
 });

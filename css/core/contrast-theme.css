@@ -1,0 +1,36 @@
+/* Modos de Alto Contraste e Acessibilidade Visual */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast header,
+body.high-contrast nav,
+body.high-contrast footer,
+body.high-contrast .card,
+body.high-contrast .service-card,
+body.high-contrast .episode-card,
+body.high-contrast .remedy-card,
+body.high-contrast .gallery-card,
+body.high-contrast .pastoral-card,
+body.high-contrast .quick-link-card,
+body.high-contrast .pix-box-card,
+body.high-contrast .timeline-card,
+body.high-contrast .ministry-card,
+body.high-contrast .modal-dialog {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffff00 !important;
+}
+
+body.high-contrast a,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4 {
+  color: #ffff00 !important;
+}
+
+body.font-lg { font-size: 1.15rem !important; }
+body.font-xl { font-size: 1.3rem !important; }
+body.grayscale-mode { filter: grayscale(100%); }

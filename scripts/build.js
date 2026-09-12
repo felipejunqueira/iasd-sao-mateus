@@ -1,27 +1,21 @@
 /**
- * Compilador de Partials HTML (Filosofia Unix)
- * Concatena os componentes modulares de partials/ gerando index.html
+ * Construtor Opcional de Bundle Estático (Filosofia Unix)
+ * Gera dist/bundle.html sem modificar o index.html modular raiz
  */
 const fs = require('fs');
 const path = require('path');
 
-function buildHtml() {
+function buildBundle() {
   const partialsDir = path.join(__dirname, '..', 'partials');
-  const files = fs.readdirSync(partialsDir)
-    .filter((f) => f.endsWith('.html'))
-    .sort();
+  const distDir = path.join(__dirname, '..', 'dist');
+  if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true });
 
-  const content = files
-    .map((f) => fs.readFileSync(path.join(partialsDir, f), 'utf8').trim())
-    .join('\n\n');
+  const files = fs.readdirSync(partialsDir).filter((f) => f.endsWith('.html')).sort();
+  const content = files.map((f) => fs.readFileSync(path.join(partialsDir, f), 'utf8').trim()).join('\n\n');
 
-  const targetPath = path.join(__dirname, '..', 'index.html');
-  fs.writeFileSync(targetPath, content + '\n');
-  console.log(`✔ index.html compilado com sucesso a partir de ${files.length} partials modulares.`);
+  fs.writeFileSync(path.join(distDir, 'bundle.html'), content + '\n');
+  console.log(`✔ dist/bundle.html gerado a partir de ${files.length} partials.`);
 }
 
-if (require.main === module) {
-  buildHtml();
-}
-
-module.exports = { buildHtml };
+if (require.main === module) buildBundle();
+module.exports = { buildBundle };
