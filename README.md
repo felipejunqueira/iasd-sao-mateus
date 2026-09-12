@@ -44,18 +44,14 @@ igreja/
 │   │   ├── reset.css            # Reset global e container
 │   │   └── accessibility.css    # Alto contraste e escalas
 │   └── components/
-│       ├── nav.css              # Barra de navegação e menu mobile
+│       ├── nav.css & nav-tabs   # Navegação, menu mobile e 3 abas
 │       ├── buttons.css          # Botões reutilizáveis
-│       ├── hero.css             # Banner hero com imagem real
-│       ├── quick-links.css      # Hub de links para bio do Instagram
+│       ├── hero & quick-links   # Banner e hub de links da bio
 │       ├── services.css         # Horários e cálculo de culto
-│       ├── series-tabs.css      # Abas da central de séries
-│       ├── series-cards.css     # Cards de episódios e thumbnails
+│       ├── series (tabs & cards)# Abas e cards da central de séries
 │       ├── dizimos.css          # Dízimos, PIX e 7me
-│       ├── timeline.css         # Linha do tempo de São Mateus
-│       ├── remedies.css         # 8 Remédios naturais
-│       ├── ministries.css       # Desbravadores, ASA e Jovens
-│       ├── gallery.css          # Galeria com filtros
+│       ├── timeline & remedies  # Linha do tempo e 8 remédios
+│       ├── ministries & gallery # Desbravadores, ASA, JA e galeria
 │       ├── forms.css            # Estudo bíblico e oração
 │       ├── modals.css           # Lightbox e player de vídeo
 │       └── footer.css           # Rodapé e créditos de Felipe
@@ -63,20 +59,15 @@ igreja/
 ├── js/
 │   ├── main.js                  # Ponto de entrada modular
 │   └── modules/
-│       ├── utils.js             # Sanitização, safeStorage, debounce e toast
-│       ├── menu.js              # Menu mobile drawer
-│       ├── services.js          # Próximo culto inteligente
-│       ├── series.js            # Central de séries bíblicas
-│       ├── pix.js               # Cópia segura da chave PIX
-│       ├── gallery.js           # Filtros da galeria
-│       ├── lightbox.js          # Modal de fotos
-│       ├── forms.js             # Formulários com debounce anti-spam
-│       ├── a11y-theme.js        # Alto contraste e fontes
-│       ├── a11y-voice.js        # Leitor de texto com Web Speech API
-│       └── vlibras.js           # Widget oficial VLibras
+│       ├── utils.js             # Sanitização, safeStorage e debounce
+│       ├── menu & tab-router    # Menu mobile e roteador de 3 abas
+│       ├── services & series    # Próximo culto e séries bíblicas
+│       ├── pix, gallery & light # Chave PIX, galeria e lightbox
+│       ├── forms.js             # Formulários anti-spam
+│       └── a11y & vlibras       # Alto contraste, voz e VLibras
 │
 └── assets/
-    └── images/                  # Fotos documentais reais de alta resolução
+    └── images/                  # Fotos documentais e logo oficial IASD
 ```
 
 ---
