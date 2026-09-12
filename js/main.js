@@ -4,6 +4,7 @@
  */
 
 import { initMobileMenu } from './modules/menu.js';
+import { initTabRouter } from './modules/tab-router.js';
 import { initNextService } from './modules/services.js';
 import { initSeriesPlayer } from './modules/series.js';
 import { initPixCopy } from './modules/pix.js';
@@ -16,6 +17,7 @@ import { initVLibras } from './modules/vlibras.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
+  initTabRouter();
   initNextService();
   initSeriesPlayer();
   initPixCopy();

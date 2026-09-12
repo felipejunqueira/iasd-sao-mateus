@@ -4,6 +4,7 @@
 @import url('core/accessibility.css');
 
 @import url('components/nav.css');
+@import url('components/nav-tabs.css');
 @import url('components/buttons.css');
 @import url('components/hero.css');
 @import url('components/quick-links.css');
