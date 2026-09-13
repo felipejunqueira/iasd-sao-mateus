@@ -13,6 +13,8 @@
   border-radius: var(--r-md);
   overflow: hidden;
   transition: var(--t);
+  display: flex;
+  flex-direction: column;
 }
 
 .ministry-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
@@ -24,7 +26,12 @@
   display: block;
 }
 
-.ministry-body { padding: 1.35rem; }
+.ministry-body {
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .ministry-tag {
   display: inline-block;
   font-size: .7rem; font-weight: 700;

@@ -21,5 +21,8 @@
     "python-feed"
   ],
   "author": "Felipe",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "qrcode": "^1.5.4"
+  }
 }

@@ -66,6 +66,7 @@
 }
 
 body.dark-mode .timeline-year-tag {
-  background: var(--brand-dark);
-  color: #1a120e;
+  background: rgba(212,166,120,.2);
+  color: var(--brand-warm);
+  border: 1px solid rgba(212,166,120,.35);
 }

@@ -71,3 +71,6 @@
 @media (max-width: 640px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Dark mode: stat numbers need better visibility */
+body.dark-mode .stat-number { color: var(--brand-warm); }

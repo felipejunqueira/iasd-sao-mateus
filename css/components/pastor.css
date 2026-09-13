@@ -61,3 +61,10 @@
   .pastoral-actions { justify-content: center; }
   .pastoral-quote { text-align: left; }
 }
+
+/* Dark mode: badge precisa de contraste invertido */
+body.dark-mode .pastoral-badge-pill {
+  background: rgba(212,166,120,.18);
+  color: var(--brand-warm);
+  border: 1px solid rgba(212,166,120,.35);
+}

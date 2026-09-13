@@ -48,5 +48,4 @@
   border-color: var(--border-strong);
 }
 
-/* Legacy aliases */
-.btn-secondary { @extend .btn-outline; }
+/* .btn-secondary is an alias for .btn-outline — use .btn.btn-outline instead */
