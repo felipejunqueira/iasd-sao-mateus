@@ -3,19 +3,19 @@
   <div class="container">
     <div class="location-grid">
       <div>
-        <span class="section-eyebrow">Onde Estamos</span>
-        <h2 id="contato-heading" class="section-title">Venha Nos Visitar</h2>
-        <p class="section-lead" style="margin-bottom:1.75rem;">Local de fácil acesso na Zona Leste de São Paulo, com recepção amigável.</p>
+        <span class="section-eyebrow" data-i18n="location.eyebrow">Onde Estamos</span>
+        <h2 id="contato-heading" class="section-title" data-i18n="location.title">Venha Nos Visitar</h2>
+        <p class="section-lead" style="margin-bottom:1.75rem;" data-i18n="location.lead">Local de fácil acesso na Zona Leste de São Paulo, com recepção amigável.</p>
         <div class="address-card">
-          <div class="address-label">Endereço</div>
+          <div class="address-label" data-i18n="location.address_label">Endereço</div>
           <div class="address-street">Rua Antônio Previato, 1001</div>
           <div class="address-city">Cidade São Mateus, São Paulo — SP · CEP 03960-010</div>
         </div>
         <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;">
           <a href="https://www.google.com/maps/search/?api=1&query=Rua+Antônio+Previato+1001+São+Mateus+São+Paulo"
-             target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver no Google Maps</a>
+             target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="location.btn_gmaps">Ver no Google Maps</a>
           <a href="https://waze.com/ul?q=Rua+Antônio+Previato+1001+São+Mateus+São+Paulo"
-             target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Ver no Waze</a>
+             target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="location.btn_waze">Ver no Waze</a>
         </div>
       </div>
       <div class="sanctuary-photo-wrap" style="height: 300px;">
@@ -23,10 +23,11 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.126487195433!2d-46.46788642390887!3d-23.5998150787728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66eec6f947ad%3A0xe67db580db7d6206!2sIgreja%20Adventista%20do%20S%C3%A9timo%20Dia!5e0!3m2!1spt-BR!2sbr!4v1714571234567!5m2!1spt-BR!2sbr" 
           width="100%" 
           height="100%" 
-          style="border:0;" 
+          style="border:0; border-radius: var(--r-lg); display: block;" 
           allowfullscreen="" 
           loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa - IASD São Mateus">
         </iframe>
       </div>
     </div>
