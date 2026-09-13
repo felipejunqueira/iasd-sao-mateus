@@ -1,5 +1,5 @@
 import { safeStorage } from './utils.js';
-import { locales } from '../locales.js';
+import { locales } from '../locales/index.js';
 
 window.currentLang = safeStorage.get('iasd_lang') || 'pt';
 
