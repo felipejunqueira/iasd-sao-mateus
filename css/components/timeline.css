@@ -64,3 +64,8 @@
   .timeline-dot { left: 14px; }
   .timeline-content { width: 100%; padding-left: 2rem; }
 }
+
+body.dark-mode .timeline-year-tag {
+  background: var(--brand-dark);
+  color: #1a120e;
+}
