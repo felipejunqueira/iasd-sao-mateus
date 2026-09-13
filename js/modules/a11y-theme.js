@@ -85,12 +85,12 @@ function initContrastAndFont() {
 function applyZoom(level) {
   // Remove todas as classes de zoom
   for (let i = 1; i <= 4; i++) {
-    document.body.classList.remove('font-zoom-' + i);
+    document.documentElement.classList.remove('font-zoom-' + i);
   }
   // Remove classes legadas
-  document.body.classList.remove('font-lg', 'font-xl');
+  document.documentElement.classList.remove('font-lg', 'font-xl');
   
   if (level > 0) {
-    document.body.classList.add('font-zoom-' + level);
+    document.documentElement.classList.add('font-zoom-' + level);
   }
 }
