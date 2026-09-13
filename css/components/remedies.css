@@ -42,3 +42,17 @@
   color: var(--text-secondary);
   line-height: 1.55;
 }
+
+/* Accent strip on hover */
+.remedy-card {
+  border-left: 3px solid transparent;
+}
+.remedy-card:hover {
+  border-left-color: var(--brand-gold);
+  border-color: var(--brand-mid);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 480px) {
+  .remedies-grid { grid-template-columns: repeat(2, 1fr); }
+}

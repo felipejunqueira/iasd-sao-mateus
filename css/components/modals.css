@@ -28,7 +28,7 @@
   display: flex; align-items: center; justify-content: center;
   transition: var(--t);
 }
-.video-modal-close:hover { background: rgba(255,255,255,.25); }
+.video-modal-close:hover { background: rgba(255,255,255,.25); transform: scale(1.1); }
 
 .video-ratio-wrap { position: relative; padding-bottom: 56.25%; height: 0; }
 .video-ratio-wrap iframe {
@@ -52,4 +52,6 @@
   color: #fff; font-size: 1.3rem; cursor: pointer;
   width: 40px; height: 40px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
+  transition: var(--t);
 }
+.lightbox-close:hover { background: rgba(255,255,255,.25); transform: scale(1.1); }

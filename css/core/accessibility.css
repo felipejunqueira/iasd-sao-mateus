@@ -32,7 +32,7 @@
   cursor: pointer; transition: var(--t);
 }
 .a11y-btn:hover { border-color: var(--brand-mid); color: var(--brand-mid); }
-.a11y-btn.active { background: var(--brand-dark); color: #fff; border-color: var(--brand-dark); }
+.a11y-btn.active { background: var(--brand-mid); color: #fff; border-color: var(--brand-mid); }
 
 /* WhatsApp float button */
 .whatsapp-float {
