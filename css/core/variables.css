@@ -59,6 +59,7 @@
 body.dark-mode {
   --brand-dark:    #e8d0b8;
   --brand-mid:     #d4a678;
+  --brand-light:   #1a120e;
   --bg-main:       #110d0a;
   --bg-surface:    #1c1511;
   --bg-muted:      #251c16;
