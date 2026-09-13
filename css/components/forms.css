@@ -54,7 +54,16 @@
 }
 .form-control option { background: #1a120e; color: #fff; }
 
+.form-control::placeholder { color: rgba(255,255,255,.3); }
+textarea.form-control { resize: vertical; min-height: 120px; }
+
+/* Dark mode: improve borders slightly */
+body.dark-mode .form-control {
+  border-color: rgba(212,166,120,.2);
+}
+
 @media (max-width: 600px) {
   .form-grid { grid-template-columns: 1fr; }
   .form-group.span2 { grid-column: span 1; }
+  .form-box { padding: 1.5rem; }
 }

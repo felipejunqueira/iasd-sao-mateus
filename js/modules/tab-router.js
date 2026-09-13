@@ -44,6 +44,17 @@ export function initTabRouter() {
     });
   });
 
+  // Footer links with data-tab-link attribute
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('[data-tab-link]');
+    if (!link) return;
+    const tabId = link.dataset.tabLink;
+    if (tabId) {
+      switchTab(tabId);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
   window.addEventListener('hashchange', handleRoute);
   initTabA11y();
 

@@ -65,6 +65,24 @@
   line-height: 1.55;
 }
 
+/* Featured card: fundo ligeiramente mais escuro e borda dourada */
+.service-card.featured {
+  border-color: rgba(196,154,108,.4);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(196,154,108,.04) 100%);
+}
+
+.service-card.featured .service-time-big { color: var(--brand-gold); }
+
+/* Dark mode service card */
+body.dark-mode .service-card.featured {
+  border-color: rgba(212,166,120,.35);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(212,166,120,.07) 100%);
+}
+
 @media (max-width: 580px) {
   .services-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 400px) {
+  .services-grid { grid-template-columns: 1fr; }
 }

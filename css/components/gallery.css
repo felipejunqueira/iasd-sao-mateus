@@ -14,8 +14,8 @@
   cursor: pointer; transition: var(--t);
 }
 .filter-btn.active, .filter-btn:hover {
-  background: var(--brand-dark);
-  color: #fff; border-color: var(--brand-dark);
+  background: var(--brand-mid);
+  color: #fff; border-color: var(--brand-mid);
 }
 
 .gallery-grid {
