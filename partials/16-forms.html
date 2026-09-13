@@ -2,27 +2,27 @@
 <section id="estudo-biblico" class="section form-section" aria-labelledby="form-heading">
   <div class="container">
     <div class="section-header">
-      <span class="section-eyebrow">Crescimento Espiritual</span>
-      <h2 id="form-heading" class="section-title">Como Podemos Ajudar?</h2>
-      <p class="section-lead">Solicite estudos bíblicos gratuitos ou envie seu pedido confidencial de oração.</p>
+      <span class="section-eyebrow" data-i18n="forms.eyebrow">Crescimento Espiritual</span>
+      <h2 id="form-heading" class="section-title" data-i18n="forms.title">Como Podemos Ajudar?</h2>
+      <p class="section-lead" data-i18n="forms.lead">Solicite estudos bíblicos gratuitos ou envie seu pedido confidencial de oração.</p>
     </div>
     <div class="form-box">
       <div class="form-tab-strip">
-        <button class="form-tab-btn active" id="tab-bible">Quero Estudar a Bíblia</button>
-        <button class="form-tab-btn" id="tab-prayer">Pedido de Oração</button>
+        <button class="form-tab-btn active" id="tab-bible"><span data-i18n="forms.tab_bible">Quero Estudar a Bíblia</span></button>
+        <button class="form-tab-btn" id="tab-prayer"><span data-i18n="forms.tab_prayer">Pedido de Oração</span></button>
       </div>
 
       <form id="form-bible-study" class="form-grid">
         <div class="form-group">
-          <label for="bible-name">Seu Nome *</label>
-          <input type="text" id="bible-name" class="form-control" placeholder="João da Silva" required>
+          <label for="bible-name" data-i18n="forms.lbl_name">Seu Nome *</label>
+          <input type="text" id="bible-name" class="form-control" placeholder="João da Silva" data-i18n="forms.ph_name" required>
         </div>
         <div class="form-group">
           <label for="bible-whatsapp">WhatsApp *</label>
           <input type="tel" id="bible-whatsapp" class="form-control" placeholder="(11) 98888-7777" required>
         </div>
         <div class="form-group">
-          <label for="bible-modality">Modalidade</label>
+          <label for="bible-modality" data-i18n="forms.lbl_mod">Modalidade</label>
           <select id="bible-modality" class="form-control">
             <option value="online">Online via WhatsApp</option>
             <option value="presencial">Presencial na igreja</option>
@@ -30,7 +30,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="bible-topic">Tema de Interesse</label>
+          <label for="bible-topic" data-i18n="forms.lbl_topic">Tema de Interesse</label>
           <select id="bible-topic" class="form-control">
             <option value="jesus">A Vida e os Ensinos de Jesus</option>
             <option value="profecias">Profecias de Daniel e Apocalipse</option>
@@ -39,17 +39,17 @@
           </select>
         </div>
         <div class="form-group span2">
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Enviar Solicitação Gratuita</button>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;"><span data-i18n="forms.btn_bible">Enviar Solicitação Gratuita</span></button>
         </div>
       </form>
 
       <form id="form-prayer-request" class="form-grid" style="display:none;">
         <div class="form-group">
-          <label for="prayer-name">Seu Nome (opcional)</label>
+          <label for="prayer-name" data-i18n="forms.lbl_name_opt">Seu Nome (opcional)</label>
           <input type="text" id="prayer-name" class="form-control" placeholder="Anônimo ou seu nome">
         </div>
         <div class="form-group">
-          <label for="prayer-category">Motivo</label>
+          <label for="prayer-category" data-i18n="forms.lbl_reason">Motivo</label>
           <select id="prayer-category" class="form-control">
             <option value="saude">Saúde & Cura</option>
             <option value="familia">Família & Casamento</option>
@@ -58,14 +58,14 @@
           </select>
         </div>
         <div class="form-group span2">
-          <label for="prayer-details">Pedido de Oração *</label>
+          <label for="prayer-details" data-i18n="forms.lbl_req">Pedido de Oração *</label>
           <textarea id="prayer-details" class="form-control" rows="3"
             placeholder="Compartilhe seu motivo de oração..." required></textarea>
         </div>
         <div class="form-group span2">
           <button type="submit" class="btn btn-primary"
             style="width:100%;justify-content:center;background:#10b981;border-color:#10b981;">
-            Enviar para a Equipe de Oração
+            <span data-i18n="forms.btn_prayer">Enviar para a Equipe de Oração</span>
           </button>
         </div>
       </form>
