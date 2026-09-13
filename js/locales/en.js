@@ -183,6 +183,7 @@ export const en = {
   "dizimos.pix_desc": "You can return your tithe through the official <strong>7me</strong> app or directly via the congregation's <strong>PIX</strong>.",
   "dizimos.pix_key": "Official PIX Key",
   "dizimos.btn_copy": "Copy PIX Key",
+  "dizimos.bank_details_title": "Deposits and Transfers:",
   "dizimos.7me_title": "7me App",
   "dizimos.7me_desc": "Tithes with official church receipt.",
   "dizimos.btn_7me": "Access 7me",

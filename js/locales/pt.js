@@ -183,6 +183,7 @@ export const pt = {
   "dizimos.pix_desc": "Você pode devolver seu dízimo pelo aplicativo oficial <strong>7me</strong> ou diretamente via <strong>PIX</strong> da congregação.",
   "dizimos.pix_key": "Chave PIX Oficial",
   "dizimos.btn_copy": "Copiar Chave PIX",
+  "dizimos.bank_details_title": "Depósitos e Transferências:",
   "dizimos.7me_title": "App 7me",
   "dizimos.7me_desc": "Dízimos com comprovante oficial da igreja.",
   "dizimos.btn_7me": "Acessar 7me",
