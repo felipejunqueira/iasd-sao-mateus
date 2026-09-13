@@ -130,7 +130,7 @@ export const locales = {
     "timeline.d12_desc": "Mais de 20 mil jovens, incluindo os de São Mateus, engajam-se na Arena Mané Garrincha em campanhas da ADRA, doação de sangue e Marcha pela Paz.",
     "timeline.d13_date": "5 de Abril de 2025",
     "timeline.d13_title": "Reinauguração do Novo Templo",
-    "timeline.d13_desc": "Cerimônia oficial conduzida pelo Pr. Marcos Cardoso, com a cúpula da APL e UCB (Prof. Gelcy Cantuaria), consagrando o edifício moderno.",
+    "timeline.d13_desc": "Cerimônia oficial conduzida pelo Pr. Marcos Cardoso, com a liderança da APL e UCB (Prof. Gelcy Cantuaria), consagrando o edifício moderno.",
     "timeline.d14_date": "Julho de 2026",
     "timeline.d14_title": "Maranata SP e MRNT Games",
     "timeline.d14_desc": "Engajamento tecnológico e esportivo da juventude local no evento da APL, utilizando sistemas digitais (SJA, 7me) para controle de saúde e gamificação.",
