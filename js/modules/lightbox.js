@@ -3,7 +3,7 @@
  */
 
 export function initLightbox() {
-  const modal = document.getElementById('lightbox-modal');
+  const modal = document.getElementById('lightbox-overlay') || document.getElementById('lightbox-modal');
   const closeBtn = document.getElementById('lightbox-close');
   if (!modal) return;
 
@@ -23,16 +23,16 @@ export function initLightbox() {
 }
 
 export function openLightbox(post) {
-  const modal = document.getElementById('lightbox-modal');
+  const modal = document.getElementById('lightbox-overlay') || document.getElementById('lightbox-modal');
   const img = document.getElementById('lightbox-img');
   const title = document.getElementById('lightbox-title');
   const caption = document.getElementById('lightbox-caption');
-  if (!modal || !img || !title || !caption) return;
+  if (!modal || !img) return;
 
   img.src = post.image;
-  img.alt = post.title;
-  title.innerText = post.title;
-  caption.innerText = post.caption;
+  img.alt = post.title || '';
+  if (title) title.innerText = post.title || '';
+  if (caption) caption.innerText = post.caption || '';
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
