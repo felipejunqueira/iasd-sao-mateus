@@ -1,4 +1,4 @@
-<!-- Header + Navegação Principal -->
+<!-- Header + Navegação Principal (WCAG 2.1 AAA) -->
 <header class="header-main" role="banner">
   <div class="container">
     <nav class="navbar" aria-label="Navegação Principal">
@@ -10,10 +10,10 @@
         </div>
       </a>
 
-      <ul class="nav-links" id="nav-menu" role="tablist">
-        <li><a href="#inicio" class="main-tab-link active" data-tab="tab-inicio" data-hash="#inicio" data-i18n="header.nav1">Início & Cultos</a></li>
-        <li><a href="#comunidade" class="main-tab-link" data-tab="tab-comunidade" data-hash="#comunidade" data-i18n="header.nav2">Comunidade & Dízimos</a></li>
-        <li><a href="#historia" class="main-tab-link" data-tab="tab-historia" data-hash="#historia" data-i18n="header.nav3">Desenvolvimento & Comunidade</a></li>
+      <ul class="nav-links" id="nav-menu" role="tablist" aria-label="Seções Principais">
+        <li role="presentation"><a href="#inicio" id="tab-link-inicio" role="tab" aria-selected="true" aria-controls="tab-inicio" tabindex="0" class="main-tab-link active" data-tab="tab-inicio" data-hash="#inicio" data-i18n="header.nav1">Início & Cultos</a></li>
+        <li role="presentation"><a href="#comunidade" id="tab-link-comunidade" role="tab" aria-selected="false" aria-controls="tab-comunidade" tabindex="-1" class="main-tab-link" data-tab="tab-comunidade" data-hash="#comunidade" data-i18n="header.nav2">Comunidade & Dízimos</a></li>
+        <li role="presentation"><a href="#historia" id="tab-link-historia" role="tab" aria-selected="false" aria-controls="tab-historia" tabindex="-1" class="main-tab-link" data-tab="tab-historia" data-hash="#historia" data-i18n="header.nav3">Desenvolvimento & Comunidade</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -21,8 +21,8 @@
            class="btn btn-primary" style="font-size:.82rem;padding:.45rem 1.1rem;" data-i18n="header.contact_btn">
            Falar com o Pastor
         </a>
-        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Abrir menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/>
             <line x1="3" y1="18" x2="21" y2="18"/>
           </svg>

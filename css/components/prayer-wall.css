@@ -1,0 +1,86 @@
+/* Mural de Intercessão - Visual Acolhedor em Tons Quentes */
+.prayer-wall-section {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-muted) 100%);
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.prayer-wall-header { text-align: center; max-width: 680px; margin: 0 auto 2.5rem; }
+
+.prayer-wall-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.prayer-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+  position: relative;
+}
+.prayer-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--brand-warm), var(--brand-accent));
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+}
+.prayer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-warm);
+}
+
+.prayer-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.prayer-badge {
+  font-size: .75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .04em; padding: .25rem .7rem; border-radius: var(--r-full);
+  background: rgba(196,154,108,.16); color: var(--brand-mid);
+}
+.prayer-date { font-size: .8rem; color: var(--text-muted); }
+
+.prayer-text {
+  font-size: .95rem; line-height: 1.6; color: var(--text-primary);
+  font-style: italic; margin-bottom: 1.25rem; flex-grow: 1;
+}
+
+.prayer-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid rgba(196,154,108,.16); padding-top: .85rem; gap: .5rem;
+}
+.prayer-author { font-size: .82rem; font-weight: 600; color: var(--text-secondary); }
+
+.btn-pray {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: rgba(196,154,108,.12); color: var(--brand-mid);
+  border: 1px solid rgba(196,154,108,.35); padding: .45rem .85rem;
+  border-radius: var(--r-full); font-size: .82rem; font-weight: 600;
+  cursor: pointer; transition: all .2s ease;
+}
+.btn-pray:hover:not(:disabled) {
+  background: var(--brand-mid); color: #fff;
+  border-color: var(--brand-mid); transform: scale(1.03);
+}
+.btn-pray.prayed, .btn-pray:disabled {
+  background: rgba(16,185,129,.12); color: #059669;
+  border-color: rgba(16,185,129,.35); cursor: default;
+}
+.pray-count {
+  background: rgba(0,0,0,.06); padding: .1rem .45rem;
+  border-radius: var(--r-full); font-size: .75rem;
+}
+
+.prayer-wall-cta {
+  text-align: center; background: var(--bg-surface);
+  border: 1.5px dashed var(--border-strong); border-radius: var(--r-lg);
+  padding: 2rem 1.5rem; display: flex; flex-direction: column;
+  align-items: center; gap: .75rem;
+}
+.prayer-wall-cta .cta-title { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin: 0; }
+.prayer-wall-cta .cta-desc { font-size: .92rem; color: var(--text-secondary); max-width: 580px; margin: 0; }

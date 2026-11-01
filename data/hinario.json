@@ -1,0 +1,72 @@
+[
+  {
+    "numero": 1,
+    "titulo": "Ó Deus de Amor",
+    "autor": "Fanny J. Crosby / William H. Doane",
+    "coro": "Glória a Deus nas alturas! / Louvores entoai! / A Deus de graça e luz sem par, / Glória sem fim cantai!",
+    "estrofes": [
+      "1. Ó Deus de amor, nós vimos Te adorar, / Louvores Te render e graças dar; / Por Teu Jesus, penhor de salvação, / Eterna paz e doce comunhão.",
+      "2. Ó Deus de graça e luz sem par, / Tuas mercês nos queiras dispensar; / Dirige nossos passos com poder, / E faz-nos sempre em Tua lei viver."
+    ]
+  },
+  {
+    "numero": 33,
+    "titulo": "Quão Grande És Tu",
+    "autor": "Carl Boberg / Stuart K. Hine",
+    "coro": "Então minh'alma canta a Ti, Senhor: / Quão grande és Tu! Quão grande és Tu! / Então minh'alma canta a Ti, Senhor: / Quão grande és Tu! Quão grande és Tu!",
+    "estrofes": [
+      "1. Senhor meu Deus, quando eu maravilhado, / Fico a pensar nas obras de Tuas mãos, / No céu azul de estrelas pontilhado, / O Seu poder mostrando a criação.",
+      "2. Quando a vagar nas matas e florestas, / O som eu ouço das aves a cantar, / Olhando os montes, vejo as fontes frescas, / E a brisa mansa sinto respirar."
+    ]
+  },
+  {
+    "numero": 107,
+    "titulo": "Castelo Forte",
+    "autor": "Martinho Lutero (1529)",
+    "coro": "Com Seu poder defende os Seus / Em todo transe agudo. / É nosso amparo Deus!",
+    "estrofes": [
+      "1. Castelo forte é nosso Deus, / Espada e bom escudo; / Com Seu poder defende os Seus / Em todo transe agudo. / Pois com furor mortal / Nos segue o velho mal; / Na Terra igual não há.",
+      "2. Se nos pudéssemos valer / De nossa própria força, / Teríamos de sucumbir; / Mas nosso Deus nos guarda. / Sabem quem há de ser? / É Cristo o Redentor, / Triunfa na batalha!"
+    ]
+  },
+  {
+    "numero": 283,
+    "titulo": "O Sábado Chegou",
+    "autor": "F. E. Belden",
+    "coro": "Bem-vindo sejas, dia de repouso! / Bem-vindo és tu, feliz sábado de amor! / Os cuidados mundanais cessam todos já, / Ao findar mais uma semana cá.",
+    "estrofes": [
+      "1. O sábado chegou e nos traz a santa paz, / Esquecem-se as labutas do labor. / Das bênçãos do Senhor a todos satisfaz, / Ao nos reunirmos para o louvor.",
+      "2. Ó Deus, consagra este momento de oração, / Ensina-nos a Tua lei guardar. / Queremos no Teu templo erguer a canção, / E Tua graça e amor glorificar."
+    ]
+  },
+  {
+    "numero": 290,
+    "titulo": "Santo Sábado",
+    "autor": "Dayse P. de Paula",
+    "coro": "Santo sábado bendito, dia de restauração, / Memorial da criação e de paz ao coração! / Ao Senhor dediquemos todo o nosso louvor.",
+    "estrofes": [
+      "1. Santo sábado de amor, santo dia do Senhor, / O descanso recebemos lá do Céu com fervor. / Pelo Pai santificado desde o Éden com poder, / Seja este dia o mais lindo em nosso viver.",
+      "2. Deixem tudo os cristãos, vão com alegria orar, / Na congregação dos santos para a Deus exaltar. / A mensagem da esperança proclamamos com fervor, / Até o grande encontro com o nosso Redentor."
+    ]
+  },
+  {
+    "numero": 450,
+    "titulo": "Mais Perto da Cruz",
+    "autor": "Fanny J. Crosby / William H. Doane",
+    "coro": "Mais perto, perto, perto da Tua cruz, / Leva-me, ó Salvador! / Mais perto, perto, perto de Ti, Jesus, / Junto ao Teu sagrado amor!",
+    "estrofes": [
+      "1. Meu Senhor, sou Teu, Tua voz ouvi, / A chamar-me com amor; / Mas desejo mais me achegar a Ti, / Junto à cruz do Redentor.",
+      "2. Oh, que bênção é na oração falar / Ao celeste e bom Senhor! / Sempre aos pés da cruz confiar e orar, / Proclamando o Seu amor."
+    ]
+  },
+  {
+    "numero": 500,
+    "titulo": "Tudo Por Cristo",
+    "autor": "Judson W. Van DeVenter / Winfield S. Weeden",
+    "coro": "Tudo entregarei! Tudo entregarei! / Sim, por Ti, bendito Cristo, / Tudo deixarei!",
+    "estrofes": [
+      "1. Tudo, ó Cristo, a Ti entrego, / Tudo, sim, por Ti darei; / Resoluto, mas submisso, / Sempre a Ti seguirei.",
+      "2. Tudo, ó Cristo, a Ti entrego, / Rendo-me a Teus pés, Jesus; / O prazer do mundo deixo, / Quero a Tua santa luz."
+    ]
+  }
+]

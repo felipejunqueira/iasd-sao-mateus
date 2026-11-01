@@ -1,4 +1,4 @@
-/* Accessibility bar */
+/* Accessibility bar & Global Focus Visible */
 .skip-link {
   position: absolute; top: -100px; left: 1rem;
   background: var(--brand-dark); color: #fff;
@@ -9,7 +9,19 @@
 }
 .skip-link:focus { top: 0; outline: 3px solid var(--brand-gold); }
 
-:focus-visible { outline: 2px solid var(--brand-gold) !important; outline-offset: 3px !important; }
+:focus-visible {
+  outline: 2px solid var(--brand-gold) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(10, 28, 48, .35) !important;
+}
+
+body.dark-mode :focus-visible,
+.hero-section :focus-visible,
+.dizimos-section :focus-visible,
+.form-section :focus-visible,
+.footer-main :focus-visible {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, .25) !important;
+}
 
 .accessibility-bar {
   background: var(--bg-surface);
@@ -53,7 +65,7 @@
 }
 .whatsapp-float svg { width: 26px; height: 26px; }
 
-/* High contrast */
+/* High contrast & zoom */
 body.high-contrast { background: #000 !important; color: #fff !important; }
 body.high-contrast * { border-color: #ff0 !important; }
 html.font-zoom-1 { font-size: 110% !important; }

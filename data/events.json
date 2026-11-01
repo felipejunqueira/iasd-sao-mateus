@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "id": "santa-ceia-nov",
+      "title": "Santa Ceia do Senhor e Lava-Pés",
+      "category": "espiritual", "categoryLabel": "Espiritual",
+      "date": "2026-11-07", "day": "07", "month": "NOV",
+      "dateFormatted": "Sábado, 07 de Novembro", "time": "09:00 - 12:00",
+      "startIso": "20261107T090000", "endIso": "20261107T120000",
+      "location": "Nave Principal - IASD São Mateus",
+      "description": "Celebração solene da Santa Ceia com cerimônia do lava-pés e renovação da aliança espiritual."
+    },
+    {
+      "id": "acamp-saturno",
+      "title": "Acampamento Anual - Clube Saturno",
+      "category": "desbravadores", "categoryLabel": "Desbravadores",
+      "date": "2026-11-13", "day": "13", "month": "NOV",
+      "dateFormatted": "13 a 16 de Novembro", "time": "18:00 (Sex a Seg)",
+      "startIso": "20261113T180000", "endIso": "20261116T150000",
+      "location": "Recanto dos Mananciais - SP",
+      "description": "Pioneiria, vida ao ar livre, civismo e amizade cristã para os desbravadores de São Mateus."
+    },
+    {
+      "id": "feira-saude-asa",
+      "title": "Feira de Saúde da Comunidade - ASA",
+      "category": "asa", "categoryLabel": "Ação Solidária (ASA)",
+      "date": "2026-11-22", "day": "22", "month": "NOV",
+      "dateFormatted": "Domingo, 22 de Novembro", "time": "08:30 - 13:00",
+      "startIso": "20261122T083000", "endIso": "20261122T130000",
+      "location": "Entorno da Igreja - Rua Antônio Previato",
+      "description": "Atendimento gratuito com testes de glicemia, pressão e os 8 remédios naturais para o bairro."
+    },
+    {
+      "id": "culto-jovem-ja",
+      "title": "Encontro JA: Geração Esperança",
+      "category": "jovens", "categoryLabel": "Jovens (JA)",
+      "date": "2026-11-28", "day": "28", "month": "NOV",
+      "dateFormatted": "Sábado, 28 de Novembro", "time": "17:00 - 19:30",
+      "startIso": "20261128T170000", "endIso": "20261128T193000",
+      "location": "Auditório Jovem - IASD São Mateus",
+      "description": "Louvor acústico, bate-papo bíblico dinâmico sobre desafios atuais e integração da juventude."
+    },
+    {
+      "id": "semana-oracao-dez",
+      "title": "Semana de Oração e Reavivamento",
+      "category": "espiritual", "categoryLabel": "Espiritual",
+      "date": "2026-12-05", "day": "05", "month": "DEZ",
+      "dateFormatted": "05 a 12 de Dezembro", "time": "19:30 todas as noites",
+      "startIso": "20261205T193000", "endIso": "20261212T210000",
+      "location": "Templo Central - IASD São Mateus",
+      "description": "Reuniões diárias de oração, estudo profético e fortalecimento da fé para toda a irmandade."
+    },
+    {
+      "id": "encontro-familias",
+      "title": "Seminário e Vigília das Famílias",
+      "category": "familia", "categoryLabel": "Família",
+      "date": "2026-12-19", "day": "19", "month": "DEZ",
+      "dateFormatted": "Sábado, 19 de Dezembro", "time": "18:00 - 21:00",
+      "startIso": "20261219T180000", "endIso": "20261219T210000",
+      "location": "Salão Nobre - IASD São Mateus",
+      "description": "Momento especial dedicado aos lares: diálogo, bênção pastoral e orientação bíblica para casais."
+    }
+  ]
+}

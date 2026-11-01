@@ -1,0 +1,68 @@
+/* Check-up Diário dos 8 Remédios Naturais - Filosofia Unix */
+.remedies-check-section { padding-top: .5rem; }
+.remedies-check-accordion {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--t);
+}
+.check-accordion-toggle {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 1.5rem; background: var(--bg-muted); border: none;
+  cursor: pointer; text-align: left; transition: var(--t);
+}
+.check-accordion-toggle:hover { background: var(--border); }
+.check-toggle-badge {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  color: var(--brand-mid); letter-spacing: .08em; display: block; margin-bottom: .2rem;
+}
+.check-toggle-title { margin: 0; font-size: 1.15rem; color: var(--text-primary); }
+.check-toggle-icon { font-size: 1.2rem; transition: transform .3s ease; color: var(--brand-gold); }
+.check-accordion-toggle[aria-expanded="false"] .check-toggle-icon { transform: rotate(-90deg); }
+.check-accordion-panel { padding: 1.5rem; display: block; }
+.check-accordion-panel.collapsed { display: none; }
+.check-lead { font-size: .92rem; color: var(--text-secondary); margin-bottom: 1.2rem; }
+.check-progress-wrap { margin-bottom: 1.5rem; }
+.check-progress-labels { display: flex; justify-content: space-between; font-size: .85rem; font-weight: 600; margin-bottom: .4rem; }
+.check-pct { color: var(--brand-mid); }
+.check-progress-bar { height: 10px; background: var(--bg-muted); border-radius: var(--r-full); overflow: hidden; }
+.check-progress-fill { height: 100%; background: linear-gradient(90deg, var(--brand-mid), var(--brand-gold)); transition: width .4s ease; }
+.remedies-items-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: .85rem; margin-bottom: 1.5rem;
+}
+.remedy-item {
+  display: flex; align-items: center; gap: .75rem; padding: .85rem 1rem;
+  background: var(--bg-muted); border: 1.5px solid var(--border);
+  border-radius: var(--r-md); cursor: pointer; transition: var(--t); user-select: none;
+}
+.remedy-item:hover { border-color: var(--brand-warm); transform: translateY(-1px); }
+.remedy-item.selected {
+  background: var(--bg-surface); border-color: var(--brand-gold);
+  box-shadow: 0 0 0 1px var(--brand-gold), var(--shadow-sm);
+}
+.remedy-switch {
+  width: 1.25rem; height: 1.25rem; accent-color: var(--brand-gold);
+  cursor: pointer; flex-shrink: 0;
+}
+.remedy-item-label { font-size: .88rem; color: var(--text-primary); }
+.check-actions { display: flex; justify-content: center; margin-top: 1rem; }
+.check-result-box {
+  margin-top: 1.5rem; padding: 1.25rem; background: var(--bg-muted);
+  border-left: 4px solid var(--brand-gold); border-radius: var(--r-md);
+  display: flex; gap: 1.2rem; align-items: center; animation: fadeIn .3s ease;
+}
+.result-score-badge {
+  font-family: var(--font-display); font-size: 1.8rem; font-weight: 700;
+  color: var(--brand-mid); min-width: 70px; text-align: center;
+}
+.result-feedback h4 { margin: 0 0 .3rem; font-size: 1.05rem; color: var(--text-primary); }
+.result-feedback p { margin: 0 0 .4rem; font-size: .88rem; line-height: 1.5; color: var(--text-secondary); }
+.result-date { font-size: .75rem; color: var(--text-muted); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+  .check-accordion-panel { padding: 1rem; }
+  .check-result-box { flex-direction: column; text-align: center; }
+}

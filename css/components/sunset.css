@@ -1,0 +1,74 @@
+/* Pôr do Sol e Boas-Vindas ao Sábado · IASD São Mateus */
+.sunset-section { padding: 2rem 0; }
+.sunset-card {
+  position: relative;
+  background: linear-gradient(135deg, #091a32 0%, #152642 45%, #2a1f1a 80%, #3d2314 100%);
+  border: 1px solid rgba(212, 160, 85, 0.28);
+  border-radius: var(--r-lg, 20px);
+  padding: 2rem 2.2rem;
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(9, 26, 50, 0.35), 0 0 30px rgba(212, 160, 85, 0.12);
+  transition: var(--t, all .22s ease);
+}
+.sunset-card:hover {
+  border-color: rgba(212, 160, 85, 0.45);
+  box-shadow: 0 20px 48px rgba(9, 26, 50, 0.45), 0 0 40px rgba(212, 160, 85, 0.2);
+}
+.sunset-header {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: .75rem; margin-bottom: 1.25rem;
+}
+.sunset-badge {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: #f7d299; background: rgba(212, 160, 85, 0.18);
+  border: 1px solid rgba(212, 160, 85, 0.4);
+  padding: .32rem .85rem; border-radius: var(--r-full, 9999px);
+}
+.sunset-coords {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-size: .82rem; color: rgba(255, 255, 255, 0.72);
+}
+.sunset-main {
+  display: flex; align-items: center; gap: 1.4rem; margin-bottom: 1.4rem;
+}
+.sunset-icon-wrap {
+  width: 56px; height: 56px; flex-shrink: 0; border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 210, 153, 0.25) 0%, rgba(212, 160, 85, 0.08) 100%);
+  border: 1.5px solid rgba(247, 210, 153, 0.4);
+  display: flex; align-items: center; justify-content: center; color: #f7d299;
+}
+.sunset-icon { width: 32px; height: 32px; }
+.sunset-title {
+  font-family: var(--font-display, serif); font-size: 1.75rem; font-weight: 700;
+  color: #fff; line-height: 1.25; margin-bottom: .3rem;
+}
+.sunset-desc {
+  font-size: .95rem; color: rgba(255, 255, 255, 0.84); line-height: 1.5;
+}
+.sunset-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem; padding-top: 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.sunset-verse {
+  display: flex; align-items: center; gap: .5rem;
+  font-size: .82rem; font-style: italic; color: rgba(255, 255, 255, 0.7);
+}
+.btn-sunset-share {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: #25d366; color: #fff; font-weight: 600; font-size: .88rem;
+  padding: .62rem 1.35rem; border-radius: var(--r-full, 9999px);
+  text-decoration: none; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: var(--t, all .22s ease);
+}
+.btn-sunset-share:hover {
+  transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  filter: brightness(1.05);
+}
+@media (max-width: 640px) {
+  .sunset-card { padding: 1.5rem 1.2rem; }
+  .sunset-main { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .sunset-title { font-size: 1.45rem; }
+  .sunset-footer { flex-direction: column; align-items: stretch; text-align: center; }
+  .btn-sunset-share { justify-content: center; width: 100%; }
+}

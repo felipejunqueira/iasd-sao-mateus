@@ -1,4 +1,4 @@
-/* Modos de Alto Contraste e Acessibilidade Visual */
+/* Modos de Alto Contraste e Acessibilidade Visual (WCAG 2.1 AAA < 70 linhas) */
 body.high-contrast {
   background-color: #000000 !important;
   color: #ffffff !important;
@@ -17,7 +17,22 @@ body.high-contrast .quick-link-card,
 body.high-contrast .pix-box-card,
 body.high-contrast .timeline-card,
 body.high-contrast .ministry-card,
-body.high-contrast .modal-dialog {
+body.high-contrast .modal-dialog,
+body.high-contrast .hinario-card,
+body.high-contrast .hinario-modal-content,
+body.high-contrast .hinario-chip,
+body.high-contrast .prayer-card,
+body.high-contrast .prayer-item,
+body.high-contrast .pg-card,
+body.high-contrast .verse-card,
+body.high-contrast .daily-verse-box,
+body.high-contrast .sunset-card,
+body.high-contrast .calendar-card,
+body.high-contrast .event-card,
+body.high-contrast .remedies-check-accordion,
+body.high-contrast .remedy-item,
+body.high-contrast .video-modal-inner,
+body.high-contrast #lightbox-overlay {
   background-color: #121212 !important;
   color: #ffffff !important;
   border: 2px solid #ffff00 !important;
@@ -27,10 +42,28 @@ body.high-contrast a,
 body.high-contrast h1,
 body.high-contrast h2,
 body.high-contrast h3,
-body.high-contrast h4 {
+body.high-contrast h4,
+body.high-contrast .brand-title,
+body.high-contrast .hinario-card-num,
+body.high-contrast .remedy-num {
   color: #ffff00 !important;
 }
 
-body.font-lg { font-size: 1.15rem !important; }
-body.font-xl { font-size: 1.3rem !important; }
+body.high-contrast input,
+body.high-contrast textarea,
+body.high-contrast select,
+body.high-contrast .btn,
+body.high-contrast .a11y-btn,
+body.high-contrast .btn-hinario-tool,
+body.high-contrast .btn-hinario-close {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffff00 !important;
+}
+
+body.high-contrast :focus-visible {
+  outline: 3px solid #00ffff !important;
+  outline-offset: 3px !important;
+}
+
 body.grayscale-mode { filter: grayscale(100%); }

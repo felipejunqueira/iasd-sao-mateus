@@ -29,7 +29,10 @@ function buildBundle() {
     if (fs.existsSync(src)) copyDir(src, dest);
   }
   
-  fs.copyFileSync(path.join(rootDir, 'index.html'), path.join(distDir, 'index.html'));
+  ['index.html', 'manifest.webmanifest', 'sw.js'].forEach((file) => {
+    const src = path.join(rootDir, file);
+    if (fs.existsSync(src)) fs.copyFileSync(src, path.join(distDir, file));
+  });
   
   const partialsDir = path.join(rootDir, 'partials');
   const files = fs.readdirSync(partialsDir).filter((f) => f.endsWith('.html')).sort();

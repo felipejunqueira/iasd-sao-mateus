@@ -1,0 +1,39 @@
+<!-- Agenda & Calendário de Eventos da Igreja -->
+<section id="agenda" class="section agenda-section" aria-labelledby="agenda-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow" data-i18n="agenda.eyebrow">Agenda & Eventos</span>
+      <h2 id="agenda-heading" class="section-title" data-i18n="agenda.title">Próximos Encontros da Comunidade</h2>
+      <p class="section-lead" data-i18n="agenda.lead">
+        Momentos especiais de louvor, serviço ao próximo e confraternização para você e sua família.
+      </p>
+    </div>
+
+    <!-- Filtros de Categoria -->
+    <div class="events-filter-bar" role="tablist" aria-label="Filtro de eventos por categoria">
+      <button type="button" class="event-filter-btn active" data-filter="todos" role="tab" aria-selected="true">
+        Todos
+      </button>
+      <button type="button" class="event-filter-btn" data-filter="espiritual" role="tab" aria-selected="false">
+        Espiritual
+      </button>
+      <button type="button" class="event-filter-btn" data-filter="desbravadores" role="tab" aria-selected="false">
+        Desbravadores
+      </button>
+      <button type="button" class="event-filter-btn" data-filter="jovens" role="tab" aria-selected="false">
+        Jovens (JA)
+      </button>
+      <button type="button" class="event-filter-btn" data-filter="asa" role="tab" aria-selected="false">
+        ASA & Saúde
+      </button>
+      <button type="button" class="event-filter-btn" data-filter="familia" role="tab" aria-selected="false">
+        Família
+      </button>
+    </div>
+
+    <!-- Grid Dinâmico de Eventos -->
+    <div id="events-container" class="events-grid" role="region" aria-live="polite">
+      <!-- Inserido dinamicamente via js/modules/calendar.js -->
+    </div>
+  </div>
+</section>

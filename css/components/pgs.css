@@ -1,0 +1,57 @@
+/* Componente: Pequenos Grupos (PGs) - Filosofia Unix (< 90 linhas) */
+.pgs-section { background: var(--bg-surface); padding: 4rem 0; border-top: 1px solid var(--border); }
+.pgs-filters { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0 2rem; justify-content: center; }
+.pg-filter-group { display: flex; align-items: center; gap: .5rem; }
+.pg-filter-label { font-size: .88rem; font-weight: 600; color: var(--text-secondary); }
+.pg-select {
+  padding: .5rem 1rem; border-radius: var(--r-full); border: 1.5px solid var(--border);
+  background: var(--bg-main); color: var(--text-primary); font-size: .88rem;
+  font-family: var(--font-body); outline: none; transition: var(--t); cursor: pointer;
+}
+.pg-select:focus { border-color: var(--brand-gold); box-shadow: 0 0 0 3px rgba(196,154,108,.25); }
+
+.pgs-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.5rem; align-items: stretch;
+}
+.pg-card {
+  background: var(--bg-main); border: 1.5px solid var(--border);
+  border-radius: var(--r-lg); padding: 1.5rem; display: flex;
+  flex-direction: column; justify-content: space-between;
+  transition: var(--t); box-shadow: var(--shadow-sm);
+}
+.pg-card:hover {
+  transform: translateY(-3px); border-color: var(--brand-gold);
+  box-shadow: var(--shadow-md);
+}
+.pg-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; margin-bottom: .75rem; }
+.pg-name { font-family: var(--font-display); font-size: 1.2rem; color: var(--text-primary); margin: 0; }
+.pg-badge {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  padding: .2rem .6rem; border-radius: var(--r-full); letter-spacing: .05em;
+  background: var(--bg-muted); color: var(--brand-mid); white-space: nowrap;
+}
+.pg-badge-jovens { background: #e0f2fe; color: #0369a1; }
+.pg-badge-familias { background: #fef3c7; color: #b45309; }
+.pg-badge-mulheres { background: #fce7f3; color: #be185d; }
+.pg-badge-misto { background: #dcfce7; color: #15803d; }
+
+.pg-details { margin: .5rem 0; display: flex; flex-direction: column; gap: .35rem; }
+.pg-info { font-size: .85rem; color: var(--text-secondary); margin: 0; display: flex; align-items: center; gap: .4rem; }
+.pg-icon { font-size: .95rem; flex-shrink: 0; }
+.pg-desc { font-size: .88rem; color: var(--text-muted); line-height: 1.45; margin: .5rem 0 1.25rem; flex-grow: 1; }
+.pg-action { margin-top: auto; }
+.pg-btn { width: 100%; justify-content: center; font-size: .82rem; padding: .6rem 1rem; }
+
+.pgs-empty {
+  text-align: center; padding: 2.5rem 1rem; background: var(--bg-muted);
+  border-radius: var(--r-md); border: 1.5px dashed var(--border-strong);
+  margin-top: 1.5rem; color: var(--text-secondary);
+}
+.pgs-empty p { margin-bottom: 1rem; font-size: .95rem; }
+.pgs-error { text-align: center; color: var(--brand-mid); padding: 2rem; }
+
+body.dark-mode .pg-badge-jovens { background: #075985; color: #e0f2fe; }
+body.dark-mode .pg-badge-familias { background: #78350f; color: #fef3c7; }
+body.dark-mode .pg-badge-mulheres { background: #831843; color: #fce7f3; }
+body.dark-mode .pg-badge-misto { background: #14532d; color: #dcfce7; }

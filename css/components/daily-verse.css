@@ -1,0 +1,73 @@
+/* Componente: Versículo Diário Inspirador (Pão Diário) */
+.daily-verse-section { padding: 2rem 0 2.5rem; position: relative; }
+
+.verse-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--brand-gold);
+  border-radius: var(--r-lg);
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: var(--t);
+}
+
+.verse-badge-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;
+}
+.verse-badge {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--brand-mid);
+}
+.verse-theme-tag {
+  font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.7rem;
+  border-radius: var(--r-full); background: rgba(196,154,108,0.15);
+  color: var(--brand-mid); border: 1px solid rgba(196,154,108,0.25);
+}
+
+.verse-body { position: relative; margin-bottom: 1.25rem; }
+.verse-quote-mark {
+  position: absolute; top: -1.4rem; left: -0.6rem;
+  font-family: var(--font-display); font-size: 4rem; line-height: 1;
+  color: var(--brand-gold); opacity: 0.2; pointer-events: none; user-select: none;
+}
+.verse-text {
+  font-family: var(--font-display); font-size: 1.22rem; line-height: 1.6;
+  color: var(--text-primary); font-style: italic; margin: 0 0 0.75rem;
+  position: relative; z-index: 1; transition: opacity 0.25s ease;
+}
+.verse-reference {
+  display: block; font-family: var(--font-body); font-size: 0.9rem;
+  font-weight: 700; color: var(--brand-mid); letter-spacing: 0.02em; font-style: normal;
+}
+
+.verse-actions {
+  display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap;
+  padding-top: 1rem; border-top: 1px solid var(--border);
+}
+.btn-verse-action {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.45rem 0.95rem; border-radius: var(--r-full);
+  font-size: 0.8rem; font-weight: 600; font-family: var(--font-body);
+  cursor: pointer; text-decoration: none; border: 1px solid var(--border);
+  background: var(--bg-muted); color: var(--text-primary); transition: var(--t);
+}
+.btn-verse-action:hover {
+  background: var(--bg-surface); border-color: var(--brand-gold);
+  color: var(--brand-dark); transform: translateY(-1px);
+}
+.btn-verse-share {
+  background: rgba(37,211,102,0.1); color: #15803d; border-color: rgba(37,211,102,0.3);
+}
+.btn-verse-share:hover { background: #25d366; color: #fff; border-color: #25d366; }
+.btn-verse-ghost { background: transparent; color: var(--text-muted); border-color: transparent; }
+.btn-verse-ghost:hover { color: var(--brand-mid); background: var(--bg-muted); }
+
+@media (max-width: 640px) {
+  .verse-card { padding: 1.35rem 1.25rem; }
+  .verse-text { font-size: 1.08rem; line-height: 1.55; }
+  .btn-verse-action { padding: 0.4rem 0.75rem; font-size: 0.76rem; }
+}

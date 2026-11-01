@@ -1,0 +1,31 @@
+/* Hinário Adventista - IASD São Mateus (Filosofia Unix < 90 linhas) */
+.hinario-section { background: var(--bg-main); padding: 4rem 0; }
+.hinario-search-wrap { max-width: 680px; margin: 0 auto 2rem; }
+.hinario-input-box { position: relative; display: flex; align-items: center; }
+.hinario-search-icon { position: absolute; left: 1.1rem; width: 18px; height: 18px; color: var(--text-muted); pointer-events: none; }
+.hinario-input { width: 100%; padding: .85rem 1rem .85rem 2.85rem; border-radius: var(--r-full); border: 1.5px solid var(--border); background: var(--bg-surface); color: var(--text-primary); font-size: .95rem; font-family: var(--font-body); transition: var(--t); }
+.hinario-input:focus { outline: none; border-color: var(--brand-accent); box-shadow: var(--shadow-gold); }
+.hinario-chips { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: .85rem; }
+.hinario-chips-label { font-size: .8rem; font-weight: 600; color: var(--text-muted); }
+.hinario-chip { font-size: .78rem; font-weight: 600; padding: .3rem .8rem; border-radius: var(--r-full); border: 1px solid var(--border); background: var(--bg-surface); color: var(--text-secondary); cursor: pointer; transition: var(--t); }
+.hinario-chip:hover { background: var(--brand-warm); color: #fff; border-color: var(--brand-warm); }
+.hinario-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.hinario-card { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.15rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--r-md); cursor: pointer; transition: var(--t); }
+.hinario-card:hover { transform: translateY(-2px); border-color: var(--brand-accent); box-shadow: var(--shadow-md); }
+.hinario-card-num { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--brand-mid); background: var(--bg-muted); padding: .35rem .6rem; border-radius: var(--r-sm); min-width: 48px; text-align: center; }
+.hinario-card-title { font-size: .95rem; font-weight: 600; color: var(--text-primary); margin: 0; }
+.hinario-card-author { font-size: .78rem; color: var(--text-muted); display: block; margin-top: .2rem; }
+.hinario-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(10,7,5,.88); backdrop-filter: blur(8px); z-index: 1200; align-items: center; justify-content: center; padding: 1rem; }
+.hinario-modal-overlay.active { display: flex; }
+.hinario-modal-content { background: var(--bg-surface); color: var(--text-primary); border-radius: var(--r-lg); max-width: 620px; width: 100%; max-height: 86vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border); }
+.hinario-modal-header { display: flex; justify-content: space-between; align-items: flex-start; padding: 1.15rem 1.4rem; border-bottom: 1px solid var(--border); background: var(--bg-muted); }
+.hinario-badge { display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--brand-mid); }
+.hinario-modal-title { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin: .2rem 0; color: var(--text-primary); }
+.hinario-modal-author { font-size: .82rem; color: var(--text-secondary); margin: 0; }
+.hinario-modal-actions { display: flex; gap: .4rem; align-items: center; }
+.btn-hinario-tool, .btn-hinario-close { border: none; background: var(--bg-surface); border-radius: 50%; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-primary); transition: var(--t); font-weight: 700; }
+.btn-hinario-tool:hover, .btn-hinario-close:hover { background: var(--brand-warm); color: #fff; }
+.hinario-lyrics-body { padding: 1.5rem 1.6rem; overflow-y: auto; font-family: var(--font-display); line-height: 1.8; font-size: 1.05rem; color: var(--text-primary); }
+.hinario-verse { margin-bottom: 1.4rem; }
+.hinario-chorus { margin-bottom: 1.4rem; border-left: 3px solid var(--brand-accent); background: rgba(196,154,108,.1); padding: .7rem 1rem; border-radius: 0 var(--r-sm) var(--r-sm) 0; font-style: italic; }
+.hinario-empty { grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 2rem 0; }

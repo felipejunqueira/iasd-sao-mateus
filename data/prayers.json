@@ -1,0 +1,56 @@
+[
+  {
+    "id": "prayer-1",
+    "author": "Irmã Maria",
+    "category": "saude",
+    "categoryLabel": "Saúde & Cura",
+    "date": "Há 2 horas",
+    "request": "Pela plena recuperação após cirurgia e alívio das dores, com gratidão a Deus pela equipe médica.",
+    "prayedCount": 18
+  },
+  {
+    "id": "prayer-2",
+    "author": "Jovem Lucas",
+    "category": "batismo",
+    "categoryLabel": "Decisão & Batismo",
+    "date": "Hoje",
+    "request": "Pela confirmação no coração para o batismo na próxima semana e fidelidade no testemunho com amigos.",
+    "prayedCount": 24
+  },
+  {
+    "id": "prayer-3",
+    "author": "Comunidade São Mateus",
+    "category": "trabalho",
+    "categoryLabel": "Trabalho & Provisão",
+    "date": "Hoje",
+    "request": "Pelos pais e mães de família desempregados em nosso bairro, para que Deus abra portas de trabalho digno.",
+    "prayedCount": 31
+  },
+  {
+    "id": "prayer-4",
+    "author": "Família Santos",
+    "category": "familia",
+    "categoryLabel": "Consolo & Família",
+    "date": "Ontem",
+    "request": "Pelas famílias enlutadas da comunidade, pedindo o consolo do Espírito Santo e a bendita esperança da ressurreição.",
+    "prayedCount": 29
+  },
+  {
+    "id": "prayer-5",
+    "author": "Marta R.",
+    "category": "saude",
+    "categoryLabel": "Saúde & Cura",
+    "date": "Há 2 dias",
+    "request": "Pela restauração e saúde do pequeno Gabriel, em recuperação de crise respiratória.",
+    "prayedCount": 15
+  },
+  {
+    "id": "prayer-6",
+    "author": "Anônimo",
+    "category": "espiritual",
+    "categoryLabel": "Paz Espiritual",
+    "date": "Há 3 dias",
+    "request": "Por paz interior, reconciliação no lar e derramamento do Espírito Santo sobre nossa igreja.",
+    "prayedCount": 22
+  }
+]

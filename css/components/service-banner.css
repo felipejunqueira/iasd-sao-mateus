@@ -12,13 +12,19 @@
   border-radius: var(--r-md);
   padding: 1.4rem 1.5rem;
   margin-bottom: 1.5rem;
+  transition: var(--t);
+}
+
+.address-card:hover {
+  border-color: var(--brand-mid);
+  box-shadow: var(--shadow-sm);
 }
 
 .address-label {
   font-size: .72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: .12em;
   color: var(--text-muted);
   margin-bottom: .4rem;
 }
@@ -47,19 +53,25 @@
   height: 300px;
   object-fit: cover;
   display: block;
+  transition: transform .35s ease;
+}
+
+.sanctuary-photo-wrap:hover .sanctuary-photo {
+  transform: scale(1.03);
 }
 
 .sanctuary-label {
   position: absolute;
   bottom: .85rem;
   left: .85rem;
-  background: rgba(26,18,14,.85);
+  background: rgba(10, 28, 48, 0.9);
   color: var(--brand-light);
   font-size: .78rem;
   font-weight: 700;
   padding: .3rem .85rem;
   border-radius: var(--r-full);
   border: 1px solid var(--brand-gold);
+  backdrop-filter: blur(4px);
 }
 
 @media (max-width: 840px) {

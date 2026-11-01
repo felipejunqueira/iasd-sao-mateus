@@ -1,0 +1,62 @@
+[
+  {
+    "id": "pg-esperanca-viva",
+    "nome": "PG Esperança Viva",
+    "bairro": "São Mateus Centro",
+    "dia": "Sexta-feira · 20h00",
+    "perfil": "Famílias",
+    "lideres": "Carlos e Mariana Silva",
+    "whatsapp": "5511996338938",
+    "descricao": "Comunhão bíblica, partilha e ambiente acolhedor para pais e filhos."
+  },
+  {
+    "id": "pg-geracao-conectada",
+    "nome": "PG Geração Conectada",
+    "bairro": "Parque São Rafael",
+    "dia": "Sábado · 18h30",
+    "perfil": "Jovens",
+    "lideres": "Lucas Oliveira e Beatriz Santos",
+    "whatsapp": "5511996338938",
+    "descricao": "Louvor jovem, bate-papo bíblico dinâmico e amizades sinceras."
+  },
+  {
+    "id": "pg-viver-comunhao",
+    "nome": "PG Viver em Comunhão",
+    "bairro": "Jardim Tietê",
+    "dia": "Terça-feira · 20h00",
+    "perfil": "Misto",
+    "lideres": "Robson e Priscila Mendes",
+    "whatsapp": "5511996338938",
+    "descricao": "Oração fervorosa, estudo das escrituras e apoio mútuo semanal."
+  },
+  {
+    "id": "pg-renascer",
+    "nome": "PG Renascer",
+    "bairro": "Iguatemi",
+    "dia": "Quinta-feira · 19h30",
+    "perfil": "Mulheres",
+    "lideres": "Elena Souza e Cláudia Rocha",
+    "whatsapp": "5511996338938",
+    "descricao": "Círculo de oração, fortalecimento espiritual e acolhimento feminino."
+  },
+  {
+    "id": "pg-mensageiros-paz",
+    "nome": "PG Mensageiros da Paz",
+    "bairro": "Cidade Tiradentes",
+    "dia": "Sexta-feira · 20h00",
+    "perfil": "Famílias",
+    "lideres": "Marcos e Débora Ferreira",
+    "whatsapp": "5511996338938",
+    "descricao": "Lares abertos com louvor em família, testemunhos e amizade cristã."
+  },
+  {
+    "id": "pg-conexao-biblica",
+    "nome": "PG Conexão Bíblica",
+    "bairro": "São Mateus Centro",
+    "dia": "Terça-feira · 19h45",
+    "perfil": "Misto",
+    "lideres": "Thiago e Juliana Lima",
+    "whatsapp": "5511996338938",
+    "descricao": "Estudos bíblicos temáticos com momentos de lanche e comunhão franca."
+  }
+]

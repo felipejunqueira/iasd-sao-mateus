@@ -11,6 +11,12 @@
   border-radius: var(--r-lg);
   padding: 2.5rem;
   box-shadow: var(--shadow-sm);
+  transition: transform .26s cubic-bezier(.16,1,.3,1), box-shadow .26s ease, border-color .26s ease;
+}
+
+.pastoral-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(201,151,56,.3);
 }
 
 .pastoral-photo-wrap {
@@ -43,7 +49,7 @@
 
 .pastoral-quote {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-style: italic;
   color: var(--text-secondary);
   line-height: 1.7;
@@ -52,7 +58,7 @@
   margin: 1rem 0 1.5rem;
 }
 
-.pastoral-name { font-size: 1.1rem; font-weight: 700; }
+.pastoral-name { font-size: 1.15rem; font-weight: 700; }
 .pastoral-role { font-size: .85rem; color: var(--text-muted); }
 .pastoral-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.5rem; }
 
@@ -62,9 +68,8 @@
   .pastoral-quote { text-align: left; }
 }
 
-/* Dark mode: badge precisa de contraste invertido */
 body.dark-mode .pastoral-badge-pill {
-  background: rgba(212,166,120,.18);
+  background: rgba(226,179,92,.18);
   color: var(--brand-warm);
-  border: 1px solid rgba(212,166,120,.35);
+  border: 1px solid rgba(226,179,92,.35);
 }

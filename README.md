@@ -1,73 +1,37 @@
 # ⛪ Website Oficial - Igreja Adventista do Sétimo Dia (São Mateus)
 
-> Portal moderno, inclusivo, seguro e mobile-first da IASD São Mateus (Zona Leste de São Paulo). Desenvolvido sob a **Filosofia Unix**: código modular, funções concisas, alta segurança defensiva e **estritamente menos de 100 linhas por arquivo**.
+> Portal comunitário, litúrgico, acessível e PWA da IASD São Mateus (Zona Leste de SP).
+> Desenvolvido sob a **Filosofia Unix**: código 100% modular, foco no usuário e **zero arquivos com mais de 100 linhas**.
 
 ---
 
-## 🌟 Destaques do Projeto
+## 🌟 Funcionalidades e Inovações Comunitárias
 
-- **Localização Oficial**: **Rua Antônio Previato, 1001 - São Mateus, São Paulo - SP** (com integração direta para Google Maps e Waze).
-- **Filosofia Unix na Prática**:
-  - Arquitetura 100% modular dividida em módulos independentes (`css/core/`, `css/components/`, `js/modules/`).
-  - **Zero arquivos com mais de 100 linhas**: facilidade máxima para auditoria, leitura e manutenção.
-- **Mobile-First & Resiliente**:
-  - Interface desenvolvida primariamente para smartphones (menu drawer, botões com área de toque ampla > 44px).
-  - Proteção defensiva contra toques repetidos acidentais (debounce de 3s no envio de formulários e no botão do PIX).
-  - Sanitização de strings contra ataques de injeção XSS.
-  - Armazenamento em `safeStorage` com tolerância a falhas (funciona sem quebrar mesmo em aba anônima).
-- **Novas Funcionalidades Reais**:
-  - 🎬 **Central de Séries Bíblicas em Temporadas**: Catálogo interativo com temporadas de estudos bíblicos e player modal.
-  - 💳 **Módulo de Dízimos & Ofertas com PIX**: Chave PIX da igreja com botão **"Copiar Chave PIX"** de 1 clique, QR Code e link para o app oficial **7me**.
-  - 🔗 **Hub de Links da Bio**: Atalhos rápidos pensados para quem vem do Instagram da igreja.
-  - 📸 **Fotografias Documentais Reais**: Registros autênticos de templos adventistas, cultos e acampamentos.
-  - ♿ **Acessibilidade Completa (WCAG 2.1)**: Suporte a **VLibras**, modo **Alto Contraste**, escala de fontes e **Leitor de Voz Nativo** em português.
+- **Localização Oficial**: **Rua Antônio Previato, 1001 - São Mateus, SP** (Google Maps & Waze).
+- **Pôr do Sol & Boas-Vindas ao Sábado**: Cálculo astronômico NOAA para São Mateus com contagem regressiva para sexta-feira e compartilhamento de Feliz Sábado no WhatsApp.
+- **Hinário Adventista Interativo**: Busca instantânea por número e título, modal com letra completa, ajuste de fonte cíclico para leitura durante o culto e compartilhamento.
+- **Mural de Oração Comunitário**: Pedidos reais da congregação com contadores de intercessão ("🙏 Já orei por este pedido (+1)") e integração com o formulário confidencial.
+- **Pequenos Grupos (PGs) nos Bairros**: Guia por bairros (São Mateus, São Rafael, Tietê, Iguatemi, Cidade Tiradentes) com contato direto via WhatsApp com os líderes.
+- **Agenda & Calendário Litúrgico**: Santa Ceia, Desbravadores, ASA, Jovens JA e Semanas Especiais com geração de link "Adicionar ao Google Agenda" de 1 clique.
+- **Check-up Diário dos 8 Remédios Naturais**: Avaliação interativa de estilo de vida com cálculo de pontuação, prescrição bíblico-pastoral e salvamento em `safeStorage`.
+- **Versículo Diário ("Pão da Palavra")**: Inspiração diária determinística com compartilhamento formatado no WhatsApp.
+- **Dízimos, Ofertas & PIX**: Chave PIX oficial com cópia em 1 clique, QR Code e link direto para o app 7me.
+- **PWA & Funcionamento Offline**: Service Worker com estratégia Cache-First para recursos da igreja funcionarem mesmo sem sinal de internet no santuário.
+- **Acessibilidade Universal (WCAG 2.1 AAA)**: Contraste verificado (17:1), VLibras, Leitor de Voz Nativo (Web Speech API), Focus Trap e navegação total por teclado (WAI-ARIA).
 
 ---
 
 ## 📁 Arquitetura Modular (< 100 linhas por arquivo)
 
 ```
-igreja/
-├── index.html                   # HTML semântico e estruturado
-├── server.js                    # Servidor local Node.js seguro
-├── package.json                 # Scripts do projeto
-├── README.md                    # Documentação técnica
-│
-├── data/
-│   ├── feed.json                # Publicações reais da galeria
-│   └── series.json              # Temporadas e episódios bíblicos
-│
-├── css/
-│   ├── main.css                 # Importador central
-│   ├── core/
-│   │   ├── variables.css        # Cores, raios e sombras
-│   │   ├── reset.css            # Reset global e container
-│   │   └── accessibility.css    # Alto contraste e escalas
-│   └── components/
-│       ├── nav.css & nav-tabs   # Navegação, menu mobile e 3 abas
-│       ├── buttons.css          # Botões reutilizáveis
-│       ├── hero & quick-links   # Banner e hub de links da bio
-│       ├── services.css         # Horários e cálculo de culto
-│       ├── series (tabs & cards)# Abas e cards da central de séries
-│       ├── dizimos.css          # Dízimos, PIX e 7me
-│       ├── timeline & remedies  # Linha do tempo e 8 remédios
-│       ├── ministries & gallery # Desbravadores, ASA, JA e galeria
-│       ├── forms.css            # Estudo bíblico e oração
-│       ├── modals.css           # Lightbox e player de vídeo
-│       └── footer.css           # Rodapé e créditos de Felipe
-│
-├── js/
-│   ├── main.js                  # Ponto de entrada modular
-│   └── modules/
-│       ├── utils.js             # Sanitização, safeStorage e debounce
-│       ├── menu & tab-router    # Menu mobile e roteador de 3 abas
-│       ├── services & series    # Próximo culto e séries bíblicas
-│       ├── pix, gallery & light # Chave PIX, galeria e lightbox
-│       ├── forms.js             # Formulários anti-spam
-│       └── a11y & vlibras       # Alto contraste, voz e VLibras
-│
-└── assets/
-    └── images/                  # Fotos documentais e logo oficial IASD
+iasd-sao-mateus/
+├── index.html                   # HTML semântico com carregador de partials
+├── sw.js & manifest.webmanifest # Progressive Web App e cache offline
+├── server.js                    # Servidor local Node.js com MIME types
+├── data/                        # hinario, events, pgs, prayers, verses, series, feed
+├── css/core/ & components/      # Paleta nobre adventista, botões, modais, pwa, sunset
+├── js/modules/ & locales/       # Módulos puros desacoplados, i18n bilíngue modular
+└── partials/                    # 27 partials modulares temáticas e acessíveis
 ```
 
 ---
@@ -76,11 +40,11 @@ igreja/
 
 ```bash
 # Na pasta raiz do projeto:
-npm start
+npm run dev
 # ou:
 node server.js
 ```
-Acesse no seu navegador: **`http://localhost:3000`**
+Acesse no navegador: **`http://localhost:3000`**
 
 ---
 

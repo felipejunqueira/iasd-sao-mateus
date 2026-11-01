@@ -1,0 +1,51 @@
+<!-- Pequenos Grupos (PGs) nos Lares -->
+<section id="pequenos-grupos" class="section pgs-section" aria-labelledby="pgs-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Igreja nos Lares · Comunhão Semanal</span>
+      <h2 id="pgs-heading" class="section-title">Pequenos Grupos em São Mateus</h2>
+      <p class="section-lead">
+        <em>"Diariamente perseveravam unânimes no templo, partiam pão de casa em casa e tomavam as suas refeições com alegria e singeleza de coração."</em> (Atos 2:46)
+      </p>
+    </div>
+
+    <!-- Barra de Filtros -->
+    <div class="pgs-filters" role="search" aria-label="Filtrar Pequenos Grupos">
+      <div class="pg-filter-group">
+        <label for="pg-filter-bairro" class="pg-filter-label">Bairro:</label>
+        <select id="pg-filter-bairro" class="pg-select" aria-label="Filtrar por Bairro">
+          <option value="todos">Todos os Bairros</option>
+          <option value="São Mateus Centro">São Mateus Centro</option>
+          <option value="Parque São Rafael">Parque São Rafael</option>
+          <option value="Jardim Tietê">Jardim Tietê</option>
+          <option value="Iguatemi">Iguatemi</option>
+          <option value="Cidade Tiradentes">Cidade Tiradentes</option>
+        </select>
+      </div>
+
+      <div class="pg-filter-group">
+        <label for="pg-filter-perfil" class="pg-filter-label">Perfil:</label>
+        <select id="pg-filter-perfil" class="pg-select" aria-label="Filtrar por Perfil">
+          <option value="todos">Todos os Perfis</option>
+          <option value="Famílias">Famílias</option>
+          <option value="Jovens">Jovens</option>
+          <option value="Misto">Misto</option>
+          <option value="Mulheres">Mulheres</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grid de PGs -->
+    <div id="pgs-grid" class="pgs-grid" role="region" aria-live="polite" aria-label="Lista de Pequenos Grupos">
+      <!-- Inserido dinamicamente via js/modules/pgs.js -->
+    </div>
+
+    <div id="pgs-empty" class="pgs-empty" hidden>
+      <p>Nenhum Pequeno Grupo encontrado com os filtros selecionados.</p>
+      <a href="https://wa.me/5511996338938?text=Ol%C3%A1!%20Gostaria%20de%20encontrar%20ou%20iniciar%20um%20PG%20no%20meu%20bairro."
+         target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+        Conversar com a Coordenação de PGs
+      </a>
+    </div>
+  </div>
+</section>

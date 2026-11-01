@@ -1,51 +1,80 @@
-/* Buttons */
+/* Buttons — Micro-interações táteis e foco nítido */
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: .45rem;
-  padding: .65rem 1.5rem;
+  justify-content: center;
+  gap: .5rem;
+  padding: .68rem 1.6rem;
   border-radius: var(--r-full);
   font-family: var(--font-body);
   font-size: .88rem;
   font-weight: 600;
+  letter-spacing: .01em;
   cursor: pointer;
   border: 1.5px solid transparent;
   transition: var(--t);
   white-space: normal;
   text-align: center;
   text-decoration: none;
+  position: relative;
+  user-select: none;
 }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(10, 28, 48, .28);
+}
+.btn svg { transition: transform .22s ease; }
+.btn:hover svg { transform: translateX(2px); }
 
 .btn-primary {
-  background: var(--brand-gold);
-  color: #1a120e;
+  background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-accent) 100%);
+  color: #071524;
   border-color: var(--brand-gold);
+  box-shadow: 0 2px 8px rgba(201, 151, 56, .2);
 }
 .btn-primary:hover {
-  background: var(--iasd-gold-dark);
-  border-color: var(--iasd-gold-dark);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-gold-dark) 100%);
+  border-color: var(--brand-gold-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
   box-shadow: var(--shadow-gold);
 }
 
 .btn-outline {
   background: transparent;
-  color: #fff;
-  border-color: rgba(255,255,255,.45);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, .45);
+  backdrop-filter: blur(4px);
 }
 .btn-outline:hover {
-  background: rgba(255,255,255,.1);
-  border-color: rgba(255,255,255,.7);
+  background: rgba(255, 255, 255, .15);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
 }
 
 .btn-ghost {
-  background: transparent;
+  background: var(--bg-surface);
   color: var(--brand-mid);
   border-color: var(--border);
 }
 .btn-ghost:hover {
   background: var(--bg-muted);
-  border-color: var(--border-strong);
+  border-color: var(--brand-mid);
+  color: var(--brand-mid);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
-/* .btn-secondary is an alias for .btn-outline — use .btn.btn-outline instead */
+body.dark-mode .btn-ghost {
+  background: rgba(255, 255, 255, .04);
+  border-color: var(--border);
+  color: var(--brand-mid);
+}
+body.dark-mode .btn-ghost:hover {
+  background: rgba(255, 255, 255, .08);
+  border-color: var(--brand-mid);
+}

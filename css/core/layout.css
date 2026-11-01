@@ -14,7 +14,7 @@
   font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .12em;
+  letter-spacing: .14em;
   color: var(--brand-mid);
   margin-bottom: .65rem;
 }
@@ -25,13 +25,15 @@
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: .85rem;
-  line-height: 1.15;
+  line-height: 1.18;
+  letter-spacing: -.02em;
 }
 
 .section-lead {
   font-size: 1.1rem;
   color: var(--text-secondary);
   max-width: 580px;
+  line-height: 1.65;
 }
 
 .section-header {

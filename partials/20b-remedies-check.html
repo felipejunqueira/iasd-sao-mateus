@@ -1,0 +1,71 @@
+<!-- Check-up Diário dos 8 Remédios Naturais -->
+<section class="section remedies-check-section" id="checkup-saude" aria-labelledby="check-toggle-btn">
+  <div class="container">
+    <div class="remedies-check-accordion" id="remedies-check-accordion">
+      <button type="button" class="check-accordion-toggle" id="check-toggle-btn" aria-expanded="true" aria-controls="check-accordion-panel">
+        <div class="check-toggle-info">
+          <span class="check-toggle-badge">Autoavaliação de Saúde Integral</span>
+          <h3 class="check-toggle-title">Check-up Diário: Estilo de Vida Adventista</h3>
+        </div>
+        <span class="check-toggle-icon" aria-hidden="true">▾</span>
+      </button>
+      <div id="check-accordion-panel" class="check-accordion-panel" role="region">
+        <p class="check-lead">Marque com carinho as práticas cumpridas hoje para gerar sua prescrição de renovação:</p>
+        <div class="check-progress-wrap">
+          <div class="check-progress-labels">
+            <span id="check-progress-text">0 de 8 hábitos hoje</span>
+            <span id="check-progress-pct" class="check-pct">0%</span>
+          </div>
+          <div class="check-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="check-progress-fill" id="check-progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="remedies-items-grid" id="remedies-items-grid">
+          <label class="remedy-item" for="rem-agua">
+            <input type="checkbox" id="rem-agua" data-remedy="agua" class="remedy-switch">
+            <span class="remedy-item-label"><strong>Água Pura:</strong> 2 litros ou 8 copos</span>
+          </label>
+          <label class="remedy-item" for="rem-ar">
+            <input type="checkbox" id="rem-ar" data-remedy="ar" class="remedy-switch">
+            <span class="remedy-item-label"><strong>Ar Puro:</strong> Respiração profunda e ar fresco</span>
+          </label>
+          <label class="remedy-item" for="rem-sol">
+            <input type="checkbox" id="rem-sol" data-remedy="sol" class="remedy-switch">
+            <span class="remedy-item-label"><strong>Luz Solar:</strong> 15 a 20 min de sol matinal</span>
+          </label>
+          <label class="remedy-item" for="rem-exercicio">
+            <input type="checkbox" id="rem-exercicio" data-remedy="exercicio" class="remedy-switch">
+            <span class="remedy-item-label"><strong>Exercício Físico:</strong> 30 min de movimento</span>
+          </label>
+          <label class="remedy-item" for="rem-repouso">
+            <input type="checkbox" id="rem-repouso" data-remedy="repouso" class="remedy-switch">
+            <span class="remedy-item-label"><strong>Repouso:</strong> 7-8h de sono reparador / Sábado</span>
+          </label>
+          <label class="remedy-item" for="rem-nutricao">
+            <input type="checkbox" id="rem-nutricao" data-remedy="nutricao" class="remedy-switch">
+            <span class="remedy-item-label"><strong>Nutrição:</strong> Alimentos integrais e frescos</span>
+          </label>
+          <label class="remedy-item" for="rem-temperanca">
+            <input type="checkbox" id="rem-temperanca" data-remedy="temperanca" class="remedy-switch">
+            <span class="remedy-item-label"><strong>Temperança:</strong> Moderação e equilíbrio diário</span>
+          </label>
+          <label class="remedy-item" for="rem-confianca">
+            <input type="checkbox" id="rem-confianca" data-remedy="confianca" class="remedy-switch">
+            <span class="remedy-item-label"><strong>Confiança em Deus:</strong> Oração e descanso da fé</span>
+          </label>
+        </div>
+        <div class="check-actions">
+          <button type="button" id="btn-calc-health" class="btn btn-primary">Calcular Minha Nota de Saúde</button>
+        </div>
+        <div id="check-result-box" class="check-result-box" hidden aria-live="polite">
+          <div class="result-score-badge" id="result-score-badge">0%</div>
+          <div class="result-feedback">
+            <h4 id="result-title">Avaliação do seu dia</h4>
+            <p id="result-message"></p>
+            <small id="result-date" class="result-date"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

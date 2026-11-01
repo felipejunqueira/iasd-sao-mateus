@@ -12,29 +12,36 @@
 
 .season-tab-btn {
   background: var(--bg-surface);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   color: var(--text-secondary);
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.6rem 1.3rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.55rem 1.3rem;
   border-radius: var(--r-full);
   cursor: pointer;
   transition: var(--t);
+  user-select: none;
 }
 
 .season-tab-btn:hover {
   border-color: var(--brand-mid);
   color: var(--brand-mid);
+  transform: translateY(-1px);
+}
+
+.season-tab-btn:active {
+  transform: translateY(1px);
 }
 
 .season-tab-btn.active {
   background: var(--brand-mid);
   color: #fff;
   border-color: var(--brand-mid);
+  box-shadow: 0 2px 8px rgba(22, 62, 108, .25);
 }
 
 body.dark-mode .season-tab-btn.active {
-  background: rgba(196,154,108,.15);
+  background: rgba(226,179,92,.18);
   color: var(--brand-warm);
-  border-color: rgba(196,154,108,.4);
+  border-color: rgba(226,179,92,.4);
 }

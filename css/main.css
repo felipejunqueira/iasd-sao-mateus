@@ -9,29 +9,39 @@
 @import url('components/nav-tabs.css');
 @import url('components/buttons.css');
 @import url('components/hero.css');
+@import url('components/daily-verse.css');
 @import url('components/quick-links.css');
 @import url('components/pastor.css');
 @import url('components/service-banner.css');
 @import url('components/services.css');
+@import url('components/sunset.css');
+@import url('components/calendar.css');
+@import url('components/pgs.css');
 @import url('components/series-tabs.css');
 @import url('components/series-cards.css');
 @import url('components/series-modal.css');
+@import url('components/hinario.css');
 @import url('components/dizimos.css');
 @import url('components/timeline.css');
 @import url('components/remedies.css');
+@import url('components/remedies-check.css');
 @import url('components/ministries.css');
 @import url('components/gallery.css');
 @import url('components/forms.css');
+@import url('components/prayer-wall.css');
 @import url('components/form-feedback.css');
 @import url('components/modals.css');
 @import url('components/toast.css');
+@import url('components/pwa.css');
 @import url('components/footer.css');
 
-/* Aliases de classes legadas (compatibilidade com JS existente) */
-.section-tag { font-family: var(--font-body); font-size: .75rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .12em; color: var(--brand-mid);
-  display: inline-block; margin-bottom: .65rem; }
-.section-desc { font-size: 1.05rem; color: var(--text-secondary); }
+/* Aliases de classes legadas (compatibilidade) */
+.section-tag {
+  font-family: var(--font-body); font-size: .75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .14em; color: var(--brand-mid);
+  display: inline-block; margin-bottom: .65rem;
+}
+.section-desc { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6; }
 
 /* btn-secondary legado → outline */
 .btn-secondary {
@@ -39,7 +49,7 @@
   padding: .65rem 1.5rem; border-radius: var(--r-full);
   font-size: .88rem; font-weight: 600; cursor: pointer;
   border: 1.5px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.08); color: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.08); color: rgba(255,255,255,.9);
   transition: var(--t);
 }
 .btn-secondary:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.6); }

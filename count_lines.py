@@ -1,7 +1,7 @@
 import os
 
 for root, _, files in os.walk('.'):
-    if '.git' in root or '.user_uploaded' in root:
+    if any(ignored in root for ignored in ('.git', '.user_uploaded', 'dist', 'node_modules')):
         continue
     for f in files:
         if f.endswith(('.html', '.css', '.js')):
