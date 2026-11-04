@@ -1,71 +1,71 @@
-/* Formulários */
-.form-section {
-  background: var(--bg-dark);
-  color: #fff;
-}
-.form-section .section-eyebrow { color: var(--brand-gold); }
+/* Formulários de Contato, Oração e Visita */
+.form-section { background: var(--bg-dark); color: #fff; padding: 4.5rem 0; }
+.form-section .section-eyebrow { color: var(--brand-accent); }
 .form-section .section-title { color: #fff; }
-.form-section .section-lead { color: rgba(255,255,255,.75); }
+.form-section .section-lead { color: rgba(255,255,255,.82); }
 
 .form-box {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
   background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--r-lg);
-  padding: 2.5rem;
-  box-shadow: 0 16px 40px rgba(0,0,0,.3);
+  padding: 2.75rem;
+  box-shadow: 0 16px 44px rgba(0,0,0,.35);
 }
 
 .form-tab-strip {
-  display: flex; gap: .35rem;
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  margin-bottom: 2rem; padding-bottom: .75rem;
+  display: flex; gap: .45rem;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  margin-bottom: 2.25rem; padding-bottom: .85rem;
+  overflow-x: auto;
 }
 
 .form-tab-btn {
   background: none; border: none;
-  color: rgba(255,255,255,.6);
-  font-size: .88rem; font-weight: 600;
-  padding: .4rem 1rem; cursor: pointer;
+  color: rgba(255,255,255,.7);
+  font-size: .9rem; font-weight: 600;
+  padding: .45rem 1.15rem; cursor: pointer;
   border-radius: var(--r-full);
   transition: var(--t);
+  white-space: nowrap;
 }
-.form-tab-btn:hover { color: #fff; background: rgba(255,255,255,.08); }
+.form-tab-btn:hover { color: #fff; background: rgba(255,255,255,.1); }
 .form-tab-btn.active {
-  color: var(--brand-gold);
-  background: rgba(201,151,56,.15);
-  border: 1px solid rgba(201,151,56,.3);
+  color: #fff;
+  background: rgba(201,151,56,.22);
+  border: 1px solid rgba(201,151,56,.45);
 }
 
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-.form-group { display: flex; flex-direction: column; gap: .35rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.35rem; }
+.form-group { display: flex; flex-direction: column; gap: .45rem; }
 .form-group.span2 { grid-column: span 2; }
 
-.form-group label { font-size: .8rem; font-weight: 600; color: rgba(255,255,255,.8); }
+.form-group label { font-size: .85rem; font-weight: 600; color: rgba(255,255,255,.88); }
 
 .form-control {
-  background: rgba(255,255,255,.07);
-  border: 1.5px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.08);
+  border: 1.5px solid rgba(255,255,255,.18);
   color: #fff;
-  padding: .7rem .9rem;
+  padding: .75rem 1rem;
   border-radius: var(--r-sm);
-  font-size: .9rem;
+  font-size: .95rem;
+  font-family: var(--font-body);
   transition: var(--t);
 }
 .form-control:focus {
   outline: none;
   border-color: var(--brand-gold);
   box-shadow: 0 0 0 3px rgba(201,151,56,.25);
-  background: rgba(255,255,255,.1);
+  background: rgba(255,255,255,.12);
 }
 .form-control option { background: #071524; color: #fff; }
 
-.form-control::placeholder { color: rgba(255,255,255,.4); }
-textarea.form-control { resize: vertical; min-height: 120px; }
+.form-control::placeholder { color: rgba(255,255,255,.45); }
+textarea.form-control { resize: vertical; min-height: 125px; }
 
 @media (max-width: 600px) {
   .form-grid { grid-template-columns: 1fr; }
   .form-group.span2 { grid-column: span 1; }
-  .form-box { padding: 1.5rem; }
+  .form-box { padding: 1.6rem 1.25rem; }
 }

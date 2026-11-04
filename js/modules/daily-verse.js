@@ -1,6 +1,5 @@
 /**
- * Módulo: Pão Diário da Palavra (Versículo Inspirador)
- * Filosofia Unix: propósito único, determinístico e acessível (< 85 linhas)
+ * Módulo: Pão Diário da Palavra (Versículo Inspirador < 80 linhas)
  */
 import { showToast, debounce } from './utils.js';
 
@@ -28,8 +27,8 @@ function updateVerse(index) {
   if (themeEl) themeEl.textContent = v.theme;
 
   if (shareBtn) {
-    const text = `"${v.text}" — ${v.reference} (IASD São Mateus)`;
-    shareBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    const msg = `📖 *Pão Diário da Palavra*\n\n"${v.text}"\n\n— *${v.reference}*\n\n✨ _IASD São Mateus · Rua Antônio Previato, 1001_\n🌐 https://iasd-sao-mateus.vercel.app`;
+    shareBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`;
   }
 }
 
@@ -39,7 +38,7 @@ function copyVerse() {
   const text = `"${v.text}" — ${v.reference} (IASD São Mateus)`;
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(text)
-      .then(() => showToast('Versículo copiado com sucesso!'))
+      .then(() => showToast('Versículo copiado!'))
       .catch(() => fallbackCopy(text));
   } else {
     fallbackCopy(text);
@@ -61,22 +60,20 @@ export async function initDailyVerse() {
   if (!document.getElementById('daily-verse-text')) return;
   try {
     const res = await fetch(`data/verses.json?v=${Date.now()}`);
-    verses = await res.json();
+    verses = res.ok ? await res.json() : [];
   } catch {
-    verses = [{ reference: 'Isaías 41:10', theme: 'Esperança', text: 'Não temas, porque eu sou contigo; não te assombres, porque eu sou o teu Deus.' }];
+    verses = [];
+  }
+  if (!verses.length) {
+    verses = [{ reference: 'Isaías 41:10', theme: 'Esperança', text: 'Não temas, porque eu sou contigo; não te assombres, porque eu sou o teu Deus; eu te fortaleço, e te ajudo, e te sustento com a destra da minha justiça.' }];
   }
 
   currentIndex = getDayOfYear() % verses.length;
   updateVerse(currentIndex);
 
-  const copyBtn = document.getElementById('btn-copy-verse');
-  if (copyBtn) copyBtn.addEventListener('click', debounce(copyVerse, 300));
-
-  const refreshBtn = document.getElementById('btn-refresh-verse');
-  if (refreshBtn) {
-    refreshBtn.addEventListener('click', debounce(() => {
-      currentIndex = (currentIndex + 1) % verses.length;
-      updateVerse(currentIndex);
-    }, 250));
-  }
+  document.getElementById('btn-copy-verse')?.addEventListener('click', debounce(copyVerse, 300));
+  document.getElementById('btn-refresh-verse')?.addEventListener('click', debounce(() => {
+    currentIndex = (currentIndex + 1) % verses.length;
+    updateVerse(currentIndex);
+  }, 250));
 }

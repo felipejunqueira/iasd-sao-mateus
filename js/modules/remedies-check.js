@@ -1,30 +1,25 @@
+/**
+ * Check-up dos 8 Remédios Naturais · IASD São Mateus (WCAG 2.1 AAA < 85 linhas)
+ */
 import { safeStorage } from './utils.js';
 
 const KEY = 'iasd_remedies_check';
 
 const MESSAGES = [
-  { min: 100, title: 'Saúde Integral Abençoada', text: 'Louvado seja Deus! Seu corpo e mente estão em harmonia com as leis naturais do Criador. A medicina comprova que manter esses 8 hábitos renova a imunidade e prolonga a vida com vigor e paz. "Desejo que tenhas saúde, assim como vai bem a tua alma" (3 João 1:2).' },
-  { min: 75, title: 'Excelente Vitalidade', text: 'Maravilhosa dedicação ao templo do Espírito Santo! Poucos ajustes trarão ainda mais clareza mental e paz interior para os desafios diários. Respire fundo e renove suas forças no amor de Deus.' },
-  { min: 50, title: 'Bons Passos de Renovação', text: 'Você deu passos significativos hoje! O equilíbrio no estilo de vida vem com perseverança diária: priorize uma hidratação generosa, uma pausa para oração e um descanso noturno restaurador.' },
-  { min: 0, title: 'Um Recomeço com Esperança', text: 'As misericórdias de Deus se renovam a cada manhã! Comece agora mesmo com passos simples: beba água pura, respire ar fresco na janela e descanse o coração em Cristo. "O coração alegre é bom remédio" (Pv 17:22).' }
+  { min: 100, title: 'Saúde Integral Abençoada (100%)', text: 'Louvado seja Deus! Seu corpo e mente estão em harmonia com as leis do Criador. Esses hábitos renovam a imunidade, longevidade e paz. "Desejo que tenhas saúde, assim como vai bem a tua alma" (3 João 1:2).' },
+  { min: 75, title: 'Excelente Vitalidade (75% a 99%)', text: 'Maravilhosa dedicação ao templo do Espírito Santo! Poucos ajustes trarão ainda mais vigor mental e paz interior. Beba mais água e renove-se em Deus. "O coração alegre aformoseia o rosto" (Pv 15:13).' },
+  { min: 50, title: 'Bons Passos de Renovação (50% a 74%)', text: 'Você deu passos preciosos hoje! O equilíbrio no estilo de vida vem com perseverança: priorize boa hidratação, oração e sono reparador. "Tudo posso naquele que me fortalece" (Fp 4:13).' },
+  { min: 0, title: 'Um Recomeço com Esperança (0% a 49%)', text: 'As misericórdias de Deus se renovam a cada manhã! Comece agora: beba água pura, respire ar fresco e descanse o coração em Cristo. "O coração alegre é bom remédio" (Pv 17:22).' }
 ];
-
-function getFeedback(score) {
-  return MESSAGES.find(m => score >= m.min) || MESSAGES[MESSAGES.length - 1];
-}
 
 export function initRemediesCheck() {
   const container = document.getElementById('remedies-check-accordion');
   if (!container) return;
 
-  const toggleBtn = document.getElementById('check-toggle-btn');
-  const panel = document.getElementById('check-accordion-panel');
+  const toggleBtn = document.getElementById('check-toggle-btn'), panel = document.getElementById('check-accordion-panel');
   const inputs = Array.from(container.querySelectorAll('.remedy-switch'));
-  const fill = document.getElementById('check-progress-fill');
-  const pctTxt = document.getElementById('check-progress-pct');
-  const countTxt = document.getElementById('check-progress-text');
-  const calcBtn = document.getElementById('btn-calc-health');
-  const resultBox = document.getElementById('check-result-box');
+  const fill = document.getElementById('check-progress-fill'), pctTxt = document.getElementById('check-progress-pct'), countTxt = document.getElementById('check-progress-text');
+  const calcBtn = document.getElementById('btn-calc-health'), resultBox = document.getElementById('check-result-box');
 
   const updateProgress = () => {
     const checked = inputs.filter(i => i.checked).length;
@@ -38,7 +33,7 @@ export function initRemediesCheck() {
 
   const renderResult = (score, dateStr) => {
     if (!resultBox) return;
-    const fb = getFeedback(score);
+    const fb = MESSAGES.find(m => score >= m.min) || MESSAGES[MESSAGES.length - 1];
     document.getElementById('result-score-badge').textContent = `${score}%`;
     document.getElementById('result-title').textContent = fb.title;
     document.getElementById('result-message').textContent = fb.text;
@@ -56,8 +51,7 @@ export function initRemediesCheck() {
   inputs.forEach(input => input.addEventListener('change', updateProgress));
 
   calcBtn?.addEventListener('click', () => {
-    const { score } = updateProgress();
-    const today = new Date().toLocaleDateString('pt-BR');
+    const { score } = updateProgress(), today = new Date().toLocaleDateString('pt-BR');
     const checkedIds = inputs.filter(i => i.checked).map(i => i.id);
     safeStorage.set(KEY, JSON.stringify({ date: today, score, checkedIds }));
     renderResult(score, today);

@@ -1,6 +1,6 @@
-/* Dízimos e Ofertas */
-.dizimos-section { background: var(--bg-dark); color: #fff; }
-.dizimos-section .section-eyebrow { color: var(--brand-gold); }
+/* Dízimos, Ofertas e Fidelidade Sagrada */
+.dizimos-section { background: var(--bg-dark); color: #fff; padding: 4.5rem 0; }
+.dizimos-section .section-eyebrow { color: var(--brand-accent); }
 .dizimos-section .section-title { color: #fff; }
 
 .dizimos-container {
@@ -11,30 +11,30 @@
 }
 
 .dizimos-verse {
-  border-left: 3px solid var(--brand-gold);
-  padding-left: 1.1rem;
+  border-left: 3.5px solid var(--brand-gold);
+  padding-left: 1.25rem;
   margin: 1.5rem 0;
   font-style: italic;
-  font-size: .95rem;
-  color: rgba(255,255,255,.75);
+  font-size: 1rem;
+  color: rgba(255,255,255,.88);
   line-height: 1.7;
 }
 
-.dizimos-info p { color: rgba(255,255,255,.8); line-height: 1.7; margin-bottom: 1rem; }
+.dizimos-info p { color: rgba(255,255,255,.85); line-height: 1.7; margin-bottom: 1.1rem; font-size: .95rem; }
 .dizimos-info strong { color: var(--brand-gold); }
 
 .pix-card {
   background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.16);
   border-radius: var(--r-lg);
-  padding: 2rem;
-  box-shadow: 0 16px 36px rgba(0,0,0,.35);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
   transition: var(--t);
 }
-.pix-card:hover { border-color: rgba(201,151,56,.4); }
+.pix-card:hover { border-color: rgba(201,151,56,.45); }
 
 .pix-card-label {
-  font-size: .7rem;
+  font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .12em;
@@ -44,26 +44,27 @@
 }
 
 .pix-qr-wrapper {
-  background: #fff;
+  background: #ffffff;
   border-radius: var(--r-md);
-  padding: 1.25rem;
+  padding: 1.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+  margin-bottom: 1.35rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.2);
 }
 
 .pix-key-display {
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.09);
+  border: 1px solid rgba(255,255,255,.18);
   border-radius: var(--r-sm);
-  padding: .75rem 1rem;
-  font-size: .88rem;
-  color: rgba(255,255,255,.95);
+  padding: .85rem 1rem;
+  font-size: .9rem;
+  color: rgba(255,255,255,.98);
   text-align: center;
-  margin-bottom: .85rem;
+  margin-bottom: 1rem;
   word-break: break-all;
+  font-family: monospace;
 }
 
 .sevenme-banner {
@@ -72,21 +73,21 @@
   justify-content: space-between;
   gap: 1rem;
   background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--r-sm);
-  padding: .85rem 1rem;
-  margin-top: .85rem;
+  padding: .95rem 1.15rem;
+  margin-top: 1rem;
   transition: var(--t);
 }
 .sevenme-banner:hover {
-  background: rgba(255,255,255,.1);
-  border-color: rgba(201,151,56,.3);
+  background: rgba(255,255,255,.12);
+  border-color: rgba(201,151,56,.4);
 }
 
-.sevenme-banner strong { font-size: .88rem; color: #fff; }
-.sevenme-banner p { font-size: .78rem; color: rgba(255,255,255,.65); margin-top: .1rem; }
+.sevenme-banner strong { font-size: .92rem; color: #fff; }
+.sevenme-banner p { font-size: .8rem; color: rgba(255,255,255,.72); margin-top: .15rem; }
 
 @media (max-width: 840px) {
   .dizimos-container { grid-template-columns: 1fr; }
-  .pix-card { max-width: 400px; }
+  .pix-card { max-width: 420px; }
 }

@@ -1,8 +1,8 @@
 /**
- * Pôr do Sol e Boas-Vindas ao Sábado · IASD São Mateus
- * Coordenadas: Lat -23.595, Long -46.475 · Filosofia Unix (< 90 linhas)
+ * Pôr do Sol e Boas-Vindas ao Sábado · IASD São Mateus (-23.5997, -46.4883)
+ * Cálculo astronômico NOAA preciso com contagem regressiva e saudação sabática
  */
-export function getSunset(d, lat = -23.595, lng = -46.475) {
+export function getSunset(d, lat = -23.5997, lng = -46.4883) {
   const start = new Date(d.getFullYear(), 0, 0);
   const dayOfYear = Math.floor((d - start) / 86400000);
   const gamma = (2 * Math.PI / 365) * (dayOfYear - 0.75);
@@ -14,7 +14,7 @@ export function getSunset(d, lat = -23.595, lng = -46.475) {
   const cosOmega = (Math.cos(90.833 * Math.PI / 180) - Math.sin(latRad) * Math.sin(decl)) /
     (Math.cos(latRad) * Math.cos(decl));
   const omega = Math.acos(Math.max(-1, Math.min(1, cosOmega))) * (180 / Math.PI);
-  const localMinutes = 720 - 4 * lng - eq + 4 * omega - 180; // UTC-3
+  const localMinutes = 720 - 4 * lng - eq + 4 * omega - 180; // Horário padrão de Brasília (UTC-3)
   const res = new Date(d);
   res.setHours(Math.floor(localMinutes / 60) % 24, Math.round(localMinutes % 60), 0, 0);
   return res;
@@ -32,36 +32,40 @@ export function initSunset() {
   function update() {
     const now = new Date(), day = now.getDay(), todaySunset = getSunset(now);
     const set = (t, b, d) => {
-      if (titleEl) titleEl.textContent = t;
-      if (badgeEl) badgeEl.textContent = b;
-      if (descEl) descEl.textContent = d;
+      if (titleEl) { titleEl.textContent = t; titleEl.removeAttribute('data-i18n'); }
+      if (badgeEl) { badgeEl.textContent = b; badgeEl.removeAttribute('data-i18n'); }
+      if (descEl) { descEl.textContent = d; descEl.removeAttribute('data-i18n'); }
     };
 
     if (day === 5 && now < todaySunset) {
       const diffMs = todaySunset - now;
       const h = Math.floor(diffMs / 3600000), m = Math.floor((diffMs % 3600000) / 60000);
-      set(`Faltam ${h}h ${m}m para o Pôr do Sol`, 'Dia da Preparação',
-        `O Santo Sábado se inicia hoje às ${fmt(todaySunset)}. Prepare o coração para o descanso de Deus.`);
-    } else if ((day === 5 && now >= todaySunset) || day === 6) {
-      const satSunset = day === 6 ? todaySunset : getSunset(new Date(now.getTime() + 86400000));
-      if (day === 6 && now >= satSunset) {
-        const nextFri = new Date(now.getTime() + 6 * 86400000), nextSunset = getSunset(nextFri);
-        set(`Próximo Pôr do Sol (Sexta): ${fmt(nextSunset)}`, 'Semana de Comunhão',
-          `Abençoada semana! O próximo sábado terá início na sexta-feira às ${fmt(nextSunset)}.`);
-      } else {
-        set(`Feliz Sábado! O sábado se encerra às ${fmt(satSunset)}`, 'Santo Sábado',
-          'Celebre a paz das horas sagradas na IASD São Mateus (Rua Antônio Previato, 1001).');
-      }
+      const countdown = h > 0 ? `Faltam ${h}h ${m}m para o Pôr do Sol` : `Faltam ${m} minutos para o Pôr do Sol`;
+      set(countdown, 'Dia da Preparação',
+        `O Santo Sábado se inicia hoje às ${fmt(todaySunset)}. Prepare o coração para o descanso sagrado de Deus.`);
+    } else if (day === 5 && now >= todaySunset) {
+      const satSunset = getSunset(new Date(now.getTime() + 86400000));
+      set('✨ Feliz Sábado! Horas de paz e comunhão', 'Santo Sábado',
+        `Descanse na doce presença do Criador. O sábado se encerra amanhã às ${fmt(satSunset)}. Venha adorar na IASD São Mateus!`);
+    } else if (day === 6 && now < todaySunset) {
+      set(`✨ Feliz Sábado! O sábado se encerra hoje às ${fmt(todaySunset)}`, 'Santo Sábado',
+        'Celebre as bênçãos do Santo Sábado em comunhão e louvor na IASD São Mateus (Rua Antônio Previato, 1001).');
+    } else if (day === 6 && now >= todaySunset) {
+      const nextFri = new Date(now.getTime() + 6 * 86400000), nextSunset = getSunset(nextFri);
+      set(`Uma semana abençoada! Próximo Sábado: ${fmt(nextSunset)}`, 'Semana de Comunhão',
+        `Caminhe com Deus nesta nova semana. O próximo sábado começará sexta-feira às ${fmt(nextSunset)}.`);
     } else {
-      const daysUntilFri = (5 - day + 7) % 7;
-      const nextFri = new Date(now.getTime() + daysUntilFri * 86400000), nextSunset = getSunset(nextFri);
+      const days = (5 - day + 7) % 7;
+      const nextFri = new Date(now.getTime() + days * 86400000), nextSunset = getSunset(nextFri);
+      const label = days === 1 ? 'amanhã (sexta-feira)' : `em ${days} dias (sexta-feira)`;
       set(`Próximo Pôr do Sol (Sexta): ${fmt(nextSunset)}`, 'IASD São Mateus',
-        `Caminhe com Deus nesta semana. O Santo Sábado começará sexta-feira às ${fmt(nextSunset)}.`);
+        `Caminhe sob a paz e proteção de Cristo. O Santo Sábado começará ${label} às ${fmt(nextSunset)}.`);
     }
   }
 
   update();
   setInterval(update, 60000);
+  window.addEventListener('languageChanged', update);
 
   if (shareBtn) {
     shareBtn.addEventListener('click', (e) => {

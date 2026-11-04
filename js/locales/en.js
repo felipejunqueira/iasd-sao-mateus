@@ -4,6 +4,7 @@ import { timeline } from './en/timeline.js';
 import { lideres } from './en/lideres.js';
 import { ministries } from './en/ministries.js';
 import { community } from './en/community.js';
+import { interactive } from './en/interactive.js';
 
 export const en = {
   ...general,
@@ -12,4 +13,5 @@ export const en = {
   ...lideres,
   ...ministries,
   ...community,
+  ...interactive,
 };

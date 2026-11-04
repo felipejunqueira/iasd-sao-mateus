@@ -1,43 +1,46 @@
-/* Localização */
+/* Localização e Templo Sagrado */
 .location-grid {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 440px;
   gap: 3.5rem;
   align-items: center;
 }
 
 .address-card {
-  background: var(--bg-muted);
+  background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: 1.4rem 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 1.6rem 1.75rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-sm);
   transition: var(--t);
 }
 
 .address-card:hover {
-  border-color: var(--brand-mid);
-  box-shadow: var(--shadow-sm);
+  border-color: rgba(22, 62, 108, 0.35);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .address-label {
-  font-size: .72rem;
+  display: inline-block;
+  font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .12em;
-  color: var(--text-muted);
-  margin-bottom: .4rem;
+  letter-spacing: .1em;
+  color: var(--brand-mid);
+  margin-bottom: .45rem;
 }
 
 .address-street {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--brand-mid);
-  margin-bottom: .2rem;
+  color: var(--brand-dark);
+  margin-bottom: .3rem;
 }
 
 .address-city {
-  font-size: .88rem;
+  font-size: .92rem;
   color: var(--text-secondary);
 }
 
@@ -45,12 +48,13 @@
   position: relative;
   border-radius: var(--r-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
 }
 
 .sanctuary-photo {
   width: 100%;
-  height: 300px;
+  height: 320px;
   object-fit: cover;
   display: block;
   transition: transform .35s ease;
@@ -62,18 +66,19 @@
 
 .sanctuary-label {
   position: absolute;
-  bottom: .85rem;
-  left: .85rem;
-  background: rgba(10, 28, 48, 0.9);
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(10, 28, 48, 0.88);
   color: var(--brand-light);
-  font-size: .78rem;
+  font-size: .8rem;
   font-weight: 700;
-  padding: .3rem .85rem;
+  padding: .35rem .95rem;
   border-radius: var(--r-full);
-  border: 1px solid var(--brand-gold);
-  backdrop-filter: blur(4px);
+  border: 1px solid rgba(201, 151, 56, 0.6);
+  backdrop-filter: blur(8px);
 }
 
-@media (max-width: 840px) {
-  .location-grid { grid-template-columns: 1fr; }
+@media (max-width: 860px) {
+  .location-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .sanctuary-photo { height: 260px; }
 }

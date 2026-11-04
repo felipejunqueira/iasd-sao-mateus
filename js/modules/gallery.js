@@ -1,9 +1,10 @@
 /**
- * Galeria de Fotos e Feed com Filtros Interativos
+ * Galeria de Fotos e Feed com Filtros Interativos e Acessibilidade (WCAG AAA)
  */
 import { openLightbox } from './lightbox.js';
 
 let galleryItems = [];
+let activeFilter = 'todos';
 
 export async function initGallery() {
   const container = document.getElementById('gallery-posts-container');
@@ -20,6 +21,11 @@ export async function initGallery() {
 
   renderGallery(galleryItems);
   initFilterButtons();
+
+  window.addEventListener('languageChanged', () => {
+    const filtered = activeFilter === 'todos' ? galleryItems : galleryItems.filter((i) => i.category === activeFilter);
+    renderGallery(filtered);
+  });
 }
 
 function renderGallery(items) {
@@ -27,29 +33,45 @@ function renderGallery(items) {
   if (!container) return;
 
   if (items.length === 0) {
-    container.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#94a3b8;">Nenhuma foto encontrada.</p>';
+    const emptyMsg = window.currentLang === 'en' ? 'No photos found.' : 'Nenhuma foto encontrada.';
+    container.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:#94a3b8;">${emptyMsg}</p>`;
     return;
   }
 
-  container.innerHTML = items.map((p) => `
-    <article class="feed-card" data-category="${p.category}">
-      <div class="feed-image-box" data-post-id="${p.id}">
-        <img src="${p.image}" alt="${p.title}" loading="lazy">
-      </div>
-      <div class="feed-content">
-        <div class="gallery-overlay">
-          <span class="gallery-category">${window.currentLang === 'en' && p.category_label_en ? p.category_label_en : p.category_label}</span>
-          <h4>${window.currentLang === 'en' && p.title_en ? p.title_en : p.title}</h4>
+  container.innerHTML = items.map((p) => {
+    const isEn = window.currentLang === 'en';
+    const title = isEn && p.title_en ? p.title_en : p.title;
+    const cat = isEn && p.category_label_en ? p.category_label_en : p.category_label;
+    const caption = isEn && p.caption_en ? p.caption_en : p.caption;
+    const ariaLabel = isEn ? `Enlarge photo: ${title}` : `Ampliar foto: ${title}`;
+
+    return `
+      <article class="feed-card" data-category="${p.category}">
+        <div class="feed-image-box" data-post-id="${p.id}" role="button" tabindex="0" aria-label="${ariaLabel}">
+          <img src="${p.image}" alt="${title}" loading="lazy">
         </div>
-        <p class="feed-caption">${window.currentLang === 'en' && p.caption_en ? p.caption_en : p.caption}</p>
-      </div>
-    </article>
-  `).join('');
+        <div class="feed-content">
+          <div class="gallery-overlay">
+            <span class="gallery-category">${cat}</span>
+            <h4>${title}</h4>
+          </div>
+          <p class="feed-caption">${caption}</p>
+        </div>
+      </article>
+    `;
+  }).join('');
 
   container.querySelectorAll('.feed-image-box').forEach((box) => {
-    box.addEventListener('click', () => {
+    const handleOpen = () => {
       const post = galleryItems.find((i) => i.id === box.dataset.postId);
       if (post) openLightbox(post);
+    };
+    box.addEventListener('click', handleOpen);
+    box.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleOpen();
+      }
     });
   });
 }
@@ -58,14 +80,15 @@ function initFilterButtons() {
   const buttons = document.querySelectorAll('.filter-btn');
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      buttons.forEach((b) => b.classList.remove('active'));
+      buttons.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      if (filter === 'todos') {
-        renderGallery(galleryItems);
-      } else {
-        renderGallery(galleryItems.filter((i) => i.category === filter));
-      }
+      btn.setAttribute('aria-selected', 'true');
+      activeFilter = btn.dataset.filter;
+      const filtered = activeFilter === 'todos' ? galleryItems : galleryItems.filter((i) => i.category === activeFilter);
+      renderGallery(filtered);
     });
   });
 }

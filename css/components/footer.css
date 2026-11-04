@@ -1,55 +1,55 @@
-/* Footer */
+/* Rodapé Institucional da IASD São Mateus */
 .footer-main {
   background: var(--bg-dark);
-  color: rgba(255,255,255,.55);
-  padding: 4rem 0 2rem;
-  border-top: 1px solid rgba(255,255,255,.06);
+  color: rgba(255,255,255,.7);
+  padding: 4.5rem 0 2.25rem;
+  border-top: 1px solid rgba(255,255,255,.08);
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1.6fr repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3.25rem;
 }
 
 .footer-brand p {
-  font-size: .88rem;
+  font-size: .9rem;
   line-height: 1.7;
-  color: rgba(255,255,255,.45);
-  margin-top: .85rem;
-  max-width: 260px;
+  color: rgba(255,255,255,.65);
+  margin-top: .95rem;
+  max-width: 280px;
 }
 
 .footer-col h4 {
   font-family: var(--font-body);
-  font-size: .8rem;
+  font-size: .82rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .1em;
-  color: rgba(255,255,255,.4);
-  margin-bottom: 1rem;
+  letter-spacing: .12em;
+  color: var(--brand-accent);
+  margin-bottom: 1.15rem;
 }
 
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
-.footer-col a { font-size: .88rem; color: rgba(255,255,255,.6); }
-.footer-col a:hover { color: var(--brand-gold); }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .65rem; }
+.footer-col a { font-size: .9rem; color: rgba(255,255,255,.75); transition: var(--t); }
+.footer-col a:hover { color: var(--brand-gold); transform: translateX(2px); }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.06);
-  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 1.75rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: .75rem;
-  font-size: .8rem;
+  gap: .85rem;
+  font-size: .85rem;
 }
 
 .footer-bottom strong { color: var(--brand-gold); }
-
-.dev-credit { color: rgba(255,255,255,.4); }
+.dev-credit { color: rgba(255,255,255,.55); }
 
 @media (max-width: 768px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .footer-brand { grid-column: 1 / -1; }
 }

@@ -1,18 +1,21 @@
-/* Seção de Horários de Culto */
+/* Horários de Adoração e Cultos Sagrados */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 1.35rem;
 }
 
 .service-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: 1.6rem 1.5rem;
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow-sm);
   transition: transform .24s cubic-bezier(.16,1,.3,1), box-shadow .24s ease, border-color .24s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card::before {
@@ -24,66 +27,74 @@
   transition: var(--t);
 }
 
-.service-card.featured::before { background: var(--brand-gold); }
-
 .service-card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
-  border-color: rgba(201,151,56,.35);
+  transform: translateY(-3px);
+  border-color: rgba(201,151,56,.4);
 }
 
 .service-card:hover::before { background: var(--brand-mid); }
-.service-card.featured:hover::before { background: var(--brand-accent); }
 
+/* Badges Delicados e Acolhedores */
 .service-day-label {
-  font-size: .72rem;
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .12em;
-  color: var(--text-muted);
-  margin-bottom: .6rem;
+  letter-spacing: .08em;
+  color: var(--brand-mid);
+  background: rgba(22, 62, 108, .07);
+  padding: .28rem .7rem;
+  border-radius: var(--r-full);
+  margin-bottom: .85rem;
 }
 
+/* Horário Gigante e Nítido para Idosos */
 .service-time-big {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--brand-dark);
-  margin-bottom: .5rem;
+  margin-bottom: .45rem;
   line-height: 1;
 }
 
 .service-name {
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--text-primary);
   margin-bottom: .4rem;
 }
 
 .service-desc {
-  font-size: .85rem;
+  font-size: .88rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
-/* Featured card: iluminação sutil dourada */
+/* Culto Divino Destaque Dourado */
 .service-card.featured {
-  border-color: rgba(201,151,56,.4);
-  background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(201,151,56,.05) 100%);
+  border-color: rgba(201,151,56,.45);
+  background: linear-gradient(180deg, var(--bg-surface) 0%, rgba(201,151,56,.04) 100%);
+  box-shadow: 0 4px 16px rgba(201,151,56,.12);
 }
 
-.service-card.featured .service-time-big { color: var(--brand-gold); }
+.service-card.featured::before { background: var(--brand-gold); }
+.service-card.featured:hover::before { background: var(--brand-accent); }
+.service-card.featured .service-time-big { color: var(--brand-gold-dark); }
+.service-card.featured .service-day-label {
+  background: rgba(201,151,56,.14);
+  color: var(--brand-gold-dark);
+}
 
-/* Dark mode service card */
+/* Dark Mode */
 body.dark-mode .service-card.featured {
   border-color: rgba(226,179,92,.35);
-  background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(226,179,92,.07) 100%);
+  background: linear-gradient(180deg, var(--bg-surface) 0%, rgba(226,179,92,.08) 100%);
 }
+body.dark-mode .service-card.featured .service-time-big { color: var(--brand-warm); }
 
 @media (max-width: 580px) {
-  .services-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 400px) {
   .services-grid { grid-template-columns: 1fr; }
 }

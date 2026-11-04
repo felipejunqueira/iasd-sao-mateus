@@ -4,11 +4,11 @@
     <article class="verse-card" aria-live="polite">
       <div class="verse-badge-row">
         <span class="verse-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
           </svg>
-          Pão Diário da Palavra
+          <span data-i18n="verse.badge">Pão Diário da Palavra</span>
         </span>
         <span class="verse-theme-tag" id="verse-theme-badge">Esperança</span>
       </div>
@@ -22,25 +22,25 @@
       </div>
 
       <div class="verse-actions">
-        <button type="button" class="btn-verse-action" id="btn-copy-verse" aria-label="Copiar versículo formatado">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+        <button type="button" class="btn-verse-action" id="btn-copy-verse" aria-label="Copiar versículo formatado" data-i18n-aria-label="verse.copy_aria">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true">
             <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
             <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
           </svg>
-          <span>Copiar</span>
+          <span data-i18n="verse.copy">Copiar</span>
         </button>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-verse-action btn-verse-share" id="btn-share-verse" aria-label="Compartilhar versículo no WhatsApp">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-verse-action btn-verse-share" id="btn-share-verse" aria-label="Compartilhar versículo no WhatsApp" data-i18n-aria-label="verse.share_aria">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
             <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-.9 1.1c-.2.2-.4.2-.7.1s-1.3-.5-2.5-1.5c-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5s0-.4-.1-.5c-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5.1.8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.6-.4z"/>
             <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/>
           </svg>
-          <span>WhatsApp</span>
+          <span data-i18n="verse.share">WhatsApp</span>
         </a>
-        <button type="button" class="btn-verse-action btn-verse-ghost" id="btn-refresh-verse" aria-label="Ler outro versículo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+        <button type="button" class="btn-verse-action btn-verse-ghost" id="btn-refresh-verse" aria-label="Ler outro versículo" data-i18n-aria-label="verse.refresh_aria">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true">
             <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
           </svg>
-          <span>Outro versículo</span>
+          <span data-i18n="verse.refresh">Outro versículo</span>
         </button>
       </div>
     </article>

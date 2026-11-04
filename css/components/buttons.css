@@ -1,13 +1,13 @@
-/* Buttons — Micro-interações táteis e foco nítido */
+/* Buttons — Micro-interações táteis e foco nítido para todas as idades */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
-  padding: .68rem 1.6rem;
+  gap: .55rem;
+  padding: .72rem 1.65rem;
   border-radius: var(--r-full);
   font-family: var(--font-body);
-  font-size: .88rem;
+  font-size: .9rem;
   font-weight: 600;
   letter-spacing: .01em;
   cursor: pointer;
@@ -28,11 +28,13 @@
 .btn svg { transition: transform .22s ease; }
 .btn:hover svg { transform: translateX(2px); }
 
+/* Botão Primário: Dourado Celestial */
 .btn-primary {
   background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-accent) 100%);
   color: #071524;
+  font-weight: 700;
   border-color: var(--brand-gold);
-  box-shadow: 0 2px 8px rgba(201, 151, 56, .2);
+  box-shadow: 0 4px 14px rgba(201, 151, 56, .24);
 }
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-gold-dark) 100%);
@@ -42,39 +44,42 @@
   box-shadow: var(--shadow-gold);
 }
 
+/* Botão Contorno Transparente para Seções Escuras */
 .btn-outline {
-  background: transparent;
+  background: rgba(255, 255, 255, .08);
   color: #ffffff;
-  border-color: rgba(255, 255, 255, .45);
-  backdrop-filter: blur(4px);
+  border-color: rgba(255, 255, 255, .38);
+  backdrop-filter: blur(8px);
 }
 .btn-outline:hover {
-  background: rgba(255, 255, 255, .15);
+  background: rgba(255, 255, 255, .18);
   border-color: #ffffff;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
 }
 
+/* Botão Fantasma para Seções Claras */
 .btn-ghost {
   background: var(--bg-surface);
   color: var(--brand-mid);
   border-color: var(--border);
+  box-shadow: var(--shadow-sm);
 }
 .btn-ghost:hover {
-  background: var(--bg-muted);
+  background: var(--bg-main);
   border-color: var(--brand-mid);
-  color: var(--brand-mid);
+  color: var(--brand-dark);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 body.dark-mode .btn-ghost {
   background: rgba(255, 255, 255, .04);
   border-color: var(--border);
-  color: var(--brand-mid);
+  color: var(--brand-light);
 }
 body.dark-mode .btn-ghost:hover {
   background: rgba(255, 255, 255, .08);
-  border-color: var(--brand-mid);
+  border-color: var(--brand-accent);
 }

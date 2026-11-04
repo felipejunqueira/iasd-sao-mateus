@@ -1,5 +1,5 @@
-/* Seção do Pastor */
-.pastoral-section { background: var(--bg-muted); }
+/* Mensagem Pastoral e Liderança Espiritual */
+.pastoral-section { background: var(--bg-muted); padding: 4.5rem 0; }
 
 .pastoral-card {
   display: grid;
@@ -9,14 +9,14 @@
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  padding: 2.5rem;
+  padding: 2.75rem;
   box-shadow: var(--shadow-sm);
   transition: transform .26s cubic-bezier(.16,1,.3,1), box-shadow .26s ease, border-color .26s ease;
 }
 
 .pastoral-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(201,151,56,.3);
+  border-color: rgba(201,151,56,.35);
 }
 
 .pastoral-photo-wrap {
@@ -26,44 +26,47 @@
 
 .pastoral-img {
   width: 100%;
-  max-width: 240px;
+  max-width: 250px;
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: top;
   border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
   margin: 0 auto;
 }
 
 .pastoral-badge-pill {
   display: inline-block;
-  margin-top: .85rem;
-  background: var(--brand-dark);
-  color: var(--brand-light);
-  font-size: .72rem;
+  margin-top: 1rem;
+  background: rgba(22, 62, 108, .08);
+  color: var(--brand-mid);
+  border: 1px solid rgba(22, 62, 108, .2);
+  font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .1em;
-  padding: .3rem .9rem;
+  padding: .35rem 1rem;
   border-radius: var(--r-full);
 }
 
 .pastoral-quote {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-style: italic;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  border-left: 3px solid var(--brand-gold);
-  padding-left: 1.2rem;
-  margin: 1rem 0 1.5rem;
+  color: var(--text-primary);
+  line-height: 1.75;
+  border-left: 3.5px solid var(--brand-gold);
+  padding-left: 1.35rem;
+  margin: 1.1rem 0 1.6rem;
 }
 
-.pastoral-name { font-size: 1.15rem; font-weight: 700; }
-.pastoral-role { font-size: .85rem; color: var(--text-muted); }
-.pastoral-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.pastoral-name { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
+.pastoral-role { font-size: .88rem; color: var(--text-muted); }
+.pastoral-actions { display: flex; gap: .85rem; flex-wrap: wrap; margin-top: 1.5rem; }
 
 @media (max-width: 760px) {
-  .pastoral-card { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+  .pastoral-card { grid-template-columns: 1fr; gap: 2rem; text-align: center; padding: 1.75rem; }
   .pastoral-actions { justify-content: center; }
   .pastoral-quote { text-align: left; }
 }

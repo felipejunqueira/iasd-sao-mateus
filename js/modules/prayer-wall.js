@@ -1,3 +1,6 @@
+/**
+ * Mural de Oração Comunitário (WCAG 2.1 AAA < 90 linhas)
+ */
 import { safeStorage, sanitize, showToast, debounce } from './utils.js';
 
 let prayers = [];
@@ -32,7 +35,7 @@ function render(container) {
       <p class="prayer-text">"${sanitize(p.request)}"</p>
       <div class="prayer-card-footer">
         <span class="prayer-author">— ${sanitize(p.author)}</span>
-        <button class="btn-pray ${done ? 'prayed' : ''}" data-id="${p.id}" ${done ? 'disabled' : ''}>
+        <button class="btn-pray ${done ? 'prayed' : ''}" data-id="${p.id}" ${done ? 'disabled' : ''} aria-label="${done ? 'Você já orou por este pedido' : 'Orar por este pedido'}">
           <span class="pray-icon">🙏</span>
           <span class="pray-label">${done ? 'Já orei' : 'Estou orando'}</span>
           <span class="pray-count" id="count-${p.id}">${total}</span>
@@ -63,8 +66,11 @@ function bindEvents(container) {
 
   const cta = document.getElementById('btn-trigger-prayer-form');
   if (cta) cta.onclick = () => {
-    document.getElementById('tab-prayer')?.click();
-    document.getElementById('estudo-biblico')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('[data-tab="tab-comunidade"], #tab-btn-comunidade')?.click();
+    setTimeout(() => {
+      document.getElementById('tab-prayer')?.click();
+      document.getElementById('estudo-biblico')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   const form = document.getElementById('form-prayer-request');
@@ -80,6 +86,7 @@ function bindEvents(container) {
       safeStorage.set(K_CUSTOM, JSON.stringify([item, ...custom]));
       prayers.unshift(item);
       render(container);
+      showToast('Seu pedido de oração foi adicionado ao mural com carinho! 🙏');
     }, true);
   }
 }

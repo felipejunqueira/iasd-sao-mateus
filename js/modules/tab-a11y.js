@@ -1,6 +1,5 @@
 /**
- * Acessibilidade e Navegação por Teclado das Abas (WAI-ARIA APG / WCAG 2.1 AAA)
- * Suporta setas horizontais e verticais, Home e End (< 60 linhas)
+ * Acessibilidade e Navegação por Teclado das Abas (WAI-ARIA APG / WCAG 2.1 AAA < 50 linhas)
  */
 export function initTabA11y() {
   const tablists = document.querySelectorAll('[role="tablist"], .tabs-pill-bar, #nav-menu');
@@ -11,27 +10,25 @@ export function initTabA11y() {
     if (tabs.length === 0) return;
 
     tablist.addEventListener('keydown', (e) => {
-      const isNavKey = ['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp', 'Home', 'End'].includes(e.key);
-      if (!isNavKey) return;
+      const activeIdx = tabs.findIndex((t) => t === document.activeElement);
+      if (activeIdx === -1) return;
 
-      const activeIdx = tabs.findIndex((t) => t === document.activeElement || t.classList.contains('active'));
-      let nextIdx = activeIdx;
-
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-        nextIdx = (activeIdx + 1) % tabs.length;
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        nextIdx = (activeIdx - 1 + tabs.length) % tabs.length;
-      } else if (e.key === 'Home') {
-        nextIdx = 0;
-      } else if (e.key === 'End') {
-        nextIdx = tabs.length - 1;
+      let nextIdx = -1;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextIdx = (activeIdx + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') nextIdx = (activeIdx - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') nextIdx = 0;
+      else if (e.key === 'End') nextIdx = tabs.length - 1;
+      else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        tabs[activeIdx].click();
+        return;
       }
 
       if (nextIdx >= 0 && nextIdx !== activeIdx) {
         e.preventDefault();
         const nextTab = tabs[nextIdx];
-        nextTab.click();
         nextTab.focus();
+        nextTab.click();
       }
     });
   });

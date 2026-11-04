@@ -1,5 +1,5 @@
 export const ministries = {
-  "minis.eyebrow": "Development & Community",
+  "minis.eyebrow": "Ministries & Family",
   "minis.title": "Clubs and Ministries",
   "minis.lead": "Formative activities for children, teens, youth, and families in São Mateus.",
   "minis.tag_desbrav": "10 to 15 years",

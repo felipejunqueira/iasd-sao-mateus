@@ -1,52 +1,53 @@
-/* 8 Remédios Naturais */
-.remedies-section { background: var(--bg-surface); }
+/* 8 Remédios Naturais de Deus — Saúde Integral & Estilo de Vida */
+.remedies-section { background: var(--bg-surface); padding: 4.5rem 0; }
 
 .remedies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
 }
 
 .remedy-card {
-  background: var(--bg-muted);
+  background: var(--bg-main);
   border-radius: var(--r-md);
-  padding: 1.4rem 1.25rem;
+  padding: 1.6rem 1.4rem;
   border: 1px solid var(--border);
-  border-left: 3.5px solid transparent;
+  border-top: 3.5px solid var(--brand-gold);
+  box-shadow: var(--shadow-sm);
   transition: transform .24s cubic-bezier(.16,1,.3,1), box-shadow .24s ease, border-color .24s ease;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: .45rem;
 }
 
 .remedy-card:hover {
   background: var(--bg-surface);
-  border-left-color: var(--brand-gold);
-  border-color: var(--border-strong);
+  border-color: rgba(201, 151, 56, .45);
+  border-top-color: var(--brand-accent);
   box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .remedy-num {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: var(--brand-gold);
   line-height: 1;
 }
 
 .remedy-name {
-  font-size: .95rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text-primary);
 }
 
 .remedy-desc {
-  font-size: .82rem;
+  font-size: .86rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 @media (max-width: 480px) {
-  .remedies-grid { grid-template-columns: repeat(2, 1fr); }
+  .remedies-grid { grid-template-columns: 1fr; }
 }

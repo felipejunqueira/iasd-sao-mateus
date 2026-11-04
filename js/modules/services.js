@@ -33,12 +33,12 @@ export function initNextService() {
       title = "Hoje às 19:00 • Culto da Família";
       desc = "Mensagem prática da Bíblia para começar bem a sua semana.";
     } else {
-      title = "Quarta-feira às 20:00 • Culto de Oração";
+      title = "Quarta-feira às 19:30 • Culto de Oração";
       desc = "Momento de intercessão e fortalecimento espiritual.";
     }
   } else if (day === 3) { // Quarta
-    if (hours < 20) {
-      title = "Hoje às 20:00 • Culto de Oração & Bíblia";
+    if (hours < 19 || (hours === 19 && now.getMinutes() < 30)) {
+      title = "Hoje às 19:30 • Culto de Oração & Bíblia";
       desc = "Pausa semanal para orar e estudar os ensinamentos de Cristo.";
     } else {
       title = "Sábado às 09:00 • Escola Sabatina";
@@ -48,7 +48,7 @@ export function initNextService() {
     title = "Sábado às 09:00 • Escola Sabatina & Culto";
     desc = "Prepare seu coração para um dia sagrado de paz e adoração.";
   } else {
-    title = "Quarta-feira às 20:00 • Culto de Oração";
+    title = "Quarta-feira às 19:30 • Culto de Oração";
     desc = "Estudo bíblico e oração comunitária.";
   }
 

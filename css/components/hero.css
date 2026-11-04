@@ -1,35 +1,40 @@
 /* Hero Section — Profundo, Acolhedor & Solene */
 .hero-section {
   position: relative;
-  min-height: 88vh;
+  min-height: 86vh;
   display: flex;
   align-items: center;
   background: url('../../assets/images/real_worship.jpg') center/cover no-repeat;
   color: #fff;
-  padding: 5rem 0;
+  padding: 5.5rem 0;
 }
 
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(7, 21, 36, 0.94) 0%, rgba(10, 28, 48, 0.82) 55%, rgba(22, 62, 108, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(7, 21, 36, 0.94) 0%, rgba(10, 28, 48, 0.84) 50%, rgba(22, 62, 108, 0.62) 100%);
 }
 
 .hero-content {
   position: relative; z-index: 2;
-  max-width: 740px;
+  max-width: 760px;
 }
 
 .hero-label {
-  display: inline-block;
-  font-size: .75rem; font-weight: 700;
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .78rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: .14em;
-  color: var(--brand-light); margin-bottom: 1.2rem;
+  color: var(--brand-accent);
+  background: rgba(201, 151, 56, 0.16);
+  border: 1px solid rgba(201, 151, 56, 0.35);
+  padding: .35rem .95rem; border-radius: var(--r-full);
+  margin-bottom: 1.4rem;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: 3.6rem; font-weight: 700;
-  color: #fff; margin-bottom: 1.2rem; line-height: 1.12;
+  font-size: 3.5rem; font-weight: 700;
+  color: #ffffff; margin-bottom: 1.25rem; line-height: 1.15;
+  letter-spacing: -.02em;
 }
 
 .hero-title em {
@@ -38,55 +43,54 @@
 }
 
 .hero-lead {
-  font-size: 1.15rem;
-  color: rgba(255,255,255,.82);
-  margin-bottom: 2.2rem;
-  max-width: 540px;
-  line-height: 1.65;
+  font-size: 1.18rem;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 2.25rem;
+  max-width: 580px;
+  line-height: 1.68;
 }
 
 .hero-actions {
   display: flex; flex-wrap: wrap;
-  gap: .85rem; margin-bottom: 3rem;
+  gap: .95rem; margin-bottom: 2.75rem;
 }
 
+/* Card Próximo Culto — Vidro Fosco Moderno */
 .next-service {
-  display: inline-flex; align-items: center; gap: .85rem;
-  background: rgba(255,255,255,.09);
-  border: 1px solid rgba(255,255,255,.18);
+  display: inline-flex; align-items: center; gap: 1rem;
+  background: rgba(10, 28, 48, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--r-md);
-  padding: .85rem 1.25rem;
-  backdrop-filter: blur(8px);
-  max-width: 420px;
+  padding: .95rem 1.35rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  max-width: 440px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
   transition: var(--t);
 }
 
 .next-service:hover {
-  background: rgba(255,255,255,.14);
-  border-color: rgba(201,151,56,.45);
+  background: rgba(10, 28, 48, 0.85);
+  border-color: rgba(216, 167, 72, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  box-shadow: 0 14px 36px rgba(0,0,0,.35);
 }
 
 .next-service-icon {
-  width: 36px; height: 36px;
+  width: 42px; height: 42px;
   background: rgba(201,151,56,.2);
+  border: 1px solid rgba(201,151,56,.4);
   border-radius: var(--r-sm);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
-  color: var(--brand-gold);
+  color: var(--brand-accent);
 }
 
-.next-service-text h4 {
-  font-family: var(--font-body);
-  font-size: .95rem; font-weight: 600; color: #fff;
-}
-
-.next-service-text p {
-  font-size: .8rem; color: rgba(255,255,255,.7); margin-top: .1rem;
-}
+.next-service-text h4 { font-family: var(--font-body); font-size: .95rem; font-weight: 700; color: #fff; }
+.next-service-text p { font-size: .82rem; color: rgba(255,255,255,.8); margin-top: .15rem; }
 
 @media (max-width: 768px) {
+  .hero-section { min-height: 75vh; padding: 4rem 0; }
   .hero-title { font-size: 2.3rem; }
-  .hero-lead { font-size: 1rem; }
+  .hero-lead { font-size: 1.05rem; }
 }

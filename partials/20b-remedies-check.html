@@ -4,19 +4,19 @@
     <div class="remedies-check-accordion" id="remedies-check-accordion">
       <button type="button" class="check-accordion-toggle" id="check-toggle-btn" aria-expanded="true" aria-controls="check-accordion-panel">
         <div class="check-toggle-info">
-          <span class="check-toggle-badge">Autoavaliação de Saúde Integral</span>
-          <h3 class="check-toggle-title">Check-up Diário: Estilo de Vida Adventista</h3>
+          <span class="check-toggle-badge" data-i18n="checkup.badge">Autoavaliação de Saúde Integral</span>
+          <h3 class="check-toggle-title" data-i18n="checkup.title">Check-up Diário: Estilo de Vida Adventista</h3>
         </div>
         <span class="check-toggle-icon" aria-hidden="true">▾</span>
       </button>
-      <div id="check-accordion-panel" class="check-accordion-panel" role="region">
-        <p class="check-lead">Marque com carinho as práticas cumpridas hoje para gerar sua prescrição de renovação:</p>
+      <div id="check-accordion-panel" class="check-accordion-panel" role="region" aria-labelledby="check-toggle-btn">
+        <p class="check-lead" data-i18n="checkup.lead">Marque com carinho as práticas cumpridas hoje para gerar sua prescrição de renovação:</p>
         <div class="check-progress-wrap">
           <div class="check-progress-labels">
             <span id="check-progress-text">0 de 8 hábitos hoje</span>
             <span id="check-progress-pct" class="check-pct">0%</span>
           </div>
-          <div class="check-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="check-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso dos hábitos diários de saúde">
             <div class="check-progress-fill" id="check-progress-fill" style="width: 0%"></div>
           </div>
         </div>
@@ -55,7 +55,7 @@
           </label>
         </div>
         <div class="check-actions">
-          <button type="button" id="btn-calc-health" class="btn btn-primary">Calcular Minha Nota de Saúde</button>
+          <button type="button" id="btn-calc-health" class="btn btn-primary" data-i18n="checkup.btn_calc">Calcular Minha Nota de Saúde</button>
         </div>
         <div id="check-result-box" class="check-result-box" hidden aria-live="polite">
           <div class="result-score-badge" id="result-score-badge">0%</div>

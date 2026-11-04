@@ -2,7 +2,7 @@
  * Service Worker da IASD São Mateus (Filosofia Unix)
  * Cache First para assets estáticos e Network First para dados (< 90 linhas)
  */
-const CACHE_NAME = 'iasd-sm-v1';
+const CACHE_NAME = 'iasd-sm-v2';
 const PRECACHE = [
   './', 'index.html', 'manifest.webmanifest',
   'css/main.css', 'css/core/variables.css', 'css/core/reset.css',
@@ -20,15 +20,14 @@ const PRECACHE = [
   'assets/images/icon-512.png', 'assets/images/icon-maskable-512.png',
   'assets/images/real_worship.jpg',
   'partials/02-a11y-bar.html', 'partials/03-header.html',
-  'partials/04-tabs-nav.html', 'partials/06-hero.html',
-  'partials/07-quick-links.html', 'partials/08-cultos.html',
-  'partials/09-pastor.html', 'partials/10-series.html',
-  'partials/11-location.html', 'partials/14-dizimos.html',
-  'partials/15-gallery.html', 'partials/16-forms.html',
-  'partials/19-timeline.html', 'partials/20-remedies.html',
-  'partials/21-ministries.html', 'partials/22-marcos.html',
-  'partials/24-modals.html', 'partials/25-footer.html',
-  'partials/26-footer-bottom.html'
+  'partials/04-tabs-nav.html', 'partials/06-hero.html', 'partials/06b-verse.html',
+  'partials/08-cultos.html', 'partials/08b-sunset.html', 'partials/08c-agenda.html',
+  'partials/09-pastor.html', 'partials/09b-pgs.html', 'partials/10-series.html',
+  'partials/10b-hinario.html', 'partials/11-location.html', 'partials/14-dizimos.html',
+  'partials/15-gallery.html', 'partials/16-forms.html', 'partials/16b-prayer-wall.html',
+  'partials/19-timeline.html', 'partials/20-remedies.html', 'partials/20b-remedies-check.html',
+  'partials/21-ministries.html', 'partials/22-marcos.html', 'partials/24-modals.html',
+  'partials/25-footer.html', 'partials/26-footer-bottom.html'
 ];
 
 self.addEventListener('install', (e) => {

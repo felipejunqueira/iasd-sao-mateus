@@ -2,19 +2,19 @@
 <section id="pequenos-grupos" class="section pgs-section" aria-labelledby="pgs-heading">
   <div class="container">
     <div class="section-header">
-      <span class="section-eyebrow">Igreja nos Lares · Comunhão Semanal</span>
-      <h2 id="pgs-heading" class="section-title">Pequenos Grupos em São Mateus</h2>
-      <p class="section-lead">
+      <span class="section-eyebrow" data-i18n="pgs.eyebrow">Igreja nos Lares · Comunhão Semanal</span>
+      <h2 id="pgs-heading" class="section-title" data-i18n="pgs.title">Pequenos Grupos em São Mateus</h2>
+      <p class="section-lead" data-i18n="pgs.lead">
         <em>"Diariamente perseveravam unânimes no templo, partiam pão de casa em casa e tomavam as suas refeições com alegria e singeleza de coração."</em> (Atos 2:46)
       </p>
     </div>
 
     <!-- Barra de Filtros -->
-    <div class="pgs-filters" role="search" aria-label="Filtrar Pequenos Grupos">
+    <div class="pgs-filters" role="search" aria-label="Filtrar Pequenos Grupos" data-i18n-aria-label="pgs.filter_search">
       <div class="pg-filter-group">
-        <label for="pg-filter-bairro" class="pg-filter-label">Bairro:</label>
-        <select id="pg-filter-bairro" class="pg-select" aria-label="Filtrar por Bairro">
-          <option value="todos">Todos os Bairros</option>
+        <label for="pg-filter-bairro" class="pg-filter-label" data-i18n="pgs.neighborhood_label">Bairro:</label>
+        <select id="pg-filter-bairro" class="pg-select" aria-label="Filtrar por Bairro" data-i18n-aria-label="pgs.neighborhood_aria">
+          <option value="todos" data-i18n="pgs.all_neighborhoods">Todos os Bairros</option>
           <option value="São Mateus Centro">São Mateus Centro</option>
           <option value="Parque São Rafael">Parque São Rafael</option>
           <option value="Jardim Tietê">Jardim Tietê</option>
@@ -24,9 +24,9 @@
       </div>
 
       <div class="pg-filter-group">
-        <label for="pg-filter-perfil" class="pg-filter-label">Perfil:</label>
-        <select id="pg-filter-perfil" class="pg-select" aria-label="Filtrar por Perfil">
-          <option value="todos">Todos os Perfis</option>
+        <label for="pg-filter-perfil" class="pg-filter-label" data-i18n="pgs.profile_label">Perfil:</label>
+        <select id="pg-filter-perfil" class="pg-select" aria-label="Filtrar por Perfil" data-i18n-aria-label="pgs.profile_aria">
+          <option value="todos" data-i18n="pgs.all_profiles">Todos os Perfis</option>
           <option value="Famílias">Famílias</option>
           <option value="Jovens">Jovens</option>
           <option value="Misto">Misto</option>
@@ -41,9 +41,9 @@
     </div>
 
     <div id="pgs-empty" class="pgs-empty" hidden>
-      <p>Nenhum Pequeno Grupo encontrado com os filtros selecionados.</p>
+      <p data-i18n="pgs.empty_text">Nenhum Pequeno Grupo encontrado com os filtros selecionados.</p>
       <a href="https://wa.me/5511996338938?text=Ol%C3%A1!%20Gostaria%20de%20encontrar%20ou%20iniciar%20um%20PG%20no%20meu%20bairro."
-         target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+         target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="pgs.contact_coordinator">
         Conversar com a Coordenação de PGs
       </a>
     </div>
