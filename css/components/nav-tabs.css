@@ -1,50 +1,60 @@
-/* Tabs — Painel de Conteúdo e Abas Pills Mobile */
+/* Tabs — Painel de Conteúdo e Barra Mobile Clara */
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
 .tabs-pill-bar {
   display: none;
-  background: var(--bg-surface);
+  background: rgba(250, 248, 245, 0.96);
   border-bottom: 1px solid var(--border);
-  padding: .75rem 1rem;
-  gap: .5rem;
+  padding: .35rem 1rem;
+  gap: .35rem;
   overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: inline proximity;
   -webkit-overflow-scrolling: touch;
-  box-shadow: 0 2px 6px rgba(10,28,48,.03);
 }
+.tabs-pill-bar::-webkit-scrollbar { display: none; }
+body.dark-mode .tabs-pill-bar { background: rgba(7, 16, 26, 0.96); }
 
 .main-tab-btn {
-  flex-shrink: 0;
-  background: var(--bg-main);
-  border: 1.5px solid var(--border);
+  position: relative;
+  flex: none;
+  scroll-snap-align: start;
+  background: transparent;
+  border: 1px solid transparent;
   color: var(--text-secondary);
-  padding: .5rem 1.25rem;
-  border-radius: var(--r-full);
+  padding: .6rem .95rem;
+  border-radius: var(--r-sm);
   font-size: .85rem;
   font-weight: 600;
   cursor: pointer;
-  transition: var(--t);
+  transition: color .2s ease, background-color .2s ease;
   user-select: none;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .main-tab-btn:hover {
-  border-color: var(--brand-mid);
+  color: var(--text-primary);
+  background: rgba(20, 35, 56, .05);
+}
+body.dark-mode .main-tab-btn:hover { color: #fff; background: rgba(255, 255, 255, .07); }
+
+.main-tab-btn[aria-selected="true"] {
   color: var(--brand-mid);
-  background: var(--bg-surface);
-  transform: translateY(-1px);
+  background: rgba(27, 75, 130, .07);
+}
+body.dark-mode .main-tab-btn[aria-selected="true"] {
+  color: var(--brand-accent);
+  background: rgba(226, 179, 92, .11);
 }
 
-.main-tab-btn:active {
-  transform: translateY(1px);
-}
-
-.main-tab-btn.active {
-  background: var(--brand-dark);
-  color: #fff;
-  border-color: var(--brand-dark);
-  box-shadow: var(--shadow-sm);
+.main-tab-btn[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  inset: auto .75rem 2px;
+  border-block-end: 2.5px solid var(--brand-gold);
 }
 
 @media (max-width: 860px) {

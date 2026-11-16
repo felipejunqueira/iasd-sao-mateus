@@ -1,25 +1,26 @@
-/* Localização e Templo Sagrado */
+/* Localização e Acesso */
 .location-grid {
   display: grid;
-  grid-template-columns: 1fr 440px;
+  grid-template-columns: 1fr 460px;
   gap: 3.5rem;
   align-items: center;
 }
+
+.location-lead { margin: 0 0 1.65rem; }
 
 .address-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: 1.6rem 1.75rem;
-  margin-bottom: 1.75rem;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.25rem;
   box-shadow: var(--shadow-sm);
   transition: var(--t);
 }
 
 .address-card:hover {
-  border-color: rgba(22, 62, 108, 0.35);
+  border-color: rgba(22, 62, 108, 0.3);
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
 }
 
 .address-label {
@@ -35,50 +36,54 @@
 .address-street {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--brand-dark);
+  color: var(--text-primary);
   margin-bottom: .3rem;
 }
 
-.address-city {
-  font-size: .92rem;
+.address-city { font-size: .92rem; color: var(--text-secondary); }
+
+.location-transit-card {
+  padding: 1.15rem 1.35rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  font-size: .88rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.location-transit-title {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--text-primary);
+  margin-bottom: .4rem;
+}
+
+.location-transit-text {
+  display: block;
   color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.location-actions {
+  display: flex;
+  gap: .85rem;
+  flex-wrap: wrap;
+  margin-top: 1.65rem;
 }
 
 .sanctuary-photo-wrap {
-  position: relative;
+  height: 360px;
   border-radius: var(--r-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border);
+  background: var(--bg-muted);
 }
 
-.sanctuary-photo {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  display: block;
-  transition: transform .35s ease;
-}
-
-.sanctuary-photo-wrap:hover .sanctuary-photo {
-  transform: scale(1.03);
-}
-
-.sanctuary-label {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  background: rgba(10, 28, 48, 0.88);
-  color: var(--brand-light);
-  font-size: .8rem;
-  font-weight: 700;
-  padding: .35rem .95rem;
-  border-radius: var(--r-full);
-  border: 1px solid rgba(201, 151, 56, 0.6);
-  backdrop-filter: blur(8px);
-}
+.location-map-frame { width: 100%; height: 100%; border: 0; display: block; }
 
 @media (max-width: 860px) {
-  .location-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .sanctuary-photo { height: 260px; }
+  .location-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+  .sanctuary-photo-wrap { height: 280px; }
 }

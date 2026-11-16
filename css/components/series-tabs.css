@@ -1,22 +1,23 @@
 .series-section {
   background: var(--bg-main);
+  padding: 5rem 0;
 }
 
 .season-tabs {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-bottom: 2.5rem;
+  gap: 0.7rem;
+  margin-bottom: 2.75rem;
 }
 
 .season-tab-btn {
   background: var(--bg-surface);
-  border: 1.5px solid var(--border);
+  border: 1px solid var(--border);
   color: var(--text-secondary);
   font-weight: 600;
   font-size: 0.88rem;
-  padding: 0.55rem 1.3rem;
+  padding: 0.55rem 1.35rem;
   border-radius: var(--r-full);
   cursor: pointer;
   transition: var(--t);
@@ -37,11 +38,11 @@
   background: var(--brand-mid);
   color: #fff;
   border-color: var(--brand-mid);
-  box-shadow: 0 2px 8px rgba(22, 62, 108, .25);
+  box-shadow: 0 2px 8px rgba(22, 62, 108, .22);
 }
 
 body.dark-mode .season-tab-btn.active {
-  background: rgba(226,179,92,.18);
+  background: rgba(226, 179, 92, .18);
   color: var(--brand-warm);
-  border-color: rgba(226,179,92,.4);
+  border-color: rgba(226, 179, 92, .4);
 }

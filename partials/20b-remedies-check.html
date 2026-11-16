@@ -2,14 +2,14 @@
 <section class="section remedies-check-section" id="checkup-saude" aria-labelledby="check-toggle-btn">
   <div class="container">
     <div class="remedies-check-accordion" id="remedies-check-accordion">
-      <button type="button" class="check-accordion-toggle" id="check-toggle-btn" aria-expanded="true" aria-controls="check-accordion-panel">
+      <button type="button" class="check-accordion-toggle" id="check-toggle-btn" aria-expanded="false" aria-controls="check-accordion-panel">
         <div class="check-toggle-info">
           <span class="check-toggle-badge" data-i18n="checkup.badge">Autoavaliação de Saúde Integral</span>
           <h3 class="check-toggle-title" data-i18n="checkup.title">Check-up Diário: Estilo de Vida Adventista</h3>
         </div>
         <span class="check-toggle-icon" aria-hidden="true">▾</span>
       </button>
-      <div id="check-accordion-panel" class="check-accordion-panel" role="region" aria-labelledby="check-toggle-btn">
+      <div id="check-accordion-panel" class="check-accordion-panel collapsed" role="region" aria-labelledby="check-toggle-btn" hidden>
         <p class="check-lead" data-i18n="checkup.lead">Marque com carinho as práticas cumpridas hoje para gerar sua prescrição de renovação:</p>
         <div class="check-progress-wrap">
           <div class="check-progress-labels">
@@ -17,7 +17,7 @@
             <span id="check-progress-pct" class="check-pct">0%</span>
           </div>
           <div class="check-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso dos hábitos diários de saúde">
-            <div class="check-progress-fill" id="check-progress-fill" style="width: 0%"></div>
+            <div class="check-progress-fill" id="check-progress-fill"></div>
           </div>
         </div>
         <div class="remedies-items-grid" id="remedies-items-grid">

@@ -1,8 +1,9 @@
 /**
  * Formulários de Estudo Bíblico e Pedidos de Oração
- * Proteção contra cliques múltiplos acidentais
+ * Proteção contra cliques múltiplos acidentais + envio ao Portal da Liderança
  */
 import { showToast, sanitize } from './utils.js';
+import { PortalDB } from './portal-db.js';
 
 export function initForms() {
   initFormTabs();
@@ -16,50 +17,65 @@ function initFormTabs() {
   const formPrayer = document.getElementById('form-prayer-request');
   if (!tabBible || !tabPrayer || !formBible || !formPrayer) return;
 
-  tabBible.addEventListener('click', () => {
-    tabBible.classList.add('active');
-    tabPrayer.classList.remove('active');
-    formBible.style.display = 'grid';
-    formPrayer.style.display = 'none';
-  });
+  const toggle = (showBible) => {
+    tabBible.classList.toggle('active', showBible);
+    tabPrayer.classList.toggle('active', !showBible);
+    formBible.style.display = showBible ? 'grid' : 'none';
+    formPrayer.style.display = showBible ? 'none' : 'grid';
+  };
+  tabBible.addEventListener('click', () => toggle(true));
+  tabPrayer.addEventListener('click', () => toggle(false));
+}
 
-  tabPrayer.addEventListener('click', () => {
-    tabPrayer.classList.add('active');
-    tabBible.classList.remove('active');
-    formPrayer.style.display = 'grid';
-    formBible.style.display = 'none';
-  });
+const optText = (id) => {
+  const el = document.getElementById(id);
+  return el?.selectedOptions?.[0]?.text || el?.value || '';
+};
+
+function lockSubmit(form) {
+  const btn = form.querySelector('button[type="submit"]');
+  if (!btn) return;
+  btn.disabled = true;
+  setTimeout(() => { btn.disabled = false; }, 3000);
 }
 
 function initFormSubmits() {
   const bibleForm = document.getElementById('form-bible-study');
   const prayerForm = document.getElementById('form-prayer-request');
 
-  if (bibleForm) {
-    bibleForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const submitBtn = bibleForm.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
+  bibleForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    lockSubmit(bibleForm);
+    const name = document.getElementById('bible-name')?.value.trim() || 'Amigo(a)';
+    const phone = document.getElementById('bible-whatsapp')?.value.trim() || '';
+    const modality = optText('bible-modality'), topic = optText('bible-topic');
 
-      const rawName = document.getElementById('bible-name')?.value || 'Amigo(a)';
-      const cleanName = sanitize(rawName);
-      showToast(`Obrigado, ${cleanName}! Recebemos seu pedido de estudo bíblico.`);
-      bibleForm.reset();
+    PortalDB.saveVisitor({
+      name, phone,
+      interests: ['Estudo Bíblico', topic].filter(Boolean),
+      notes: [modality && `Modalidade: ${modality}`, topic && `Tema: ${topic}`].filter(Boolean).join(' · '),
+      origin: 'site-estudo-biblico'
+    }).catch(() => {});
 
-      setTimeout(() => { if (submitBtn) submitBtn.disabled = false; }, 3000);
-    });
-  }
+    showToast(`Obrigado, ${sanitize(name)}! Recebemos seu pedido de estudo bíblico.`);
+    bibleForm.reset();
+  });
 
-  if (prayerForm) {
-    prayerForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const submitBtn = prayerForm.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
+  prayerForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    lockSubmit(prayerForm);
+    const name = document.getElementById('prayer-name')?.value.trim() || 'Pedido de Oração (Anônimo)';
+    const category = optText('prayer-category');
+    const details = document.getElementById('prayer-details')?.value.trim() || '';
 
-      showToast('Seu pedido de oração foi enviado para nossa equipe de intercessão!');
-      prayerForm.reset();
+    PortalDB.saveVisitor({
+      name, phone: '',
+      interests: ['Oração', category].filter(Boolean),
+      notes: details,
+      origin: 'site-oracao'
+    }).catch(() => {});
 
-      setTimeout(() => { if (submitBtn) submitBtn.disabled = false; }, 3000);
-    });
-  }
+    showToast('Seu pedido de oração foi enviado para nossa equipe de intercessão!');
+    prayerForm.reset();
+  });
 }

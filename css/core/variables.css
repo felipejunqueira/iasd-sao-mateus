@@ -1,48 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Brand: Tons Nobres Adventistas (Azul Profundo, Dourado Celestial & Âmbar) */
-  --brand-dark:      #0a1c30;
-  --brand-mid:       #163e6c;
-  --brand-warm:      #c99738;
-  --brand-light:     #eaf1f8;
-  --brand-gold:      #c99738;
-  --brand-gold-dark: #a27420;
-  --brand-accent:    #d8a748;
+  color-scheme: light;
 
-  /* Backgrounds: Marfim Acolhedor & Superfícies Claras Nobres */
-  --bg-main:         #fbf9f5;
-  --bg-surface:      #ffffff;
-  --bg-muted:        #f3eee6;
-  --bg-dark:         #071524;
+  /* Paleta Editorial Clara & Luminosa */
+  --brand-dark:      #0F233C;
+  --brand-mid:       #1B4B82;
+  --brand-warm:      #C49234;
+  --brand-light:     #EEF3F9;
+  --brand-gold:      #C49234;
+  --brand-gold-dark: #8E6416;
+  --brand-accent:    #D6A54B;
 
-  /* Typography: Legibilidade Suprema para Idosos e Crianças (WCAG AAA) */
-  --text-primary:    #0a1826;
-  --text-secondary:  #334458;
-  --text-muted:      #53657b;
+  /* Superfícies Marfim & Papel Branco */
+  --bg-main:         #FAF8F5;
+  --bg-surface:      #FFFFFF;
+  --bg-muted:        #F2ECE1;
+  --bg-dark:         #142338;
 
-  /* UI Borders Sutis e Translúcidas */
-  --border:          rgba(10, 28, 48, 0.09);
-  --border-strong:   #c8c0b2;
+  /* Tipografia de Alto Conforto Visual (WCAG AA/AAA) */
+  --text-primary:    #142338;
+  --text-secondary:  #3E5066;
+  --text-muted:      #5A6B80;
+
+  /* Bordas Suaves e Controles */
+  --border:          rgba(20, 35, 56, 0.09);
+  --border-strong:   #948B7E;
 
   /* Radii Harmônicos */
-  --r-sm:   6px;
+  --r-sm:   8px;
   --r-md:   14px;
   --r-lg:   20px;
   --r-xl:   32px;
   --r-full: 9999px;
 
-  /* Shadows Suaves Multicamadas (Soft Elevation) */
-  --shadow-sm:   0 2px 6px -1px rgba(10,28,48,.06), 0 1px 3px rgba(10,28,48,.04);
-  --shadow-md:   0 10px 24px -4px rgba(10,28,48,.08), 0 4px 10px -2px rgba(10,28,48,.04);
-  --shadow-lg:   0 20px 42px -8px rgba(10,28,48,.12), 0 8px 18px -4px rgba(10,28,48,.05);
-  --shadow-gold: 0 8px 24px rgba(201,151,56,.28);
+  /* Sombras Respiráveis */
+  --shadow-sm:   0 2px 8px -2px rgba(20, 35, 56, .05), 0 1px 3px rgba(20, 35, 56, .03);
+  --shadow-md:   0 12px 28px -6px rgba(20, 35, 56, .07), 0 4px 12px -2px rgba(20, 35, 56, .03);
+  --shadow-lg:   0 24px 48px -12px rgba(20, 35, 56, .10), 0 8px 20px -4px rgba(20, 35, 56, .04);
+  --shadow-gold: 0 8px 24px rgba(196, 146, 52, .22);
 
   /* Transições Fluidas */
-  --t:        all .24s cubic-bezier(.16,1,.3,1);
-  --t-spring: transform .3s cubic-bezier(.34,1.56,.64,1);
+  --t:        all .24s cubic-bezier(.16, 1, .3, 1);
+  --t-spring: transform .3s cubic-bezier(.34, 1.56, .64, 1);
 
-  /* Fontes Sagradas e Dignas */
+  /* Tipografia */
   --font-body:    'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
 
@@ -60,6 +62,7 @@
 }
 
 body.dark-mode {
+  color-scheme: dark;
   --brand-dark:      #dbe7f5;
   --brand-mid:       #689fd7;
   --brand-warm:      #ecc57e;
@@ -71,13 +74,13 @@ body.dark-mode {
   --bg-surface:      #0d1a29;
   --bg-muted:        #132438;
   --bg-dark:         #040910;
-  --border:          rgba(210,226,245,.14);
-  --border-strong:   rgba(210,226,245,.24);
+  --border:          rgba(210, 226, 245, .14);
+  --border-strong:   rgba(210, 226, 245, .28);
   --text-primary:    #f2f6fc;
   --text-secondary:  #b8cbe0;
-  --text-muted:      #8299b2;
-  --shadow-sm:       0 2px 6px rgba(0,0,0,.45);
-  --shadow-md:       0 8px 24px rgba(0,0,0,.55);
-  --shadow-lg:       0 16px 44px rgba(0,0,0,.7);
-  --shadow-gold:     0 8px 26px rgba(226,179,92,.25);
+  --text-muted:      #8da4be;
+  --shadow-sm:       0 2px 6px rgba(0, 0, 0, .45);
+  --shadow-md:       0 8px 24px rgba(0, 0, 0, .55);
+  --shadow-lg:       0 16px 44px rgba(0, 0, 0, .7);
+  --shadow-gold:     0 8px 26px rgba(226, 179, 92, .25);
 }

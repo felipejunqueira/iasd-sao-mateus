@@ -1,0 +1,104 @@
+{
+  "driveUrl": "",
+  "scales": [
+    {
+      "id": "portal_escala_ancionato_20261121",
+      "ministry": "ancionato",
+      "ministryLabel": "Ancionato & Púlpito",
+      "date": "2026-11-21",
+      "time": "09:00 / 10:15",
+      "team": "Itamar & Márcia Redi",
+      "notes": "Direção do Culto Divino, coordenação de púlpito e oração intercessória."
+    },
+    {
+      "id": "portal_escala_diaconato_20261121",
+      "ministry": "diaconato",
+      "ministryLabel": "Diáconos & Diaconisas",
+      "date": "2026-11-21",
+      "time": "08:30 - 12:00",
+      "team": "Antonio + Equipe de Diáconos e Diaconisas",
+      "notes": "Abertura do templo, organização da nave, recolhimento de dízimos e ofertas."
+    },
+    {
+      "id": "portal_escala_recepcao_20261121",
+      "ministry": "recepcao",
+      "ministryLabel": "Ministério da Recepção",
+      "date": "2026-11-21",
+      "time": "08:40 - 10:30",
+      "team": "Miriã + Equipe de Recepção",
+      "notes": "Acolhimento na entrada, entrega de folhetos e registro de visitantes."
+    },
+    {
+      "id": "portal_escala_sonoplastia_20261121",
+      "ministry": "sonoplastia",
+      "ministryLabel": "Áudio & Transmissão",
+      "date": "2026-11-21",
+      "time": "08:30 - 12:00",
+      "team": "Anderson + Equipe de Sonoplastia",
+      "notes": "Passagem de som às 08h30, projeção de hinos e suporte ao púlpito."
+    },
+    {
+      "id": "portal_escala_louvor_20261121",
+      "ministry": "louvor",
+      "ministryLabel": "Música & Louvor",
+      "date": "2026-11-21",
+      "time": "09:00 / 10:15",
+      "team": "Elaine, Claudia (Coral) & Equipe de Louvor",
+      "notes": "Cânticos na Escola Sabatina, louvor congregacional e mensagem musical."
+    },
+    {
+      "id": "portal_escala_ancionato_20261125",
+      "ministry": "ancionato",
+      "ministryLabel": "Ancionato & Púlpito",
+      "date": "2026-11-25",
+      "time": "19:30",
+      "team": "Airton & Josiel",
+      "notes": "Culto de Oração de Quarta-feira — condução bíblica e momento de intercessão."
+    },
+    {
+      "id": "portal_escala_diaconato_20261125",
+      "ministry": "diaconato",
+      "ministryLabel": "Diáconos & Diaconisas",
+      "date": "2026-11-25",
+      "time": "19:00",
+      "team": "Antonio + Equipe de Apoio",
+      "notes": "Abertura e apoio nos cultos de Quarta-feira (19h30) e Domingo (19h00)."
+    },
+    {
+      "id": "portal_escala_ancionato_20261128",
+      "ministry": "ancionato",
+      "ministryLabel": "Ancionato & Púlpito",
+      "date": "2026-11-28",
+      "time": "09:00 / 10:15",
+      "team": "Eliel & Márcia Redi",
+      "notes": "Culto Divino de Sábado pela manhã e acompanhamento do Encontro JA (17h)."
+    },
+    {
+      "id": "portal_escala_recepcao_20261128",
+      "ministry": "recepcao",
+      "ministryLabel": "Ministério da Recepção",
+      "date": "2026-11-28",
+      "time": "08:40 / 17:00",
+      "team": "Miriã + Equipe de Recepção",
+      "notes": "Acolhimento matinal e recepção especial no Encontro JA: Geração Esperança."
+    },
+    {
+      "id": "portal_escala_sonoplastia_20261128",
+      "ministry": "sonoplastia",
+      "ministryLabel": "Áudio & Transmissão",
+      "date": "2026-11-28",
+      "time": "08:30 / 16:30",
+      "team": "Anderson + Equipe de Sonoplastia",
+      "notes": "Áudio e projeção para o culto da manhã e louvor acústico do Encontro JA."
+    },
+    {
+      "id": "portal_escala_louvor_20261128",
+      "ministry": "louvor",
+      "ministryLabel": "Música & Louvor",
+      "date": "2026-11-28",
+      "time": "09:00 / 17:00",
+      "team": "Elaine & Alessandra (JA)",
+      "notes": "Adoração congregacional pela manhã e louvor acústico do Culto Jovem (17h)."
+    }
+  ]
+}

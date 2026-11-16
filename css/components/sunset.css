@@ -1,89 +1,96 @@
 /* Pôr do Sol e Boas-Vindas ao Sábado · IASD São Mateus */
-.sunset-section { padding: 1.5rem 0 2.5rem; }
+.sunset-section { padding: 0 0 4.5rem; }
 
 .sunset-card {
   position: relative;
-  background: linear-gradient(135deg, #0a1c30 0%, #152d4c 45%, #2a221b 80%, #3a2b16 100%);
-  border: 1px solid rgba(201, 151, 56, 0.35);
+  background: linear-gradient(135deg, #FFFDF9 0%, #FDF5E6 55%, #F8E8C8 100%);
+  border: 1px solid rgba(196, 146, 52, 0.36);
   border-radius: var(--r-lg);
-  padding: 1.85rem 2.25rem;
-  color: #fff;
-  box-shadow: 0 12px 36px rgba(10, 28, 48, 0.22), 0 0 24px rgba(201, 151, 56, 0.08);
+  padding: 2.25rem 2.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 12px 32px -10px rgba(162, 116, 32, 0.16), var(--shadow-sm);
   transition: var(--t);
 }
 
 .sunset-card:hover {
-  border-color: rgba(201, 151, 56, 0.55);
-  box-shadow: 0 16px 44px rgba(10, 28, 48, 0.28), 0 0 32px rgba(201, 151, 56, 0.16);
+  border-color: rgba(196, 146, 52, 0.55);
+  box-shadow: 0 16px 38px -10px rgba(162, 116, 32, 0.22), var(--shadow-md);
 }
 
 .sunset-header {
   display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: .75rem; margin-bottom: 1.25rem;
+  flex-wrap: wrap; gap: .75rem; margin-bottom: 1.35rem;
 }
 
 .sunset-badge {
   font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
-  color: #fde4b8; background: rgba(201, 151, 56, 0.22);
-  border: 1px solid rgba(201, 151, 56, 0.45);
-  padding: .32rem .9rem; border-radius: var(--r-full);
+  color: var(--brand-gold-dark); background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(196, 146, 52, 0.36);
+  padding: .34rem .95rem; border-radius: var(--r-full);
 }
 
 .sunset-coords {
   display: inline-flex; align-items: center; gap: .45rem;
-  font-size: .84rem; color: rgba(255, 255, 255, 0.78);
+  font-size: .85rem; color: var(--text-secondary);
 }
 
-.sunset-main {
-  display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.35rem;
-}
+.sunset-main { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; }
 
 .sunset-icon-wrap {
   width: 58px; height: 58px; flex-shrink: 0; border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 151, 56, 0.28) 0%, rgba(201, 151, 56, 0.08) 100%);
-  border: 1.5px solid rgba(216, 167, 72, 0.45);
-  display: flex; align-items: center; justify-content: center; color: #fde4b8;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(196, 146, 52, 0.42);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--brand-gold-dark);
+  box-shadow: 0 4px 14px rgba(162, 116, 32, 0.12);
 }
 
 .sunset-icon { width: 32px; height: 32px; }
 
 .sunset-title {
-  font-family: var(--font-display); font-size: 1.65rem; font-weight: 700;
-  color: #fff; line-height: 1.25; margin-bottom: .3rem;
+  font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.75rem); font-weight: 700;
+  color: var(--text-primary); line-height: 1.25; margin-bottom: .35rem;
 }
 
-.sunset-desc {
-  font-size: .95rem; color: rgba(255, 255, 255, 0.88); line-height: 1.55;
-}
+.sunset-desc { font-size: .96rem; color: var(--text-secondary); line-height: 1.6; max-width: 64ch; }
 
 .sunset-footer {
   display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 1rem; padding-top: 1.15rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  flex-wrap: wrap; gap: 1rem; padding-top: 1.25rem;
+  border-top: 1px solid rgba(162, 116, 32, 0.18);
 }
 
 .sunset-verse {
   display: flex; align-items: center; gap: .5rem;
-  font-size: .84rem; font-style: italic; color: rgba(255, 255, 255, 0.78);
+  font-size: .86rem; font-style: italic; color: var(--text-secondary);
 }
 
 .btn-sunset-share {
   display: inline-flex; align-items: center; gap: .5rem;
-  background: #25d366; color: #fff; font-weight: 600; font-size: .88rem;
-  padding: .62rem 1.4rem; border-radius: var(--r-full);
-  text-decoration: none; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  background: #15803d; color: #ffffff; font-weight: 600; font-size: .88rem;
+  padding: .68rem 1.45rem; border-radius: var(--r-full);
+  text-decoration: none; box-shadow: 0 4px 14px rgba(21, 128, 61, 0.22);
   transition: var(--t);
 }
 
 .btn-sunset-share:hover {
-  transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-  filter: brightness(1.05);
+  background: #166534; transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(21, 128, 61, 0.28);
 }
+
+body.dark-mode .sunset-card {
+  background: linear-gradient(135deg, #0d1a29 0%, #152538 55%, #282016 100%);
+  border-color: rgba(226, 179, 92, 0.32);
+}
+body.dark-mode .sunset-badge, body.dark-mode .sunset-icon-wrap {
+  background: rgba(226, 179, 92, 0.14); color: var(--brand-warm); border-color: rgba(226, 179, 92, 0.38);
+}
+body.dark-mode .sunset-footer { border-top-color: rgba(255, 255, 255, 0.12); }
 
 @media (max-width: 640px) {
   .sunset-card { padding: 1.5rem 1.25rem; }
   .sunset-main { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .sunset-title { font-size: 1.45rem; }
   .sunset-footer { flex-direction: column; align-items: stretch; text-align: center; }
+  .sunset-verse { justify-content: center; }
   .btn-sunset-share { justify-content: center; width: 100%; }
 }

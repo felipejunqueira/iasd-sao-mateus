@@ -1,49 +1,64 @@
 /**
- * Acessibilidade: Modo Escuro, Alto Contraste e Zoom de Fonte (WCAG 2.1 AAA < 85 linhas)
+ * Acessibilidade: Tema Claro por padrão, Modo Escuro, Alto Contraste e Zoom
  */
 import { safeStorage } from './utils.js';
 
 export function initA11yTheme() {
   initDarkMode();
+  initA11yDrawer();
   initContrastAndFont();
 }
 
 function initDarkMode() {
   const themeBtn = document.getElementById('toggle-theme');
-  const savedTheme = safeStorage.get('iasd_theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+  const isDark = safeStorage.get('iasd_theme') === 'dark';
+
+  const applyThemeUI = (dark) => {
+    const isEn = window.currentLang === 'en';
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#07101a' : '#FAF8F5');
+    if (!themeBtn) return;
+    themeBtn.setAttribute('aria-pressed', String(dark));
+    themeBtn.textContent = dark ? (isEn ? 'Light Mode' : 'Modo Claro') : (isEn ? 'Dark Mode' : 'Modo Escuro');
+  };
 
   document.body.classList.toggle('dark-mode', isDark);
-  if (themeBtn) {
-    themeBtn.setAttribute('aria-pressed', String(isDark));
-    themeBtn.innerHTML = isDark ? '☀️ Claro' : '🌙 Escuro';
-    themeBtn.addEventListener('click', () => {
-      const activeDark = document.body.classList.toggle('dark-mode');
-      safeStorage.set('iasd_theme', activeDark ? 'dark' : 'light');
-      themeBtn.setAttribute('aria-pressed', String(activeDark));
-      themeBtn.innerHTML = activeDark ? '☀️ Claro' : '🌙 Escuro';
-    });
-  }
+  applyThemeUI(isDark);
+  if (!themeBtn) return;
+
+  themeBtn.addEventListener('click', () => {
+    const activeDark = document.body.classList.toggle('dark-mode');
+    safeStorage.set('iasd_theme', activeDark ? 'dark' : 'light');
+    applyThemeUI(activeDark);
+  });
+  window.addEventListener('languageChanged', () => applyThemeUI(document.body.classList.contains('dark-mode')));
+}
+
+function initA11yDrawer() {
+  const drawer = document.getElementById('a11y-drawer');
+  if (!drawer) return;
+  const label = drawer.querySelector('.a11y-trigger-label');
+  const summary = drawer.querySelector('summary');
+
+  window.addEventListener('languageChanged', () => {
+    if (label) label.textContent = window.currentLang === 'en' ? 'Accessibility' : 'Acessibilidade';
+  });
+  document.addEventListener('click', (e) => {
+    if (drawer.open && !drawer.contains(e.target)) drawer.open = false;
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.open) { drawer.open = false; summary?.focus(); }
+  });
 }
 
 function initContrastAndFont() {
   const contrastBtn = document.getElementById('toggle-contrast');
   const grayscaleBtn = document.getElementById('toggle-grayscale');
-  const fontInc = document.getElementById('font-increase');
-  const fontDec = document.getElementById('font-decrease');
-
   const isContrast = safeStorage.get('iasd_contrast') === 'true';
-  if (isContrast) {
-    document.body.classList.add('high-contrast');
-    if (contrastBtn) contrastBtn.classList.add('active');
-  }
-  if (contrastBtn) contrastBtn.setAttribute('aria-pressed', String(isContrast));
 
-  let currentZoom = parseInt(safeStorage.get('iasd_fontzoom')) || 0;
-  applyZoom(currentZoom);
-
+  document.body.classList.toggle('high-contrast', isContrast);
   if (contrastBtn) {
+    contrastBtn.classList.toggle('active', isContrast);
+    contrastBtn.setAttribute('aria-pressed', String(isContrast));
     contrastBtn.addEventListener('click', () => {
       const isHigh = document.body.classList.toggle('high-contrast');
       contrastBtn.classList.toggle('active', isHigh);
@@ -52,25 +67,23 @@ function initContrastAndFont() {
     });
   }
 
-  if (grayscaleBtn) {
-    grayscaleBtn.addEventListener('click', () => {
-      const isGray = document.body.classList.toggle('grayscale-mode');
-      grayscaleBtn.classList.toggle('active', isGray);
-      grayscaleBtn.setAttribute('aria-pressed', String(isGray));
-    });
-  }
+  grayscaleBtn?.addEventListener('click', () => {
+    const isGray = document.body.classList.toggle('grayscale-mode');
+    grayscaleBtn.classList.toggle('active', isGray);
+    grayscaleBtn.setAttribute('aria-pressed', String(isGray));
+  });
 
+  let currentZoom = parseInt(safeStorage.get('iasd_fontzoom')) || 0;
+  applyZoom(currentZoom);
   const updateZoom = (delta) => {
     const next = Math.max(0, Math.min(4, currentZoom + delta));
-    if (next !== currentZoom) {
-      currentZoom = next;
-      applyZoom(currentZoom);
-      safeStorage.set('iasd_fontzoom', String(currentZoom));
-    }
+    if (next === currentZoom) return;
+    currentZoom = next;
+    applyZoom(currentZoom);
+    safeStorage.set('iasd_fontzoom', String(currentZoom));
   };
-
-  if (fontInc) fontInc.addEventListener('click', () => updateZoom(1));
-  if (fontDec) fontDec.addEventListener('click', () => updateZoom(-1));
+  document.getElementById('font-increase')?.addEventListener('click', () => updateZoom(1));
+  document.getElementById('font-decrease')?.addEventListener('click', () => updateZoom(-1));
 }
 
 function applyZoom(level) {

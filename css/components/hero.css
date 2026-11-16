@@ -1,96 +1,95 @@
-/* Hero Section — Profundo, Acolhedor & Solene */
+/* Hero Editorial Claro, Luminoso & Acolhedor */
 .hero-section {
   position: relative;
-  min-height: 86vh;
-  display: flex;
+  background: radial-gradient(circle at 82% 24%, rgba(196, 146, 52, 0.12), transparent 55%),
+    linear-gradient(180deg, var(--bg-main) 0%, var(--bg-muted) 100%);
+  color: var(--text-primary);
+  padding: clamp(3.25rem, 6vw, 5.25rem) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2.25rem, 4.5vw, 4rem);
   align-items: center;
-  background: url('../../assets/images/real_worship.jpg') center/cover no-repeat;
-  color: #fff;
-  padding: 5.5rem 0;
 }
 
-.hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(7, 21, 36, 0.94) 0%, rgba(10, 28, 48, 0.84) 50%, rgba(22, 62, 108, 0.62) 100%);
-}
-
-.hero-content {
-  position: relative; z-index: 2;
-  max-width: 760px;
-}
+.hero-content { max-width: 600px; }
 
 .hero-label {
-  display: inline-flex; align-items: center; gap: .5rem;
-  font-size: .78rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .14em;
-  color: var(--brand-accent);
-  background: rgba(201, 151, 56, 0.16);
-  border: 1px solid rgba(201, 151, 56, 0.35);
-  padding: .35rem .95rem; border-radius: var(--r-full);
-  margin-bottom: 1.4rem;
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--brand-mid); background: rgba(201, 151, 56, 0.12);
+  border: 1px solid rgba(201, 151, 56, 0.32);
+  padding: .38rem .95rem; border-radius: var(--r-full); margin-bottom: 1.35rem;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: 3.5rem; font-weight: 700;
-  color: #ffffff; margin-bottom: 1.25rem; line-height: 1.15;
-  letter-spacing: -.02em;
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 700; color: var(--text-primary);
+  margin-bottom: 1.15rem; line-height: 1.14; letter-spacing: -.02em;
 }
 
-.hero-title em {
-  font-style: normal;
-  color: var(--brand-gold);
-}
+.hero-title em { font-style: italic; font-weight: 600; color: var(--brand-gold-dark); }
 
 .hero-lead {
-  font-size: 1.18rem;
-  color: rgba(255,255,255,.9);
-  margin-bottom: 2.25rem;
-  max-width: 580px;
-  line-height: 1.68;
+  font-size: 1.08rem; color: var(--text-secondary);
+  margin-bottom: 2rem; max-width: 52ch; line-height: 1.7;
 }
 
-.hero-actions {
-  display: flex; flex-wrap: wrap;
-  gap: .95rem; margin-bottom: 2.75rem;
+.hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-bottom: 2.25rem; }
+
+.hero-actions .btn-outline {
+  background: var(--bg-surface); color: var(--text-primary);
+  border-color: var(--border-strong); box-shadow: var(--shadow-sm);
 }
 
-/* Card Próximo Culto — Vidro Fosco Moderno */
+.hero-actions .btn-outline:hover {
+  background: var(--bg-surface); border-color: var(--brand-mid); color: var(--brand-mid);
+  transform: translateY(-2px); box-shadow: var(--shadow-md);
+}
+
 .next-service {
   display: inline-flex; align-items: center; gap: 1rem;
-  background: rgba(10, 28, 48, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: var(--r-md);
-  padding: .95rem 1.35rem;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  max-width: 440px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.3);
-  transition: var(--t);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border); border-radius: var(--r-md);
+  padding: 1rem 1.35rem; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  max-width: 480px; box-shadow: var(--shadow-sm); transition: var(--t);
 }
 
-.next-service:hover {
-  background: rgba(10, 28, 48, 0.85);
-  border-color: rgba(216, 167, 72, 0.5);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(0,0,0,.35);
-}
+.next-service:hover { border-color: rgba(201, 151, 56, 0.45); box-shadow: var(--shadow-md); transform: translateY(-2px); }
 
 .next-service-icon {
-  width: 42px; height: 42px;
-  background: rgba(201,151,56,.2);
-  border: 1px solid rgba(201,151,56,.4);
-  border-radius: var(--r-sm);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  color: var(--brand-accent);
+  width: 42px; height: 42px; flex-shrink: 0; border-radius: var(--r-sm);
+  background: rgba(201, 151, 56, 0.14); border: 1px solid rgba(201, 151, 56, 0.3);
+  display: flex; align-items: center; justify-content: center; color: var(--brand-gold-dark);
 }
 
-.next-service-text h4 { font-family: var(--font-body); font-size: .95rem; font-weight: 700; color: #fff; }
-.next-service-text p { font-size: .82rem; color: rgba(255,255,255,.8); margin-top: .15rem; }
+.next-service-text h4 { font-family: var(--font-body); font-size: .95rem; font-weight: 700; color: var(--text-primary); }
+.next-service-text p { font-size: .84rem; color: var(--text-secondary); margin-top: .18rem; line-height: 1.45; }
 
-@media (max-width: 768px) {
-  .hero-section { min-height: 75vh; padding: 4rem 0; }
-  .hero-title { font-size: 2.3rem; }
-  .hero-lead { font-size: 1.05rem; }
+.hero-photo-frame {
+  margin: 0; padding: .6rem; background: var(--bg-surface);
+  border: 1px solid var(--border); border-radius: var(--r-xl); box-shadow: var(--shadow-lg);
+}
+
+.hero-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: calc(var(--r-xl) - 8px); }
+
+body.dark-mode .hero-section {
+  background: radial-gradient(circle at 82% 24%, rgba(226, 179, 92, 0.12), transparent 55%),
+    linear-gradient(180deg, var(--bg-main) 0%, var(--bg-muted) 100%);
+}
+body.dark-mode .hero-label { color: var(--brand-warm); border-color: rgba(226, 179, 92, 0.35); }
+body.dark-mode .hero-title em { color: var(--brand-warm); }
+body.dark-mode .hero-actions .btn-outline { background: rgba(255, 255, 255, 0.05); color: var(--text-primary); }
+body.dark-mode .next-service { background: rgba(13, 26, 41, 0.8); }
+body.dark-mode .next-service-icon { color: var(--brand-warm); }
+
+@media (max-width: 900px) {
+  .hero-section { padding: 2.75rem 0 2.5rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-content { max-width: 100%; }
+  .next-service { width: 100%; max-width: 100%; }
 }

@@ -1,93 +1,100 @@
 /* Dízimos, Ofertas e Fidelidade Sagrada */
-.dizimos-section { background: var(--bg-dark); color: #fff; padding: 4.5rem 0; }
-.dizimos-section .section-eyebrow { color: var(--brand-accent); }
-.dizimos-section .section-title { color: #fff; }
+.dizimos-section { background: var(--bg-main); color: var(--text-primary); padding: 5rem 0; }
+.dizimos-section .section-eyebrow { color: var(--brand-gold-dark); }
+.dizimos-section .section-title { color: var(--text-primary); }
 
 .dizimos-container {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  grid-template-columns: 1fr 410px;
   gap: 4rem;
   align-items: start;
 }
 
 .dizimos-verse {
   border-left: 3.5px solid var(--brand-gold);
-  padding-left: 1.25rem;
-  margin: 1.5rem 0;
+  padding: .25rem 0 .25rem 1.25rem;
+  margin: 1.75rem 0;
   font-style: italic;
-  font-size: 1rem;
-  color: rgba(255,255,255,.88);
-  line-height: 1.7;
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
 }
 
-.dizimos-info p { color: rgba(255,255,255,.85); line-height: 1.7; margin-bottom: 1.1rem; font-size: .95rem; }
-.dizimos-info strong { color: var(--brand-gold); }
+.dizimos-info p { color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.15rem; font-size: .98rem; }
+.dizimos-info strong { color: var(--brand-mid); font-weight: 700; }
 
 .pix-card {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.16);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 2.25rem 2rem;
-  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+  box-shadow: var(--shadow-md);
   transition: var(--t);
 }
-.pix-card:hover { border-color: rgba(201,151,56,.45); }
+.pix-card:hover { border-color: rgba(201,151,56,.45); box-shadow: var(--shadow-lg); }
 
 .pix-card-label {
-  font-size: .75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  color: var(--brand-gold);
-  margin-bottom: 1.25rem;
-  text-align: center;
+  font-size: .75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .12em;
+  color: var(--brand-gold-dark);
+  margin-bottom: 1.25rem; text-align: center;
 }
 
 .pix-qr-wrapper {
   background: #ffffff;
+  border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: 1.35rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.35rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,.2);
+  padding: 1.25rem;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-sm);
 }
 
+.pix-qr-img { width: 140px; height: 140px; border-radius: var(--r-sm); }
+
 .pix-key-display {
-  background: rgba(255,255,255,.09);
-  border: 1px solid rgba(255,255,255,.18);
+  background: var(--bg-muted);
+  border: 1px solid var(--border-strong);
   border-radius: var(--r-sm);
   padding: .85rem 1rem;
-  font-size: .9rem;
-  color: rgba(255,255,255,.98);
+  font-size: .92rem;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 1rem;
   word-break: break-all;
   font-family: monospace;
+  font-weight: 600;
 }
+
+.pix-bank-details {
+  font-size: .85rem; color: var(--text-secondary);
+  text-align: left; margin-bottom: 1.35rem;
+  line-height: 1.55; background: var(--bg-main);
+  padding: 1rem; border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+}
+.pix-bank-details strong { color: var(--text-primary); }
+
+.pix-copy-btn { width: 100%; justify-content: center; }
 
 .sevenme-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
   border-radius: var(--r-sm);
-  padding: .95rem 1.15rem;
-  margin-top: 1rem;
+  padding: .95rem 1.15rem; margin-top: 1rem;
   transition: var(--t);
 }
-.sevenme-banner:hover {
-  background: rgba(255,255,255,.12);
-  border-color: rgba(201,151,56,.4);
-}
+.sevenme-banner:hover { border-color: rgba(201,151,56,.45); }
+.sevenme-banner strong { font-size: .92rem; color: var(--text-primary); }
+.sevenme-banner p { font-size: .8rem; color: var(--text-secondary); margin-top: .15rem; }
+.sevenme-btn { font-size: .8rem; flex-shrink: 0; }
 
-.sevenme-banner strong { font-size: .92rem; color: #fff; }
-.sevenme-banner p { font-size: .8rem; color: rgba(255,255,255,.72); margin-top: .15rem; }
+body.dark-mode .dizimos-section .section-eyebrow,
+body.dark-mode .pix-card-label { color: var(--brand-accent); }
+body.dark-mode .dizimos-info strong { color: var(--brand-gold); }
 
 @media (max-width: 840px) {
-  .dizimos-container { grid-template-columns: 1fr; }
+  .dizimos-container { grid-template-columns: 1fr; gap: 2.5rem; }
   .pix-card { max-width: 420px; }
 }

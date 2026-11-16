@@ -25,7 +25,12 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   let reqUrl = req.url.split('?')[0];
+  if (reqUrl === '/adolescentes' || reqUrl === '/adolescentes/') {
+    res.writeHead(302, { Location: 'https://felipejunqueira.github.io/ChurchRankingApp/' });
+    return res.end();
+  }
   if (reqUrl === '/') reqUrl = '/index.html';
+  if (reqUrl === '/equipe' || reqUrl === '/equipe/') reqUrl = '/equipe.html';
 
   const filePath = path.join(PUBLIC_DIR, reqUrl);
   if (!filePath.startsWith(PUBLIC_DIR)) {

@@ -1,11 +1,12 @@
 /* Modal de Vídeo */
 #video-modal {
   display: none; position: fixed; inset: 0;
-  background: rgba(7, 21, 36, 0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(20, 35, 56, 0.75);
+  backdrop-filter: blur(8px);
+  overscroll-behavior: contain;
   z-index: 1100;
   align-items: center; justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 #video-modal.active { display: flex; }
 
@@ -15,20 +16,20 @@
   width: 100%; max-width: 880px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,.7);
+  box-shadow: 0 30px 80px rgba(0,0,0,.45);
 }
 
 .video-modal-close {
   position: absolute; top: .75rem; right: .75rem;
-  width: 36px; height: 36px;
-  background: rgba(255,255,255,.12);
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,.16);
   border: none; border-radius: 50%;
   color: #fff; font-size: 1.1rem;
   cursor: pointer; z-index: 10;
   display: flex; align-items: center; justify-content: center;
   transition: var(--t);
 }
-.video-modal-close:hover { background: rgba(255,255,255,.25); transform: scale(1.1); }
+.video-modal-close:hover { background: rgba(255,255,255,.3); transform: scale(1.08); }
 
 .video-ratio-wrap { position: relative; padding-bottom: 56.25%; height: 0; }
 .video-ratio-wrap iframe {
@@ -39,19 +40,25 @@
 /* Lightbox */
 #lightbox-overlay {
   display: none; position: fixed; inset: 0;
-  background: rgba(7, 21, 36, 0.94);
+  background: rgba(20, 35, 56, 0.75);
+  backdrop-filter: blur(8px);
+  overscroll-behavior: contain;
   z-index: 1050;
   align-items: center; justify-content: center;
   padding: 1.5rem;
 }
 #lightbox-overlay.active { display: flex; }
-#lightbox-img { max-width: 90vw; max-height: 82vh; border-radius: var(--r-sm); }
+#lightbox-img {
+  max-width: 90vw; max-height: 82vh;
+  border-radius: var(--r-md);
+  box-shadow: 0 24px 60px rgba(0,0,0,.4);
+}
 .lightbox-close {
   position: absolute; top: 1rem; right: 1rem;
-  background: rgba(255,255,255,.12); border: none;
+  background: rgba(255,255,255,.16); border: none;
   color: #fff; font-size: 1.3rem; cursor: pointer;
-  width: 40px; height: 40px; border-radius: 50%;
+  width: 44px; height: 44px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   transition: var(--t);
 }
-.lightbox-close:hover { background: rgba(255,255,255,.25); transform: scale(1.1); }
+.lightbox-close:hover { background: rgba(255,255,255,.3); transform: scale(1.08); }

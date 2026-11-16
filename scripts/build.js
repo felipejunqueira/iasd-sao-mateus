@@ -29,13 +29,13 @@ function buildBundle() {
     if (fs.existsSync(src)) copyDir(src, dest);
   }
   
-  ['index.html', 'manifest.webmanifest', 'sw.js'].forEach((file) => {
+  ['index.html', 'equipe.html', 'manifest.webmanifest', 'sw.js'].forEach((file) => {
     const src = path.join(rootDir, file);
     if (fs.existsSync(src)) fs.copyFileSync(src, path.join(distDir, file));
   });
   
   const partialsDir = path.join(rootDir, 'partials');
-  const files = fs.readdirSync(partialsDir).filter((f) => f.endsWith('.html')).sort();
+  const files = fs.readdirSync(partialsDir).filter((f) => /^\d/.test(f) && f.endsWith('.html')).sort();
   const content = files.map((f) => fs.readFileSync(path.join(partialsDir, f), 'utf8').trim()).join('\n\n');
 
   fs.writeFileSync(path.join(distDir, 'bundle.html'), content + '\n');

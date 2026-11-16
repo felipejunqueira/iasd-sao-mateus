@@ -1,11 +1,12 @@
 /**
- * Mural de Oração Comunitário (WCAG 2.1 AAA < 90 linhas)
+ * Mural de Oração Comunitário (WCAG 2.1 AAA < 100 linhas)
  */
 import { safeStorage, sanitize, showToast, debounce } from './utils.js';
 
 let prayers = [];
 const K_CUSTOM = 'iasd_custom_prayers', K_COUNTS = 'iasd_prayer_counts', K_PRAYED = 'iasd_prayed_ids';
 const CATS = { saude: 'Saúde & Cura', familia: 'Família', trabalho: 'Trabalho & Provisão', espiritual: 'Paz Espiritual', batismo: 'Decisão & Batismo' };
+const HEART_SVG = '<svg class="pray-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
 const persistCounts = debounce((counts) => safeStorage.set(K_COUNTS, JSON.stringify(counts)), 300);
 
 export async function initPrayerWall() {
@@ -36,7 +37,7 @@ function render(container) {
       <div class="prayer-card-footer">
         <span class="prayer-author">— ${sanitize(p.author)}</span>
         <button class="btn-pray ${done ? 'prayed' : ''}" data-id="${p.id}" ${done ? 'disabled' : ''} aria-label="${done ? 'Você já orou por este pedido' : 'Orar por este pedido'}">
-          <span class="pray-icon">🙏</span>
+          ${HEART_SVG}
           <span class="pray-label">${done ? 'Já orei' : 'Estou orando'}</span>
           <span class="pray-count" id="count-${p.id}">${total}</span>
         </button>
@@ -61,7 +62,7 @@ function bindEvents(container) {
     if (cnt) cnt.textContent = counts[id];
     persistCounts(counts);
     safeStorage.set(K_PRAYED, JSON.stringify([...prayed]));
-    showToast('Que bênção! Sua intercessão foi registrada diante de Deus. 🙏');
+    showToast('Que bênção! Sua intercessão foi registrada diante de Deus.');
   });
 
   const cta = document.getElementById('btn-trigger-prayer-form');
@@ -86,7 +87,7 @@ function bindEvents(container) {
       safeStorage.set(K_CUSTOM, JSON.stringify([item, ...custom]));
       prayers.unshift(item);
       render(container);
-      showToast('Seu pedido de oração foi adicionado ao mural com carinho! 🙏');
+      showToast('Seu pedido de oração foi adicionado ao mural com carinho.');
     }, true);
   }
 }

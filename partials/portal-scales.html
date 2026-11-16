@@ -1,0 +1,92 @@
+<!-- Painel de Escalas Semanais & Hub de Ministérios -->
+<section id="panel-scales" class="portal-panel" role="tabpanel" aria-labelledby="portal-tab-scales" hidden>
+  <div class="portal-card portal-toolbar-card">
+    <div class="portal-card-head">
+      <span class="portal-eyebrow">Organização Semanal</span>
+      <h2 class="portal-heading">Escalas de Serviço</h2>
+    </div>
+
+    <div id="scales-ministry-filter" class="portal-pills" role="group" aria-label="Filtrar escalas por ministério">
+      <button type="button" class="portal-pill active" data-scale-ministry="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="portal-pill" data-scale-ministry="diaconato" aria-pressed="false">Diaconato</button>
+      <button type="button" class="portal-pill" data-scale-ministry="recepcao" aria-pressed="false">Recepção</button>
+      <button type="button" class="portal-pill" data-scale-ministry="ancionato" aria-pressed="false">Ancionato</button>
+      <button type="button" class="portal-pill" data-scale-ministry="sonoplastia" aria-pressed="false">Sonoplastia</button>
+      <button type="button" class="portal-pill" data-scale-ministry="louvor" aria-pressed="false">Louvor</button>
+    </div>
+
+    <div class="portal-scales-bar">
+      <a id="scales-drive-link" href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">Planilha no Drive</a>
+      <button type="button" id="scales-drive-config-btn" class="btn btn-outline btn-sm">Vincular Planilha Drive</button>
+      <button type="button" id="scales-edit-toggle-btn" class="btn btn-primary btn-sm">Atualizar Escala</button>
+    </div>
+  </div>
+
+  <div id="scales-editor-panel" class="portal-card portal-editor-card" hidden>
+    <h3 class="portal-subheading">Cadastrar ou Atualizar Escala</h3>
+    <form id="scale-form" class="portal-form">
+      <div class="portal-field">
+        <label for="scale-ministry">Ministério *</label>
+        <select id="scale-ministry" class="portal-input" required>
+          <option value="diaconato">Diaconato</option>
+          <option value="recepcao">Recepção</option>
+          <option value="ancionato">Ancionato</option>
+          <option value="sonoplastia">Sonoplastia</option>
+          <option value="louvor">Louvor</option>
+        </select>
+      </div>
+      <div class="portal-field">
+        <label for="scale-date">Data do Culto *</label>
+        <input type="date" id="scale-date" class="portal-input" required>
+      </div>
+      <div class="portal-field portal-span2">
+        <label for="scale-team">Equipe Escalada *</label>
+        <input type="text" id="scale-team" class="portal-input" required placeholder="Nomes separados por vírgula">
+      </div>
+      <div class="portal-field portal-span2">
+        <label for="scale-notes">Observações</label>
+        <textarea id="scale-notes" class="portal-input" rows="2" placeholder="Horário de chegada, orientações ou turno..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary portal-submit portal-span2">Salvar Escala na Nuvem</button>
+    </form>
+  </div>
+
+  <div id="scales-grid" class="portal-cards-grid" aria-live="polite"></div>
+</section>
+
+<section id="panel-hub" class="portal-panel" role="tabpanel" aria-labelledby="portal-tab-hub" hidden>
+  <div class="portal-card portal-hub-teens">
+    <div class="portal-hub-teens-head">
+      <div><span class="portal-eyebrow">Escola Sabatina</span><h2 class="portal-heading">Adolescentes · Top 5</h2></div>
+      <a href="https://felipejunqueira.github.io/ChurchRankingApp/" target="_blank" rel="noopener noreferrer" data-teens-link class="btn btn-primary">Abrir App dos Adolescentes</a>
+    </div>
+    <div id="hub-teens-preview" class="portal-teens-preview" aria-live="polite">Carregando ranking...</div>
+  </div>
+
+  <div class="portal-hub-grid">
+    <article class="portal-card portal-hub-card">
+      <span class="portal-hub-tag">Acolhimento</span>
+      <h3>Recepção</h3>
+      <p>Diretora: Miriã. Cadastro de visitas na entrada do templo e boas-vindas rápidas.</p>
+      <a href="#recepcao" class="btn btn-ghost btn-sm">Abrir Recepção</a>
+    </article>
+    <article class="portal-card portal-hub-card">
+      <span class="portal-hub-tag">Ordem &amp; Serviço</span>
+      <h3>Diaconato</h3>
+      <p>Diretor: Antonio. Consulte escalas semanais e envie lembretes da equipe.</p>
+      <a href="#escalas" class="btn btn-ghost btn-sm">Ver Escalas</a>
+    </article>
+    <article class="portal-card portal-hub-card">
+      <span class="portal-hub-tag">Liderança Espiritual</span>
+      <h3>Ancionato</h3>
+      <p>Márcia Redi, Itamar, Airton, Josiel e Eliel. Atendimento espiritual direto.</p>
+      <a href="https://wa.me/5511916606028" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">WhatsApp Ancionato</a>
+    </article>
+    <article class="portal-card portal-hub-card">
+      <span class="portal-hub-tag">Pastoral</span>
+      <h3>Pastor &amp; Visitação</h3>
+      <p>Encaminhe pedidos urgentes de visita pastoral ou estudos bíblicos.</p>
+      <a href="https://wa.me/5511996338938" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">Falar com o Pastor</a>
+    </article>
+  </div>
+</section>

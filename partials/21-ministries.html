@@ -6,7 +6,16 @@
       <h2 id="ministerios-heading" class="section-title" data-i18n="minis.title">Clubes, Ministérios e Liderança</h2>
       <p class="section-lead" data-i18n="minis.lead">Atividades formativas e líderes dedicados a servir nossa comunidade com amor e fé em São Mateus.</p>
     </div>
-    
+
+    <div id="ministries-filter-bar" class="ministries-filter-bar" role="group" aria-label="Filtrar ministérios por categoria">
+      <button type="button" class="ministry-filter-btn active" data-filter="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="ministry-filter-btn" data-filter="jovens" aria-pressed="false">Jovens &amp; Crianças</button>
+      <button type="button" class="ministry-filter-btn" data-filter="comunidade" aria-pressed="false">Comunidade &amp; Família</button>
+      <button type="button" class="ministry-filter-btn" data-filter="louvor" aria-pressed="false">Louvor &amp; Mídia</button>
+      <button type="button" class="ministry-filter-btn" data-filter="lideranca" aria-pressed="false">Liderança</button>
+    </div>
+    <p id="ministries-count" class="ministries-count" aria-live="polite"></p>
+
     <div class="ministries-grid">
       <div data-include="partials/ministries/04-admin.html"></div>
       <div data-include="partials/ministries/03-liturgy.html"></div>

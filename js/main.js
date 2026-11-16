@@ -21,6 +21,7 @@ import { initA11yVoice } from './modules/a11y-voice.js';
 import { initVLibras } from './modules/vlibras.js';
 import { initI18n } from './modules/i18n.js';
 import { initPGs } from './modules/pgs.js';
+import { initMinistriesFilter } from './modules/ministries-filter.js';
 import { initRemediesCheck } from './modules/remedies-check.js';
 import { initPWA } from './modules/pwa.js';
 
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initSeriesPlayer();
   initHinario();
   initPGs();
+  initMinistriesFilter();
   initPixCopy();
   initGallery();
   initLightbox();

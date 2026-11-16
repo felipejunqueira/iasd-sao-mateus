@@ -1,36 +1,33 @@
 /* Mensagem Pastoral e Liderança Espiritual */
-.pastoral-section { background: var(--bg-muted); padding: 4.5rem 0; }
+.pastoral-section { background: var(--bg-muted); padding: 4.75rem 0; }
 
 .pastoral-card {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 3.5rem;
+  grid-template-columns: 260px 1fr;
+  gap: 3.25rem;
   align-items: center;
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
-  padding: 2.75rem;
+  padding: 2.85rem;
   box-shadow: var(--shadow-sm);
   transition: transform .26s cubic-bezier(.16,1,.3,1), box-shadow .26s ease, border-color .26s ease;
 }
 
 .pastoral-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(201,151,56,.35);
+  border-color: rgba(201, 151, 56, 0.35);
 }
 
-.pastoral-photo-wrap {
-  position: relative;
-  text-align: center;
-}
+.pastoral-photo-wrap { position: relative; text-align: center; }
 
 .pastoral-img {
   width: 100%;
-  max-width: 250px;
-  aspect-ratio: 3/4;
+  max-width: 240px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: top;
-  border-radius: var(--r-md);
+  object-position: center top;
+  border-radius: var(--r-lg);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
   margin: 0 auto;
@@ -39,9 +36,9 @@
 .pastoral-badge-pill {
   display: inline-block;
   margin-top: 1rem;
-  background: rgba(22, 62, 108, .08);
+  background: var(--bg-muted);
   color: var(--brand-mid);
-  border: 1px solid rgba(22, 62, 108, .2);
+  border: 1px solid var(--border);
   font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -50,29 +47,33 @@
   border-radius: var(--r-full);
 }
 
+.pastoral-title { font-size: clamp(1.55rem, 2.5vw, 1.9rem); margin-bottom: .5rem; }
+
 .pastoral-quote {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   font-style: italic;
   color: var(--text-primary);
   line-height: 1.75;
-  border-left: 3.5px solid var(--brand-gold);
+  border-left: 3px solid var(--brand-gold);
   padding-left: 1.35rem;
-  margin: 1.1rem 0 1.6rem;
+  margin: 1.15rem 0 1.65rem;
+  max-width: 60ch;
 }
 
-.pastoral-name { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
-.pastoral-role { font-size: .88rem; color: var(--text-muted); }
-.pastoral-actions { display: flex; gap: .85rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.pastoral-name { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); }
+.pastoral-role { font-size: .9rem; color: var(--text-secondary); margin-top: .15rem; }
+.pastoral-actions { display: flex; gap: .85rem; flex-wrap: wrap; margin-top: 1.6rem; }
 
-@media (max-width: 760px) {
-  .pastoral-card { grid-template-columns: 1fr; gap: 2rem; text-align: center; padding: 1.75rem; }
+@media (max-width: 780px) {
+  .pastoral-section { padding: 3.25rem 0; }
+  .pastoral-card { grid-template-columns: 1fr; gap: 2rem; text-align: center; padding: 1.85rem; }
   .pastoral-actions { justify-content: center; }
   .pastoral-quote { text-align: left; }
 }
 
 body.dark-mode .pastoral-badge-pill {
-  background: rgba(226,179,92,.18);
+  background: rgba(226, 179, 92, 0.16);
   color: var(--brand-warm);
-  border: 1px solid rgba(226,179,92,.35);
+  border-color: rgba(226, 179, 92, 0.35);
 }

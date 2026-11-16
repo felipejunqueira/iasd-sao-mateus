@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central da Equipe · IASD São Mateus</title>
+  <meta name="description" content="Central operacional de recepção, interessados, escalas e ministérios da IASD São Mateus.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#FAF8F5">
+  <link rel="icon" type="image/png" href="assets/images/logo_oficial.png">
+  <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/core/variables.css">
+  <link rel="stylesheet" href="css/core/reset.css">
+  <link rel="stylesheet" href="css/core/layout.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/toast.css">
+  <link rel="stylesheet" href="css/components/portal.css">
+  <link rel="stylesheet" href="css/components/portal-cards.css">
+</head>
+<body>
+  <a href="#portal-main" class="skip-link">Ir para o conteúdo principal</a>
+
+  <header class="portal-topbar" role="banner">
+    <div class="container portal-topbar-inner">
+      <a href="index.html" class="portal-back-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+        <span>Voltar ao Site</span>
+      </a>
+
+      <div class="portal-brand">
+        <img src="assets/images/logo_oficial.png" alt="IASD São Mateus" width="32" height="32">
+        <h1 class="portal-title">Central da Equipe · IASD São Mateus</h1>
+      </div>
+
+      <span id="portal-sync-badge" class="portal-sync-badge" aria-live="polite">Sincronizando...</span>
+    </div>
+
+    <nav class="portal-tabs-wrap" aria-label="Módulos da Central">
+      <div class="container">
+        <div class="portal-tablist" role="tablist" aria-label="Abas Operacionais">
+          <button type="button" id="portal-tab-reception" class="portal-tab active" role="tab" aria-selected="true" aria-controls="panel-reception" data-portal-tab="reception">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+            <span>Recepção</span>
+          </button>
+          <button type="button" id="portal-tab-coord" class="portal-tab" role="tab" aria-selected="false" aria-controls="panel-coord" data-portal-tab="coord">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Interessados</span>
+          </button>
+          <button type="button" id="portal-tab-scales" class="portal-tab" role="tab" aria-selected="false" aria-controls="panel-scales" data-portal-tab="scales">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Escalas</span>
+          </button>
+          <button type="button" id="portal-tab-hub" class="portal-tab" role="tab" aria-selected="false" aria-controls="panel-hub" data-portal-tab="hub">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            <span>Ministérios</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="portal-main" class="container portal-main" tabindex="-1">
+    <div data-include="partials/portal-reception.html"></div>
+    <div data-include="partials/portal-scales.html"></div>
+  </main>
+
+  <script type="module" src="js/modules/portal-app.js"></script>
+</body>
+</html>

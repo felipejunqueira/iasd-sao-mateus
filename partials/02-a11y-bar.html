@@ -1,16 +1,32 @@
 <a href="#conteudo-principal" class="skip-link" data-i18n="a11y.skip">Pular para o conteúdo principal</a>
 
-<!-- Barra de Acessibilidade (WCAG 2.1 AAA) -->
+<!-- Ferramentas de Acessibilidade (WCAG 2.1 AAA) -->
 <aside class="accessibility-bar" aria-label="Barra de Acessibilidade" data-i18n-aria-label="a11y.bar_label">
   <div class="container">
     <div class="a11y-inner">
-      <button id="toggle-theme" class="a11y-btn" aria-pressed="false" aria-label="Alternar entre modo escuro e claro" data-i18n-aria-label="a11y.theme_aria">🌙 Escuro</button>
-      <button id="toggle-contrast" class="a11y-btn" aria-pressed="false" aria-label="Ativar modo de alto contraste para baixa visão" data-i18n-aria-label="a11y.contrast_aria" data-i18n="a11y.contrast">Alto Contraste</button>
-      <button id="toggle-grayscale" class="a11y-btn" aria-pressed="false" aria-label="Ativar modo monocromático" data-i18n-aria-label="a11y.grayscale_aria" data-i18n="a11y.grayscale">P&B</button>
-      <button id="font-decrease" class="a11y-btn" aria-label="Diminuir tamanho da fonte" data-i18n-aria-label="a11y.font_dec_aria" data-i18n="a11y.font_dec">A-</button>
-      <button id="font-increase" class="a11y-btn" aria-label="Aumentar tamanho da fonte" data-i18n-aria-label="a11y.font_inc_aria" data-i18n="a11y.font_inc">A+</button>
-      <button id="toggle-tts" class="a11y-btn" aria-label="Ouvir conteúdo em voz alta com leitor de tela" data-i18n-aria-label="a11y.tts_aria" aria-pressed="false" data-i18n="a11y.tts_listen"><span>🔊</span> Ouvir</button>
-      <button id="toggle-lang" class="a11y-btn" aria-label="Mudar idioma para Inglês">EN</button>
+      <details class="a11y-drawer" id="a11y-drawer">
+        <summary class="a11y-trigger">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="5" r="2"/>
+            <path d="M5 9h14"/>
+            <path d="M12 9v6"/>
+            <path d="M9 21l3-6 3 6"/>
+          </svg>
+          <span class="a11y-trigger-label">Acessibilidade</span>
+          <svg class="a11y-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </summary>
+        <div class="a11y-panel" role="group" aria-label="Opções de acessibilidade e idioma">
+          <button type="button" id="toggle-theme" class="a11y-btn" aria-pressed="false" aria-label="Alternar entre modo escuro e claro" data-i18n-aria-label="a11y.theme_aria">Modo Escuro</button>
+          <button type="button" id="toggle-contrast" class="a11y-btn" aria-pressed="false" aria-label="Ativar modo de alto contraste para baixa visão" data-i18n-aria-label="a11y.contrast_aria" data-i18n="a11y.contrast">Alto Contraste</button>
+          <button type="button" id="toggle-grayscale" class="a11y-btn" aria-pressed="false" aria-label="Ativar modo monocromático" data-i18n-aria-label="a11y.grayscale_aria" data-i18n="a11y.grayscale">P&amp;B</button>
+          <button type="button" id="font-decrease" class="a11y-btn" aria-label="Diminuir tamanho da fonte" data-i18n-aria-label="a11y.font_dec_aria" data-i18n="a11y.font_dec">A-</button>
+          <button type="button" id="font-increase" class="a11y-btn" aria-label="Aumentar tamanho da fonte" data-i18n-aria-label="a11y.font_inc_aria" data-i18n="a11y.font_inc">A+</button>
+          <button type="button" id="toggle-tts" class="a11y-btn" aria-label="Ouvir conteúdo em voz alta com leitor de tela" data-i18n-aria-label="a11y.tts_aria" aria-pressed="false" data-i18n="a11y.tts_listen">Ouvir</button>
+          <button type="button" id="toggle-lang" class="a11y-btn" aria-label="Mudar idioma para Inglês">EN</button>
+        </div>
+      </details>
     </div>
   </div>
 </aside>

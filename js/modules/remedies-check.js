@@ -1,5 +1,5 @@
 /**
- * Check-up dos 8 Remédios Naturais · IASD São Mateus (WCAG 2.1 AAA < 85 linhas)
+ * Check-up dos 8 Remédios Naturais · IASD São Mateus (WCAG 2.1 AAA < 95 linhas)
  */
 import { safeStorage } from './utils.js';
 
@@ -19,7 +19,16 @@ export function initRemediesCheck() {
   const toggleBtn = document.getElementById('check-toggle-btn'), panel = document.getElementById('check-accordion-panel');
   const inputs = Array.from(container.querySelectorAll('.remedy-switch'));
   const fill = document.getElementById('check-progress-fill'), pctTxt = document.getElementById('check-progress-pct'), countTxt = document.getElementById('check-progress-text');
+  const progressBar = container.querySelector('.check-progress-bar');
   const calcBtn = document.getElementById('btn-calc-health'), resultBox = document.getElementById('check-result-box');
+
+  const setExpanded = (open) => {
+    toggleBtn?.setAttribute('aria-expanded', String(open));
+    if (panel) {
+      panel.hidden = !open;
+      panel.classList.toggle('collapsed', !open);
+    }
+  };
 
   const updateProgress = () => {
     const checked = inputs.filter(i => i.checked).length;
@@ -27,6 +36,7 @@ export function initRemediesCheck() {
     if (fill) fill.style.width = `${score}%`;
     if (pctTxt) pctTxt.textContent = `${score}%`;
     if (countTxt) countTxt.textContent = `${checked} de ${inputs.length} hábitos hoje`;
+    progressBar?.setAttribute('aria-valuenow', String(score));
     inputs.forEach(i => i.closest('.remedy-item')?.classList.toggle('selected', i.checked));
     return { checked, score };
   };
@@ -42,10 +52,21 @@ export function initRemediesCheck() {
     resultBox.hidden = false;
   };
 
+  setExpanded(window.location.hash.toLowerCase() === '#checkup-saude');
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash.toLowerCase() === '#checkup-saude') setExpanded(true);
+  });
+
   toggleBtn?.addEventListener('click', () => {
-    const open = toggleBtn.getAttribute('aria-expanded') === 'true';
-    toggleBtn.setAttribute('aria-expanded', String(!open));
-    panel?.classList.toggle('collapsed', open);
+    setExpanded(toggleBtn.getAttribute('aria-expanded') !== 'true');
+  });
+
+  document.querySelectorAll('a[href="#checkup-saude"]').forEach((cta) => {
+    cta.addEventListener('click', (e) => {
+      e.preventDefault();
+      setExpanded(true);
+      document.getElementById('checkup-saude')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   });
 
   inputs.forEach(input => input.addEventListener('change', updateProgress));

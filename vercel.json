@@ -11,6 +11,8 @@
   ],
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/equipe", "dest": "/equipe.html" },
+    { "src": "/adolescentes", "status": 302, "headers": { "Location": "https://felipejunqueira.github.io/ChurchRankingApp/" } },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }

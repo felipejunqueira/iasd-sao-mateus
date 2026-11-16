@@ -1,22 +1,34 @@
 /* Rodapé Institucional da IASD São Mateus */
-.footer-main {
-  background: var(--bg-dark);
-  color: rgba(255,255,255,.7);
-  padding: 4.5rem 0 2.25rem;
-  border-top: 1px solid rgba(255,255,255,.08);
+.footer-main,
+.footer-bottom-bar {
+  background: #EFEAE1;
+  color: var(--text-secondary);
 }
+
+.footer-main {
+  padding: 4.5rem 0 2.5rem;
+  border-top: 1px solid var(--border-strong);
+}
+
+.footer-bottom-bar { padding: 0 0 2.25rem; }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1.6fr repeat(3, 1fr);
   gap: 2.5rem;
-  margin-bottom: 3.25rem;
+}
+
+.footer-brand-title {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
 .footer-brand p {
   font-size: .9rem;
   line-height: 1.7;
-  color: rgba(255,255,255,.65);
+  color: var(--text-secondary);
   margin-top: .95rem;
   max-width: 280px;
 }
@@ -27,16 +39,16 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .12em;
-  color: var(--brand-accent);
+  color: var(--brand-mid);
   margin-bottom: 1.15rem;
 }
 
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .65rem; }
-.footer-col a { font-size: .9rem; color: rgba(255,255,255,.75); transition: var(--t); }
-.footer-col a:hover { color: var(--brand-gold); transform: translateX(2px); }
+.footer-col a { font-size: .9rem; color: var(--text-secondary); transition: var(--t); }
+.footer-col a:hover { color: var(--brand-mid); transform: translateX(2px); }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.08);
+  border-top: 1px solid var(--border);
   padding-top: 1.75rem;
   display: flex;
   justify-content: space-between;
@@ -46,8 +58,20 @@
   font-size: .85rem;
 }
 
-.footer-bottom strong { color: var(--brand-gold); }
-.dev-credit { color: rgba(255,255,255,.55); }
+.dev-credit { color: var(--text-muted); }
+.dev-credit a { color: var(--brand-mid); text-decoration: none; font-weight: 600; }
+.dev-credit a:hover { text-decoration: underline; }
+
+body.dark-mode .footer-main,
+body.dark-mode .footer-bottom-bar {
+  background: var(--bg-dark);
+  color: var(--text-secondary);
+}
+body.dark-mode .footer-main { border-top-color: var(--border); }
+body.dark-mode .footer-col h4 { color: var(--brand-accent); }
+body.dark-mode .footer-col a:hover,
+body.dark-mode .dev-credit a,
+body.dark-mode .footer-bottom strong { color: var(--brand-gold); }
 
 @media (max-width: 768px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }

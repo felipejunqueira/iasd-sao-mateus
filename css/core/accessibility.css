@@ -1,75 +1,82 @@
-/* Acessibilidade Universal, Barra A11y e Touch Targets (WCAG 2.1 AAA) */
+/* Acessibilidade Universal, Drawer Compacto & Touch Targets (WCAG 2.1 AAA) */
 .skip-link {
   position: absolute; top: -100px; left: 1rem;
   background: var(--brand-dark); color: #fff;
-  padding: .75rem 1.25rem; font-weight: 700;
+  padding: .75rem 1.25rem; font-weight: 700; font-size: .9rem;
   z-index: 9999; border-radius: 0 0 var(--r-sm) var(--r-sm);
   border: 2px solid var(--brand-gold);
-  font-size: .9rem;
 }
 .skip-link:focus { top: 0; outline: 3px solid var(--brand-gold); }
 
 :focus-visible {
-  outline: 3px solid var(--brand-gold) !important;
+  outline: 2.5px solid var(--brand-mid) !important;
   outline-offset: 3px !important;
-  box-shadow: 0 0 0 4px rgba(10, 28, 48, .45) !important;
+  box-shadow: 0 0 0 4px rgba(196, 146, 52, .28) !important;
 }
-
 body.dark-mode :focus-visible {
-  outline: 3px solid var(--brand-gold) !important;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, .35) !important;
+  outline: 2.5px solid var(--brand-gold) !important;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, .28) !important;
 }
 
 .accessibility-bar {
-  background: var(--bg-surface);
-  border-bottom: 1px solid var(--border);
-  font-size: .82rem;
-  padding: .35rem 0;
+  background: var(--bg-main); border-bottom: 1px solid var(--border);
+  font-size: .8rem; position: relative; z-index: 950;
+}
+.a11y-inner { display: flex; justify-content: flex-end; align-items: center; }
+.a11y-drawer { position: relative; }
+
+.a11y-trigger {
+  display: inline-flex; align-items: center; gap: .4rem;
+  min-height: 44px; padding: .25rem .75rem;
+  color: var(--text-secondary); font-weight: 600; font-size: .78rem;
+  cursor: pointer; list-style: none; user-select: none;
+  border-radius: var(--r-sm); transition: var(--t);
+}
+.a11y-trigger::-webkit-details-marker { display: none; }
+.a11y-trigger:hover { color: var(--text-primary); background: rgba(20, 35, 56, .04); }
+.a11y-chevron { transition: transform .2s ease; }
+.a11y-drawer[open] .a11y-chevron { transform: rotate(180deg); }
+
+.a11y-panel {
+  position: absolute; top: calc(100% + .35rem); right: 0;
+  width: min(370px, calc(100vw - 2rem));
+  background: var(--bg-surface); border: 1px solid var(--border-strong);
+  border-radius: var(--r-md); padding: .85rem;
+  box-shadow: var(--shadow-lg);
+  display: flex; flex-wrap: wrap; gap: .5rem; z-index: 960;
 }
 
-.a11y-inner {
-  display: flex; justify-content: flex-end;
-  align-items: center; gap: .5rem; flex-wrap: wrap;
-}
-
-/* Touch Targets >= 48x48px para facilitar o toque por idosos (WCAG 2.1 AAA) */
+/* Touch Targets >= 48x48px dentro do painel aberto */
 .a11y-btn {
-  background: var(--bg-main); border: 1.5px solid var(--border);
-  color: var(--text-secondary);
-  padding: .4rem .85rem;
-  min-height: 48px; min-width: 48px;
-  border-radius: var(--r-full);
-  font-size: .82rem; font-weight: 600;
-  cursor: pointer; transition: var(--t);
+  flex: 1 1 auto; min-height: 48px; min-width: 48px;
+  padding: .45rem .85rem; border-radius: var(--r-sm);
+  background: var(--bg-main); border: 1.5px solid var(--border-strong);
+  color: var(--text-primary); font-size: .82rem; font-weight: 600;
+  cursor: pointer; transition: var(--t); user-select: none;
   display: inline-flex; align-items: center; justify-content: center; gap: .35rem;
-  user-select: none;
 }
-.a11y-btn:hover { border-color: var(--brand-gold); color: var(--brand-dark); background: var(--bg-surface); }
-.a11y-btn.active { background: var(--brand-dark); color: var(--brand-gold); border-color: var(--brand-gold); }
+.a11y-btn:hover { border-color: var(--brand-mid); color: var(--brand-mid); background: var(--bg-surface); }
+.a11y-btn.active { background: var(--brand-mid); color: #fff; border-color: var(--brand-mid); }
+#toggle-tts > span { display: none; }
 
 .main-tab-btn, .btn-verse-action, .filter-btn, .event-filter-btn,
+.btn-hinario-tool, .btn-hinario-close, .video-modal-close, .lightbox-close { min-height: 48px; }
 .btn-hinario-tool, .btn-hinario-close, .video-modal-close, .lightbox-close {
-  min-height: 48px;
-}
-.btn-hinario-tool, .btn-hinario-close, .video-modal-close, .lightbox-close {
-  min-width: 48px;
-  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 48px; display: inline-flex; align-items: center; justify-content: center;
 }
 
-/* Botão Flutuante do WhatsApp */
 .whatsapp-float {
-  position: fixed; bottom: 2rem; right: 2rem; z-index: 800;
+  position: fixed; bottom: 1.75rem; right: 1.75rem; z-index: 800;
   display: flex; align-items: center; justify-content: center;
   width: 56px; height: 56px; border-radius: 50%;
-  background: #25d366; box-shadow: 0 6px 24px rgba(37,211,102,.45);
-  transition: var(--t); color: #fff;
+  background: #25d366; color: #fff;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, .38); transition: var(--t);
 }
-.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 8px 30px rgba(37,211,102,.6); }
-.whatsapp-float svg { width: 28px; height: 28px; }
+.whatsapp-float:hover { transform: scale(1.06); box-shadow: 0 10px 28px rgba(37, 211, 102, .48); }
+.whatsapp-float svg { width: 26px; height: 26px; }
 
-/* Alto Contraste & Ajustes de Escala */
 body.high-contrast { background: #000 !important; color: #fff !important; }
-body.high-contrast * { border-color: #ff0 !important; }
+body.high-contrast .a11y-panel { background: #121212 !important; border: 2px solid #ff0 !important; }
 html.font-zoom-1 { font-size: 110% !important; }
 html.font-zoom-2 { font-size: 120% !important; }
 html.font-zoom-3 { font-size: 130% !important; }
