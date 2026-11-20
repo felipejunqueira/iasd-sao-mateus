@@ -36,19 +36,22 @@ function initTabs() {
 function initReceptionForm() {
   const form = $('portal-visitor-form'), post = $('vis-post-save'), btn = $('vis-submit-btn');
   if (!form || !post) return;
+  const btnLabel = btn?.textContent || 'Salvar Visita na Nuvem', kicker = post.querySelector('.portal-saved-kicker');
   form.addEventListener('submit', async (e) => {
-    e.preventDefault(); if (btn) btn.disabled = true;
+    e.preventDefault(); if (btn) { btn.disabled = true; btn.textContent = 'Salvando...'; }
     try {
       const interests = [...form.querySelectorAll('input[name="vis-interest"]:checked')].map((c) => c.value);
       const v = await PortalDB.saveVisitor({ name: $('vis-name')?.value, phone: $('vis-phone')?.value, address: $('vis-address')?.value, invitedBy: $('vis-invited-by')?.value, interests, notes: $('vis-notes')?.value, origin: 'recepcao' });
       $('vis-saved-name').textContent = v.name;
+      if (kicker) kicker.textContent = v._synced ? 'Visita registrada na nuvem' : 'Salvo no aparelho (sem conexão)';
       const waNum = toWa(v.phone), waBtn = $('vis-wa-welcome-btn'), pastorBtn = $('vis-wa-pastor-btn');
       const hi = `Olá ${v.name}! Que alegria receber você na IASD São Mateus (Rua Antônio Previato, 1001). Conte conosco e tenha uma semana abençoada!`;
       const pMsg = `Olá Pastor! Nova visita na recepção IASD São Mateus:\nNome: ${v.name}\nTel: ${v.phone || '-'}\nBairro: ${v.address || '-'}\nConvite: ${v.invitedBy || '-'}\nInteresses: ${interests.join(', ') || '-'}\nObs: ${v.notes || '-'}`;
       if (waBtn) { waBtn.href = waNum ? `https://wa.me/${waNum}?text=${encodeURIComponent(hi)}` : '#'; waBtn.hidden = !waNum; }
       if (pastorBtn) pastorBtn.href = `https://wa.me/${PORTAL_CONFIG.pastorWa}?text=${encodeURIComponent(pMsg)}`;
-      post.hidden = false; showToast('Visita salva com sucesso!'); emit('portal:visitors');
-    } finally { if (btn) btn.disabled = false; }
+      form.reset(); post.hidden = false; post.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      showToast(v._synced ? 'Visita salva na nuvem!' : 'Salvo localmente (nuvem indisponível).'); emit('portal:visitors');
+    } finally { if (btn) { btn.disabled = false; btn.textContent = btnLabel; } }
   });
   $('vis-new-btn')?.addEventListener('click', () => { form.reset(); post.hidden = true; $('vis-name')?.focus(); });
 }

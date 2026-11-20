@@ -25,8 +25,10 @@ function mergeById(local, cloud) {
 }
 async function persist(key, item, row) {
   safeStorage.set(key, JSON.stringify(upsert(readArr(key), item)));
-  try { setBadge((await api('', { method: 'POST', headers: { Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify(row) })).ok); } catch { setBadge(false); }
-  return item;
+  let ok = false;
+  try { ok = (await api('', { method: 'POST', headers: { Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify(row) })).ok; } catch {}
+  setBadge(ok);
+  return { ...item, _synced: ok };
 }
 export const PortalDB = {
   getVisitors: () => readArr(K_VIS), getScales: () => readArr(K_SCL),

@@ -27,7 +27,8 @@ function updateVerse(index) {
   if (themeEl) themeEl.textContent = v.theme;
 
   if (shareBtn) {
-    const msg = `📖 *Pão Diário da Palavra*\n\n"${v.text}"\n\n— *${v.reference}*\n\n✨ _IASD São Mateus · Rua Antônio Previato, 1001_\n🌐 https://iasd-sao-mateus.vercel.app`;
+    const siteUrl = typeof location !== 'undefined' && /^https:/.test(location.protocol) ? `${location.origin}${location.pathname.replace(/[^/]*$/, '')}` : 'https://felipejunqueira.github.io/iasd-sao-mateus/';
+    const msg = `📖 *Pão Diário da Palavra*\n\n"${v.text}"\n\n— *${v.reference}*\n\n✨ _IASD São Mateus · Rua Antônio Previato, 1001_\n🌐 ${siteUrl}`;
     shareBtn.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`;
   }
 }

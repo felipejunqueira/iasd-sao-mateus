@@ -21,6 +21,7 @@
   user-select: none;
 }
 .btn:active { transform: translateY(1px) scale(.985); }
+.btn:disabled { opacity: .6; cursor: not-allowed; transform: none; box-shadow: none; }
 .btn:focus-visible {
   outline: 2.5px solid var(--brand-mid);
   outline-offset: 3px;

@@ -22,7 +22,7 @@ function buildBundle() {
   console.log('Copying static files to dist...');
   if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true });
   
-  const foldersToCopy = ['assets', 'css', 'data', 'js', 'partials'];
+  const foldersToCopy = ['assets', 'css', 'data', 'js', 'partials', 'recepcao'];
   for (const folder of foldersToCopy) {
     const src = path.join(rootDir, folder);
     const dest = path.join(distDir, folder);

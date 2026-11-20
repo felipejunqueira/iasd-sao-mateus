@@ -31,6 +31,7 @@ const server = http.createServer((req, res) => {
   }
   if (reqUrl === '/') reqUrl = '/index.html';
   if (reqUrl === '/equipe' || reqUrl === '/equipe/') reqUrl = '/equipe.html';
+  if (reqUrl === '/recepcao' || reqUrl === '/recepcao/') reqUrl = '/recepcao/index.html';
 
   const filePath = path.join(PUBLIC_DIR, reqUrl);
   if (!filePath.startsWith(PUBLIC_DIR)) {
