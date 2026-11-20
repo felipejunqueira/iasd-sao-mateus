@@ -45,10 +45,10 @@ export function initSunset() {
         `O Santo Sábado se inicia hoje às ${fmt(todaySunset)}. Prepare o coração para o descanso sagrado de Deus.`);
     } else if (day === 5 && now >= todaySunset) {
       const satSunset = getSunset(new Date(now.getTime() + 86400000));
-      set('✨ Feliz Sábado! Horas de paz e comunhão', 'Santo Sábado',
+      set('Feliz Sábado! Horas de paz e comunhão', 'Santo Sábado',
         `Descanse na doce presença do Criador. O sábado se encerra amanhã às ${fmt(satSunset)}. Venha adorar na IASD São Mateus!`);
     } else if (day === 6 && now < todaySunset) {
-      set(`✨ Feliz Sábado! O sábado se encerra hoje às ${fmt(todaySunset)}`, 'Santo Sábado',
+      set(`Feliz Sábado! O sábado se encerra hoje às ${fmt(todaySunset)}`, 'Santo Sábado',
         'Celebre as bênçãos do Santo Sábado em comunhão e louvor na IASD São Mateus (Rua Antônio Previato, 1001).');
     } else if (day === 6 && now >= todaySunset) {
       const nextFri = new Date(now.getTime() + 6 * 86400000), nextSunset = getSunset(nextFri);
@@ -70,7 +70,7 @@ export function initSunset() {
   if (shareBtn) {
     shareBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const msg = '✨ *Feliz Sábado!* 🕊️\n\nQue a doce paz e o descanso deste Santo Sábado renovem o seu coração e a sua família!\n\n_"Lembra-te do dia do sábado, para o santificar."_ (Êxodo 20:8)\n\nCom carinho, seus amigos da *IASD São Mateus*\n📍 Rua Antônio Previato, 1001\n🌐 https://iasd-sao-mateus.vercel.app';
+      const msg = '*Feliz Sábado!*\n\nQue a doce paz e o descanso deste Santo Sábado renovem o seu coração e a sua família!\n\n_"Lembra-te do dia do sábado, para o santificar."_ (Êxodo 20:8)\n\nCom carinho, seus amigos da *IASD São Mateus*\nRua Antônio Previato, 1001\nhttps://iasd-sao-mateus.vercel.app';
       window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
     });
   }

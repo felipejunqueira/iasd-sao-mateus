@@ -32,7 +32,7 @@ def adicionar_post(title, caption, category, image, link=None, tags=None):
     }
     feed.setdefault("posts", []).insert(0, novo_post)
     salvar_feed(feed)
-    print(f"[✓] Post '{title}' cadastrado com sucesso!")
+    print(f"[OK] Post '{title}' cadastrado com sucesso!")
 
 def modo_interativo():
     print("\n--- Novo Post no Feed da Igreja ---")

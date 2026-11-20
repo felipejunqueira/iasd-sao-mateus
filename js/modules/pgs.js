@@ -22,14 +22,14 @@ function createCard(pg) {
         <span class="pg-badge ${badgeClass}">${escapeHtml(pg.perfil)}</span>
       </div>
       <div class="pg-details">
-        <p class="pg-info"><span class="pg-icon">📍</span><strong>Bairro:</strong> ${escapeHtml(pg.bairro)}</p>
-        <p class="pg-info"><span class="pg-icon">🗓️</span><strong>Dia:</strong> ${escapeHtml(pg.dia)}</p>
-        <p class="pg-info"><span class="pg-icon">🤝</span><strong>Líderes:</strong> ${escapeHtml(pg.lideres)}</p>
+        <p class="pg-info"><strong>Bairro:</strong> ${escapeHtml(pg.bairro)}</p>
+        <p class="pg-info"><strong>Dia:</strong> ${escapeHtml(pg.dia)}</p>
+        <p class="pg-info"><strong>Líderes:</strong> ${escapeHtml(pg.lideres)}</p>
       </div>
       <p class="pg-desc">${escapeHtml(pg.descricao)}</p>
       <div class="pg-action">
         <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary pg-btn">
-          <span>💬 Quero Participar / Falar no WhatsApp</span>
+          <span>Quero Participar / Falar no WhatsApp</span>
         </a>
       </div>
     </article>

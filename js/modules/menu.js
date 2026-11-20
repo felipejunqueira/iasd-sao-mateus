@@ -9,7 +9,7 @@ export function initMobileMenu() {
   const closeMenu = (restoreFocus = false) => {
     navLinks.classList.remove('mobile-open');
     toggleBtn.setAttribute('aria-expanded', 'false');
-    toggleBtn.innerHTML = '☰';
+    toggleBtn.innerHTML = '≡';
     if (restoreFocus) toggleBtn.focus();
   };
 
@@ -17,7 +17,7 @@ export function initMobileMenu() {
     e.stopPropagation();
     const isOpen = navLinks.classList.toggle('mobile-open');
     toggleBtn.setAttribute('aria-expanded', String(isOpen));
-    toggleBtn.innerHTML = isOpen ? '✕' : '☰';
+    toggleBtn.innerHTML = isOpen ? '×' : '≡';
   });
 
   navLinks.querySelectorAll('a').forEach((link) => {

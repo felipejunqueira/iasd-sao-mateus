@@ -47,7 +47,7 @@ export const interactive = {
   "prayer.lead": "\"Orai uns pelos outros, para que sareis\" (Tiago 5:16). Una seu coração ao nosso em intercessão pela igreja e pelo bairro de São Mateus.",
   "prayer.cta_title": "Precisa de oração por você ou sua família?",
   "prayer.cta_desc": "Nossa equipe pastoral e ministério de intercessão oram diariamente por cada motivo. Seu pedido pode ser compartilhado ou confidencial.",
-  "prayer.cta_btn": "✍️ Enviar Pedido de Oração",
+  "prayer.cta_btn": "Enviar Pedido de Oração",
   "remedies.btn_checkup": "Fazer Check-up Diário de Saúde",
   "checkup.badge": "Autoavaliação de Saúde Integral",
   "checkup.title": "Check-up Diário: Estilo de Vida Adventista",

@@ -12,7 +12,7 @@ function getGoogleCalUrl(ev) {
 }
 
 function shareOnWhatsApp(ev) {
-  const msg = encodeURIComponent(`📅 *${ev.title}*\n🗓 ${ev.dateFormatted} (${ev.time})\n📍 ${ev.location}\n\n${ev.description}\n\nVenha nos visitar na IASD São Mateus!`);
+  const msg = encodeURIComponent(`*${ev.title}*\n${ev.dateFormatted} (${ev.time})\n${ev.location}\n\n${ev.description}\n\nVenha nos visitar na IASD São Mateus!`);
   window.open(`https://api.whatsapp.com/send?text=${msg}`, '_blank');
 }
 
@@ -33,11 +33,11 @@ function renderEvents(filter = 'todos') {
       <div class="event-body">
         <div class="event-meta">
           <span class="event-badge badge-${ev.category}">${ev.categoryLabel}</span>
-          <span class="event-time">⏰ ${ev.time}</span>
+          <span class="event-time">${ev.time}</span>
         </div>
         <h3 class="event-title">${ev.title}</h3>
         <p class="event-desc">${ev.description}</p>
-        <div class="event-location">📍 ${ev.location}</div>
+        <div class="event-location">${ev.location}</div>
         <div class="event-actions">
           <a href="${getGoogleCalUrl(ev)}" target="_blank" rel="noopener noreferrer" class="btn-event btn-gcal">+ Google Agenda</a>
           <button type="button" class="btn-event btn-wa" data-wa="${ev.id}">WhatsApp</button>

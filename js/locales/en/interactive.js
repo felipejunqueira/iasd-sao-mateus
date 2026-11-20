@@ -47,7 +47,7 @@ export const interactive = {
   "prayer.lead": "\"Pray for one another, so that you may be healed\" (James 5:16). Join your heart with ours in intercession for the church and our neighborhood.",
   "prayer.cta_title": "Do you need prayer for yourself or your family?",
   "prayer.cta_desc": "Our pastoral team and intercession ministry pray daily for every request. It can be public or confidential.",
-  "prayer.cta_btn": "✍️ Submit Prayer Request",
+  "prayer.cta_btn": "Submit Prayer Request",
   "remedies.btn_checkup": "Take Daily Health Check-up",
   "checkup.badge": "Holistic Health Self-Assessment",
   "checkup.title": "Daily Check-up: Adventist Lifestyle",

@@ -61,12 +61,12 @@ function startVoice() {
   const btn = document.getElementById('toggle-tts');
   utter.onstart = () => {
     isSpeaking = true;
-    if (btn) { btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true'); btn.innerHTML = '<span>⏹️</span> Parar'; }
+    if (btn) { btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true'); btn.innerHTML = 'Parar'; }
   };
 
   utter.onend = utter.onerror = () => {
     isSpeaking = false;
-    if (btn) { btn.classList.remove('active'); btn.setAttribute('aria-pressed', 'false'); btn.innerHTML = '<span>🔊</span> Ouvir'; }
+    if (btn) { btn.classList.remove('active'); btn.setAttribute('aria-pressed', 'false'); btn.innerHTML = 'Ouvir'; }
   };
 
   synth.speak(utter);
@@ -76,5 +76,5 @@ export function stopVoice() {
   if (synth) synth.cancel();
   isSpeaking = false;
   const btn = document.getElementById('toggle-tts');
-  if (btn) { btn.classList.remove('active'); btn.setAttribute('aria-pressed', 'false'); btn.innerHTML = '<span>🔊</span> Ouvir'; }
+  if (btn) { btn.classList.remove('active'); btn.setAttribute('aria-pressed', 'false'); btn.innerHTML = 'Ouvir'; }
 }

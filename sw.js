@@ -2,7 +2,7 @@
  * Service Worker da IASD São Mateus (Filosofia Unix)
  * Cache First para assets estáticos e Network First para dados (< 90 linhas)
  */
-const CACHE_NAME = 'iasd-sm-v4';
+const CACHE_NAME = 'iasd-sm-v5';
 const PRECACHE = [
   './', 'index.html', 'equipe.html', 'manifest.webmanifest',
   'css/main.css', 'css/core/variables.css', 'css/core/reset.css',

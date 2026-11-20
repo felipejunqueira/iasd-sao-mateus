@@ -39,7 +39,7 @@ function buildBundle() {
   const content = files.map((f) => fs.readFileSync(path.join(partialsDir, f), 'utf8').trim()).join('\n\n');
 
   fs.writeFileSync(path.join(distDir, 'bundle.html'), content + '\n');
-  console.log(`✔ dist/bundle.html gerado a partir de ${files.length} partials.`);
+  console.log(`dist/bundle.html gerado a partir de ${files.length} partials.`);
 }
 
 if (require.main === module) buildBundle();
